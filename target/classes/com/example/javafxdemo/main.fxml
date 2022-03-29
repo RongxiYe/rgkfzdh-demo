@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Text?>
+<AnchorPane fx:id="mainanchor" prefHeight="600.0" prefWidth="900.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/main" fx:controller="com.example.javafxdemo.controller.MainController">
+    <children>
+
+        <Circle fill="DODGERBLUE" layoutX="70.0" layoutY="61.0" radius="38.0" stroke="BLACK" strokeType="INSIDE" />
+        <Text layoutX="705.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ddmmyy " wrappingWidth="173.62695503234863" />
+        <Button layoutX="20.0" layoutY="432.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="106.0" text="EXIT" />
+        <Button layoutX="20.0" layoutY="478.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="106.0" text="SEEK HELP" />
+    </children>
+</AnchorPane>
