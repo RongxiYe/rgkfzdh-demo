@@ -27,10 +27,10 @@
                 </Label>
                 <Label alignment="CENTER" contentDisplay="CENTER" layoutX="230.0" layoutY="221.0" prefHeight="24.0" prefWidth="77.0" text="ID card Info:" textFill="RED" />
                 <Label alignment="CENTER" layoutX="303.0" layoutY="226.0" prefHeight="15.0" prefWidth="95.0" text="NOT CHECKED!" textFill="RED" />
-                <Label alignment="TOP_LEFT" contentDisplay="TOP" layoutX="16.0" layoutY="79.0" prefHeight="211.0" prefWidth="200.0" text="information" textOverrun="WORD_ELLIPSIS">
+                <Label alignment="TOP_LEFT" contentDisplay="TOP" layoutX="16.0" layoutY="79.0" prefHeight="211.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" text="information" textOverrun="WORD_ELLIPSIS">
 
                 </Label>
-                <Label alignment="TOP_LEFT" layoutX="232.0" layoutY="81.0" prefHeight="138.0" prefWidth="162.0" text="payment">
+                <Label alignment="TOP_LEFT" layoutX="232.0" layoutY="81.0" prefHeight="138.0" prefWidth="162.0" style="-fx-background-color: white; -fx-border-color: black;"  text="payment">
 
                 </Label>
                 <Button fx:id="confirmChekin" layoutX="225.0" layoutY="251.0" mnemonicParsing="false" onAction="#onClickPrintMaterialButton" prefHeight="38.0" prefWidth="174.0" text="PRINT YOUR MATERIALS" />
