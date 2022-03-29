@@ -23,7 +23,7 @@ public class UserData {
         this.flightNum = null;
         this.seatNum = null;
         this.meal = null;
-        this.flyingDate = new Date();
+        this.flyingDate = null;
         this.depAddr = null;
         this.desAddr = null;
         this.totalTime = null;
