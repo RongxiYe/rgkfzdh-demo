@@ -44,7 +44,7 @@ public class HelloController {
                 alert.showAndWait();
 
 
-                //给userData赋值
+                //userdata赋值
                 PrintPageController ppc = loaders[2].getController();
                 ppc.init(userData,loaders);
                 MainController main = loaders[0].getController();
