@@ -1,48 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.paint.*?>
-<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="checkinanchor" layoutX="150.0" layoutY="97.0" prefHeight="436.0" prefWidth="633.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.user.PrintPageController">
+<AnchorPane fx:id="checkinanchor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.PrintPageController">
     <children>
+        <AnchorPane layoutX="102.0" layoutY="55.0" prefHeight="304.0" prefWidth="414.0" style="-fx-border-color: black;">
+            <children>
 
-        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="215.0" layoutY="23.0" text="Check-In Information" textOverrun="CENTER_ELLIPSIS">
-            <font>
-                <Font size="20.0" />
-            </font>
-        </Label>
-        <Label alignment="CENTER" layoutX="66.0" layoutY="57.0" text="Airline Information">
-            <font>
-                <Font size="18.0" />
-            </font>
-        </Label>
-        <Label alignment="CENTER" layoutX="350.0" layoutY="57.0" text="Extra Payment">
-            <font>
-                <Font size="18.0" />
-            </font>
-        </Label>
-        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="282.0" layoutY="270.0" prefHeight="24.0" prefWidth="95.0" text="ID card Info:" textFill="RED" />
-        <Label alignment="CENTER" layoutX="416.0" layoutY="270.0" prefHeight="19.0" prefWidth="116.0" text="NOT CHECKED!" textFill="RED" />
-        <Label alignment="TOP_LEFT" contentDisplay="TOP" layoutX="41.0" layoutY="118.0" prefHeight="19.0" prefWidth="116.0" text="Booking No." textOverrun="WORD_ELLIPSIS" wrapText="true" AnchorPane.rightAnchor="476.0" AnchorPane.topAnchor="118.0">
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="114.0" layoutY="20.0" text="Check-In Information" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font size="18.0" />
+               </font>
+                </Label>
+                <Label alignment="CENTER" layoutX="34.0" layoutY="45.0" text="Airline Information">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" layoutX="256.0" layoutY="44.0" text="Extra Payment">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="230.0" layoutY="221.0" prefHeight="24.0" prefWidth="77.0" text="ID card Info:" textFill="RED" />
+                <Label alignment="CENTER" layoutX="303.0" layoutY="226.0" prefHeight="15.0" prefWidth="95.0" text="NOT CHECKED!" textFill="RED" />
+                <Label alignment="TOP_LEFT" contentDisplay="TOP" layoutX="16.0" layoutY="79.0" prefHeight="211.0" prefWidth="200.0" text="information" textOverrun="WORD_ELLIPSIS">
 
-        </Label>
-        <Label alignment="TOP_LEFT" layoutX="307.0" layoutY="97.0" prefHeight="27.0" prefWidth="46.0" text="Seat">
+                </Label>
+                <Label alignment="TOP_LEFT" layoutX="232.0" layoutY="81.0" prefHeight="138.0" prefWidth="162.0" text="payment">
 
-        </Label>
-        <Button fx:id="confirmChekin" layoutX="299.0" layoutY="315.0" mnemonicParsing="false" onAction="#onClickPrintMaterialButton" prefHeight="38.0" prefWidth="205.0" text="PRINT YOUR MATERIALS" />
-        <Label layoutX="38.0" layoutY="147.0" text="Surname" />
-        <Label layoutX="39.0" layoutY="181.0" text="Air No." />
-        <Label layoutX="39.0" layoutY="206.0" prefHeight="24.0" prefWidth="61.0" text="Date" />
-        <Label layoutX="39.0" layoutY="242.0" text="put-off" />
-        <Label layoutX="38.0" layoutY="272.0" text="baggage" />
-      <Label fx:id="airLineInfo" layoutX="156.0" layoutY="94.0" prefHeight="222.0" prefWidth="124.0" />
-      <Label fx:id="extraPay" layoutX="365.0" layoutY="91.0" prefHeight="75.0" prefWidth="95.0" />
-      <Label layoutX="308.0" layoutY="145.0" text="Meal" />
-      <Label layoutX="483.0" layoutY="98.0" text="PAID" textFill="RED" />
-      <Label layoutX="483.0" layoutY="136.0" text="PAID" textFill="RED" />
+                </Label>
+                <Button fx:id="confirmChekin" layoutX="225.0" layoutY="251.0" mnemonicParsing="false" onAction="#onClickPrintMaterialButton" prefHeight="38.0" prefWidth="174.0" text="PRINT YOUR MATERIALS" />
+            </children>
+        </AnchorPane>
+        <Circle fill="DODGERBLUE" layoutX="44.0" layoutY="37.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" />
+        <Text layoutX="412.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ddmmyy " wrappingWidth="173.62695503234863" />
+        <Button layoutX="28.0" layoutY="297.0" mnemonicParsing="false" text="EXIT" />
+        <Button layoutX="11.0" layoutY="335.0" mnemonicParsing="false" text="SEEK HELP" />
+        <Button layoutX="14.0" layoutY="257.0" mnemonicParsing="false" text="GO BACK" />
     </children>
 </AnchorPane>
