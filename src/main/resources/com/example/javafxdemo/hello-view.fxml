@@ -17,7 +17,7 @@
         <Label layoutX="206.0" layoutY="172.0" text="Forget booking number? Try: " />
         <Hyperlink layoutX="161.0" layoutY="210.0" prefHeight="52.0" prefWidth="105.0" text="Input ID info" wrapText="true" />
         <Hyperlink layoutX="334.0" layoutY="210.0" prefHeight="52.0" prefWidth="124.0" text="Upload ID card" wrapText="true" />
-        <Button fx:id="confirmChekin" layoutX="253.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#onClickCheckInButton" prefHeight="45.0" prefWidth="105.0" text="Confirm">
+        <Button fx:id="confirmChekin" layoutX="253.0" layoutY="300.0" mnemonicParsing="false" onAction="#onClickCheckInButton" prefHeight="45.0" prefWidth="105.0" text="Confirm">
             <font>
                 <Font size="18.0" />
             </font></Button>
