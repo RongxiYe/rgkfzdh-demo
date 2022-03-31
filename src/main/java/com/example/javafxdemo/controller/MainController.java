@@ -8,10 +8,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.ButtonBar;
+import javafx.scene.control.ButtonBar.ButtonData;
 import javafx.scene.layout.AnchorPane;
-
+import javafx.scene.control.Label;
+import javafx.stage.StageStyle;
 import java.io.IOException;
 import java.util.Arrays;
+import java.util.Optional;
 
 public class MainController {
     @FXML
@@ -58,10 +63,14 @@ public class MainController {
 
     @FXML
     public void exit(){
-        Alert alert = new Alert(Alert.AlertType.WARNING,"Are you sure to exit?");
-        alert.showAndWait();
-        System.exit(0);
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Would you like to exit?", ButtonType.YES, ButtonType.NO);
+        alert.setHeaderText("Exit");
+        Optional<ButtonType> result = alert.showAndWait();
+        if(result.get()==ButtonType.YES)
+            System.exit(0);
+
     }
+
 
     @FXML
     public void help(){
