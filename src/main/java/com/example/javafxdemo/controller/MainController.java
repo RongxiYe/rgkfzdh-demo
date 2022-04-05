@@ -61,6 +61,7 @@ public class MainController {
         mainanchor.getChildren().add(root);
     }
 
+
     @FXML
     public void exit(){
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Would you like to exit?", ButtonType.YES, ButtonType.NO);
