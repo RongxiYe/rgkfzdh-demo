@@ -21,4 +21,6 @@ module com.example.javafxdemo {
 
     opens com.example.javafxdemo.test to javafx.graphics;
     exports com.example.javafxdemo.test;
+
+    exports com.example.javafxdemo.data;
 }
