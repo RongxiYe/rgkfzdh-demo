@@ -23,31 +23,32 @@ public static void main(String[]args){
 
 @Override
 public void start(Stage stage) throws IOException {
-//        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("main.fxml"));
-//        FXMLLoader smLoader = new FXMLLoader(HelloApplication.class.getResource("sm-confirm.fxml"));
-//        AnchorPane root = fxmlLoader.load();
-//        MainController main = fxmlLoader.getController();
-//        AnchorPane smroot = smLoader.load();
-//
-//        UserData userData = new UserData();
-//        FXMLLoader[] loaders = new FXMLLoader[20];
-//
-//        SmConfirmController smc = smLoader.getController();
-//        smc.init(userData,loaders);
-//        root.getChildren().add(smroot);
-//        int num = root.getChildren().size();
-//        root.getChildren().get(num-2).setVisible(false);
-//
-//
-//
-//        Scene scene = new Scene(root, 900, 600);
-//        stage.setTitle("Hello!");
-//        stage.setScene(scene);
-//        stage.setResizable(false);
-//        stage.show();
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("main.fxml"));
+        FXMLLoader smLoader = new FXMLLoader(HelloApplication.class.getResource("sm-confirm.fxml"));
+        AnchorPane root = fxmlLoader.load();
+        MainController main = fxmlLoader.getController();
+        AnchorPane smroot = smLoader.load();
 
-        System.out.println(ClassPath.classPath);
-        File file = new File(ClassPath.classPath+"Data.json");
-        System.out.println(file.exists());
+        UserData userData = new UserData();
+        FXMLLoader[] loaders = new FXMLLoader[20];
+
+        SmConfirmController smc = smLoader.getController();
+        smc.init(userData,loaders);
+        root.getChildren().add(smroot);
+        int num = root.getChildren().size();
+        root.getChildren().get(num-2).setVisible(false);
+
+
+
+        Scene scene = new Scene(root, 900, 600);
+        stage.setTitle("Hello!");
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
+
+//        System.out.println(ClassPath.classPath);
+//        File file = new File(ClassPath.classPath+"Data.json");
+//        System.out.println(file.exists());
+
         }
 }
