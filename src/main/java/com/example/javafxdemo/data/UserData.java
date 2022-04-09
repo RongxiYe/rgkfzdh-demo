@@ -9,12 +9,21 @@ public class UserData {
     private String flightNum;
     private String seatNum;
     private String meal;
-    private Date flyingDate;
+    private String flyingDate;
     private String depAddr;
     private String desAddr;
     private String totalTime;
     private String delayStatus;
     private String luggage;
+    private String carryOn;
+
+    public String getCarryOn() {
+        return carryOn;
+    }
+
+    public void setCarryOn(String carryOn) {
+        this.carryOn = carryOn;
+    }
 
     public UserData(){
         this.bookingNum = null;
@@ -23,12 +32,13 @@ public class UserData {
         this.flightNum = null;
         this.seatNum = null;
         this.meal = null;
-        this.flyingDate = new Date();
+        this.flyingDate = null;
         this.depAddr = null;
         this.desAddr = null;
         this.totalTime = null;
         this.delayStatus = null;
         this.luggage = null;
+        this.carryOn = null;
     }
 
     public String getBookingNum() {
@@ -79,11 +89,11 @@ public class UserData {
         this.meal = meal;
     }
 
-    public Date getFlyingDate() {
+    public String getFlyingDate() {
         return flyingDate;
     }
 
-    public void setFlyingDate(Date flyingDate) {
+    public void setFlyingDate(String flyingDate) {
         this.flyingDate = flyingDate;
     }
 
