@@ -86,7 +86,7 @@ public class HelloController {
                         break;
                     }
                 }
-                if (n >= array.size()) {
+                if (n >= array.size()+1) {
                     alert = new Alert(Alert.AlertType.ERROR, "Wrong booking number! Please input again");
                     alert.showAndWait();
                 }

@@ -11,7 +11,8 @@
 		"desAddr":"Beijing",
 		"totalTime":"1.5h",
 		"delayStatus":"No",
-		"luggage":"1.5kg"
+		"luggage":"1.5kg",
+		"carryOn": "123"
 	},
 	{
 		"bookingNum":"002",
@@ -25,7 +26,8 @@
 		"desAddr":"Beijing",
 		"totalTime":"2.5h",
 		"delayStatus":"No",
-		"luggage":"2kg"
+		"luggage":"2kg",
+		"carryOn": "123"
 	},
 	{
 		"bookingNum":"003",
@@ -39,6 +41,7 @@
 		"desAddr":"Beijing",
 		"totalTime":"2h",
 		"delayStatus":"No",
-		"luggage":"1kg"
+		"luggage":"1kg",
+		"carryOn": "123"
 	}]
 }
