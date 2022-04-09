@@ -1,0 +1,47 @@
+{
+	"UserData":[{
+		"bookingNum":"001",
+		"surname":"Yunhan",
+		"firstname":"Xi",
+		"flightNum":"AB6060",
+		"seatNum":"06B",
+		"meal":"Normal",
+		"flyingDate":"2022-04-01",
+		"depAddr":"Shanxi",
+		"desAddr":"Beijing",
+		"totalTime":"1.5h",
+		"delayStatus":"No",
+		"luggage":"1.5kg",
+		"carryOn": "123"
+	},
+	{
+		"bookingNum":"002",
+		"surname":"Ruxu",
+		"firstname":"Zhang",
+		"flightNum":"BC7070",
+		"seatNum":"06C",
+		"meal":"Normal",
+		"flyingDate":"2022-04-01",
+		"depAddr":"Shanghai",
+		"desAddr":"Beijing",
+		"totalTime":"2.5h",
+		"delayStatus":"No",
+		"luggage":"2kg",
+		"carryOn": "123"
+	},
+	{
+		"bookingNum":"003",
+		"surname":"Ruotong",
+		"firstname":"Cui",
+		"flightNum":"CD8080",
+		"seatNum":"06A",
+		"meal":"Normal",
+		"flyingDate":"2022-04-01",
+		"depAddr":"Shengyang",
+		"desAddr":"Beijing",
+		"totalTime":"2h",
+		"delayStatus":"No",
+		"luggage":"1kg",
+		"carryOn": "123"
+	}]
+}

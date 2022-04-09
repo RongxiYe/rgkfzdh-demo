@@ -1,15 +1,17 @@
 package com.example.javafxdemo.controller.user;
 
 import com.example.javafxdemo.data.UserData;
+import com.example.javafxdemo.utils.ClassPath;
+import com.example.javafxdemo.utils.Tool;
+import com.google.gson.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.*;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
-import java.io.IOException;
+import javafx.scene.layout.AnchorPane;
+
+import java.io.*;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Optional;
 
 public class PrintPageController {
     @FXML
@@ -27,16 +29,18 @@ public class PrintPageController {
         String sn = userData.getSurname();
         String an = userData.getFlightNum();
         //目前日期没有值，无法转换格式
-       java.text.SimpleDateFormat formatter = new SimpleDateFormat( "yyyy-MM-dd ");
-        String date = formatter.format(userData.getFlyingDate());;
+//        java.text.SimpleDateFormat formatter = new SimpleDateFormat( "yyyy-MM-dd ");
+//        String date = formatter.format(userData.getFlyingDate());
+        String date = userData.getFlyingDate();
         String po = userData.getDelayStatus();
         String cg = userData.getLuggage();
 
         //payment 打印
         String stn = userData.getSeatNum();
         String ml = userData.getMeal();
+        String co = userData.getCarryOn();
 
-        String string1 = bn+"\n"+"\n"+sn+"\n"+"\n"+an+"\n"+"\n"+date+"\n"+"\n"+po+"\n"+"\n"+cg;
+        String string1 = bn+"\n"+"\n"+sn+"\n"+"\n"+an+"\n"+"\n"+date+"\n"+"\n"+po+"\n"+"\n"+cg+"\n\n"+co;
         String string2 = stn+"\n"+"\n"+"\n"+ml;
         //airLineInfo和extraPay换行显示data
         airLineInfo.setText(string1);
@@ -52,6 +56,36 @@ public class PrintPageController {
 
         //打印出信息文件
         //生成发给后台系统的文件
+
+        Tool tool = new Tool();
+        try {
+            JsonParser parser = new JsonParser();
+            Gson gson = new Gson();
+            String udata = gson.toJson(userData);
+//            JsonObject subObject = parser.parse(udata).getAsJsonObject();
+            File file=new File(ClassPath.classPath+userData.getFlightNum()+"_"+userData.getFlyingDate()+".json");
+            if(!file.exists()) //判断文件是否存在，若不存在则新建
+            {
+                file.createNewFile();
+            }
+            FileOutputStream fileOutputStream=new FileOutputStream(file,true);//实例化FileOutputStream
+            OutputStreamWriter outputStreamWriter=new OutputStreamWriter(fileOutputStream,"utf-8");//将字符流转换为字节流
+            BufferedWriter bufferedWriter= new BufferedWriter(outputStreamWriter);//创建字符缓冲输出流对象
+
+//            String jsonString=subObject.toString();//将subObject转化为字符串
+
+//            String JsonString=tool.stringToJSON(jsonString);//将subObject字符串格式化
+            bufferedWriter.write(udata);//将格式化的subObject字符串写入文件
+            bufferedWriter.flush();//清空缓冲区，强制输出数据
+            bufferedWriter.close();//关闭输出流
+
+        } catch (JsonIOException e) {
+            e.printStackTrace();
+        } catch (JsonSyntaxException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
 
