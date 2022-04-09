@@ -4,10 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="smConfirmAnchor" layoutX="150.0" layoutY="97.0" prefHeight="436.0" prefWidth="633.0" style="-fx-border-color: black;"
-            xmlns="http://javafx.com/javafx/11.0.14-internal"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.javafxdemo.controller.user.SmConfirmController">
+<AnchorPane fx:id="smConfirmAnchor" layoutX="150.0" layoutY="97.0" prefHeight="436.0" prefWidth="633.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.user.SmConfirmController">
     <children>
 
         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="238.0" layoutY="23.0" text="Extra Payment" textOverrun="CENTER_ELLIPSIS">
@@ -20,14 +17,17 @@
                 <Font size="18.0" />
             </font>
         </Label>
-        <Label alignment="CENTER" layoutX="387.0" layoutY="57.0" text="Meal Selection">
+        <Label alignment="CENTER" layoutX="389.0" layoutY="57.0" text="Meal Selection">
             <font>
                 <Font size="18.0" />
             </font>
         </Label>
         <Label alignment="CENTER" layoutX="111.0" layoutY="227.0" prefHeight="62.0" prefWidth="402.0" text="Please click to input your credit card information to complete extra payment." textAlignment="CENTER" textFill="RED" wrapText="true" />
-        <Button fx:id="inputInfo" layoutX="212.0" layoutY="308.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="205.0" text="Input Information" onMouseClicked="#onClickInputButton"/>
+        <Button fx:id="inputInfo" layoutX="212.0" layoutY="308.0" mnemonicParsing="false" onMouseClicked="#onClickInputButton" prefHeight="38.0" prefWidth="205.0" text="Input Information" />
+        <Button fx:id="confirmSelect" layoutX="212.0" layoutY="308.0" mnemonicParsing="false" onMouseClicked="#onClickConfirmButton" prefHeight="38.0" prefWidth="205.0" text="Input Information" />
         <Label fx:id="seatInfo" layoutX="21.0" layoutY="94.0" prefHeight="75.0" prefWidth="259.0" />
         <Label fx:id="mealInfo" layoutX="365.0" layoutY="91.0" prefHeight="75.0" prefWidth="211.0" />
+      <Button layoutX="117.0" layoutY="189.0" mnemonicParsing="false" text="Change" onMouseClicked="#onClickChangeSeat"/>
+      <Button layoutX="430.0" layoutY="189.0" mnemonicParsing="false" text="Change" onMouseClicked="#onClickChangeMeal"/>
     </children>
 </AnchorPane>
