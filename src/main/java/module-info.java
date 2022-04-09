@@ -9,6 +9,8 @@ module com.example.javafxdemo {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires gson;
+    requires java.sql;
 
     opens com.example.javafxdemo to javafx.fxml;
     exports com.example.javafxdemo;
@@ -23,4 +25,6 @@ module com.example.javafxdemo {
     exports com.example.javafxdemo.test;
 
     exports com.example.javafxdemo.data;
+
+    opens com.example.javafxdemo.data to gson;
 }
