@@ -18,18 +18,18 @@ import java.io.IOException;
 
 public class FirstOverviewTest extends Application{
 
-public static void main(String[]args){
-        launch(args);
+public static void main(String[] args){
+        launch();
         }
 
 @Override
 public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("main.fxml"));
-        FXMLLoader smLoader = new FXMLLoader(HelloApplication.class.getResource("sm-confirm.fxml"));
+        //FXMLLoader smLoader = new FXMLLoader(HelloApplication.class.getResource("sm-confirm.fxml"));
         FXMLLoader fvLoader = new FXMLLoader(HelloApplication.class.getResource("first-view.fxml"));
         AnchorPane root = fxmlLoader.load();
         MainController main = fxmlLoader.getController();
-        AnchorPane smroot = smLoader.load();
+        //AnchorPane smroot = smLoader.load();
         AnchorPane fvroot =fvLoader.load();
 
         UserData userData = new UserData();
