@@ -4,6 +4,7 @@ import com.example.javafxdemo.data.UserData;
 import com.example.javafxdemo.utils.ClassPath;
 import com.example.javafxdemo.utils.Tool;
 import com.google.gson.*;
+import com.google.gson.stream.JsonReader;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Alert;
@@ -11,6 +12,8 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.*;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 
 public class PrintPageController {
@@ -62,28 +65,39 @@ public class PrintPageController {
             JsonParser parser = new JsonParser();
             Gson gson = new Gson();
             String udata = gson.toJson(userData);
-//            JsonObject subObject = parser.parse(udata).getAsJsonObject();
+            JsonObject subObject = parser.parse(udata).getAsJsonObject();
+
             File file=new File(ClassPath.classPath+userData.getFlightNum()+"_"+userData.getFlyingDate()+".json");
             if(!file.exists()) //判断文件是否存在，若不存在则新建
             {
                 file.createNewFile();
             }
-            FileOutputStream fileOutputStream=new FileOutputStream(file,true);//实例化FileOutputStream
-            OutputStreamWriter outputStreamWriter=new OutputStreamWriter(fileOutputStream,"utf-8");//将字符流转换为字节流
-            BufferedWriter bufferedWriter= new BufferedWriter(outputStreamWriter);//创建字符缓冲输出流对象
 
-//            String jsonString=subObject.toString();//将subObject转化为字符串
 
-//            String JsonString=tool.stringToJSON(jsonString);//将subObject字符串格式化
-            bufferedWriter.write(udata);//将格式化的subObject字符串写入文件
+            JsonObject object;
+            try{
+                object = gson.fromJson(new JsonReader(new FileReader(file, StandardCharsets.UTF_8)),JsonObject.class);
+                JsonArray array = object.get("UserData").getAsJsonArray();
+                System.out.println(array);
+                array.add(subObject);
+                object.add("UserData", array);
+            }catch (Exception e){
+                object = new JsonObject();
+                JsonArray array = new JsonArray();
+                array.add(subObject);
+                object.add("UserData", array);
+                System.out.println(array);
+            }
+
+            BufferedWriter bufferedWriter= new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), StandardCharsets.UTF_8));//创建字符缓冲输出流对象
+            bufferedWriter.write(object.toString());//将格式化的subObject字符串写入文件
             bufferedWriter.flush();//清空缓冲区，强制输出数据
             bufferedWriter.close();//关闭输出流
 
-        } catch (JsonIOException e) {
-            e.printStackTrace();
-        } catch (JsonSyntaxException e) {
-            e.printStackTrace();
-        } catch (FileNotFoundException e) {
+//            String jsonString=subObject.toString();//将subObject转化为字符串
+//            String JsonString=tool.stringToJSON(jsonString);//将subObject字符串格式化
+
+        } catch (JsonIOException | JsonSyntaxException | FileNotFoundException e) {
             e.printStackTrace();
         }
     }
