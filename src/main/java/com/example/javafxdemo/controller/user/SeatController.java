@@ -34,6 +34,7 @@ public class SeatController{
                 Rectangle rect = (Rectangle) event.getSource();
                 rect.setFill(Color.AQUA);
                 tempSeatNum = rect.getId();
+
         }
 
 }
