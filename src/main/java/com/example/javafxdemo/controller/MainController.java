@@ -33,13 +33,16 @@ public class MainController {
         loaders = new FXMLLoader[20];
         FXMLLoader helloLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         FXMLLoader printLoader = new FXMLLoader(HelloApplication.class.getResource("checkin-view.fxml"));
+        FXMLLoader seatLoader = new FXMLLoader(HelloApplication.class.getResource("seat-select.fxml"));
         loaders[0] = mainLoader;
         loaders[1] = helloLoader;
         loaders[2] = printLoader;
+        loaders[3] = seatLoader;
         //还有很多其他的页面都在这里初始化
         userData = new UserData();
 //        Scene scene = new Scene(fxmlLoader.load(), 900, 600);
         AnchorPane root = helloLoader.load();
+        seatLoader.load();
         printLoader.load();
         HelloController hello = helloLoader.getController();
         hello.init(userData,loaders);
