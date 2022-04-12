@@ -73,7 +73,6 @@ public class PrintPageController {
                 file.createNewFile();
             }
 
-
             JsonObject object;
             try{
                 object = gson.fromJson(new JsonReader(new FileReader(file, StandardCharsets.UTF_8)),JsonObject.class);
