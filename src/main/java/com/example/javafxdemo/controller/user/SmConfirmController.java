@@ -8,8 +8,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 
-import java.io.IOException;
-
 public class SmConfirmController {
 
     @FXML
@@ -62,7 +60,10 @@ public class SmConfirmController {
     }
 
     @FXML public void onClickChangeSeat(){
-
+        MealController mc = loaders[2].getController();
+        mc.init(userData, loaders);
+        MainController main = loaders[0].getController();
+        main.loadRoot(loaders[2]);
     }
 
     @FXML public void onClickChangeMeal(){
