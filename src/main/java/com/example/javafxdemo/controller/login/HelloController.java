@@ -2,6 +2,7 @@ package com.example.javafxdemo.controller.login;
 
 import com.example.javafxdemo.controller.MainController;
 import com.example.javafxdemo.controller.user.PrintPageController;
+import com.example.javafxdemo.controller.user.SeatController;
 import com.example.javafxdemo.data.UserData;
 import com.example.javafxdemo.utils.ClassPath;
 import com.google.gson.*;
@@ -79,10 +80,10 @@ public class HelloController {
                         Gson gson = new Gson();
                         userData = gson.fromJson(subObject,UserData.class);
                         //
-                        PrintPageController ppc = loaders[2].getController();
-                        ppc.init(userData, loaders);
+                        SeatController sc = loaders[3].getController();
+                        sc.init(userData, loaders);
                         MainController main = loaders[0].getController();
-                        main.loadRoot(loaders[2]);
+                        main.loadRoot(loaders[3]);
                         break;
                     }
                 }
