@@ -14,7 +14,7 @@ public class SeatController{
         @FXML
         private UserData userData;
         private FXMLLoader[] loaders;
-        private String seatNum;
+        private String tempSeatNum;
 
         public void init(UserData data, FXMLLoader[] loaders) {
                 this.userData = data;
@@ -23,6 +23,7 @@ public class SeatController{
 
         @FXML
         protected void onClickNextPageButton() throws IOException {
+                userData.setSeatNum(tempSeatNum);
                 PrintPageController ppc = loaders[2].getController();
                 ppc.init(userData, loaders);
                 MainController main = loaders[0].getController();
@@ -32,7 +33,7 @@ public class SeatController{
         public void onClickSeat(MouseEvent event) throws IOException {
                 Rectangle rect = (Rectangle) event.getSource();
                 rect.setFill(Color.AQUA);
-                userData.setSeatNum(rect.getId());
+                tempSeatNum = rect.getId();
         }
 
 }
