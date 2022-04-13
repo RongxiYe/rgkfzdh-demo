@@ -1,9 +1,12 @@
 package com.example.javafxdemo.controller.login;
 
+import com.example.javafxdemo.controller.Controller;
+import com.example.javafxdemo.controller.Handler;
 import com.example.javafxdemo.controller.MainController;
-import com.example.javafxdemo.controller.user.PrintPageController;
 import com.example.javafxdemo.controller.user.SeatController;
-import com.example.javafxdemo.data.UserData;
+import com.example.javafxdemo.data.CurrentData;
+import com.example.javafxdemo.utils.Page;
+import com.example.javafxdemo.utils.UserData;
 import com.example.javafxdemo.utils.ClassPath;
 import com.google.gson.*;
 import javafx.fxml.FXML;
@@ -13,21 +16,20 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.*;
+import java.util.Currency;
 
-public class HelloController {
+public class HelloController implements Controller {
     @FXML
     private TextField bn;
     public AnchorPane helloanchor;
-    private FXMLLoader[] loaders;
-    private UserData userData;
 
-    public void init(UserData data, FXMLLoader[] loaders) {
-        this.userData = data;
-        this.loaders = loaders;
+
+    public void init() {
+
     }
 
     @FXML
-    protected void onClickCheckInButton() throws IOException {
+    protected void onClickCheckInButton() {
         String booknum = bn.getText().trim();
         Alert alert;
         if (booknum.isEmpty() || booknum == null) {
@@ -52,7 +54,7 @@ public class HelloController {
             } finally {
                 try {
                     fileInputStream.close();
-                } catch (IOException e) {
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
@@ -78,12 +80,11 @@ public class HelloController {
                         alert.showAndWait();
                         //给userData赋值
                         Gson gson = new Gson();
-                        userData = gson.fromJson(subObject,UserData.class);
+                        CurrentData.userData = gson.fromJson(subObject,UserData.class);
                         //
-                        SeatController sc = loaders[3].getController();
-                        sc.init(userData, loaders);
-                        MainController main = loaders[0].getController();
-                        main.loadRoot(loaders[3]);
+                        Controller sc = Handler.getController(Page.SEATSELECT);
+                        MainController main = (MainController)Handler.getController(Page.MAIN);
+                        main.loadRoot(Page.SEATSELECT);
                         break;
                     }
                 }
@@ -92,11 +93,7 @@ public class HelloController {
                     alert.showAndWait();
                 }
 
-            } catch (JsonIOException e) {
-                e.printStackTrace();
-            } catch (JsonSyntaxException e) {
-                e.printStackTrace();
-            } catch (FileNotFoundException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
 

@@ -27,4 +27,6 @@ module com.example.javafxdemo {
     exports com.example.javafxdemo.data;
 
     opens com.example.javafxdemo.data to gson;
+    exports com.example.javafxdemo.utils;
+    opens com.example.javafxdemo.utils to gson;
 }

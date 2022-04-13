@@ -1,7 +1,11 @@
 package com.example.javafxdemo.controller.user;
 
+import com.example.javafxdemo.controller.Controller;
+import com.example.javafxdemo.controller.Handler;
 import com.example.javafxdemo.controller.MainController;
-import com.example.javafxdemo.data.UserData;
+import com.example.javafxdemo.data.CurrentData;
+import com.example.javafxdemo.utils.Page;
+import com.example.javafxdemo.utils.UserData;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.input.MouseEvent;
@@ -10,27 +14,22 @@ import javafx.scene.shape.Rectangle;
 
 import java.io.IOException;
 
-public class SeatController{
+public class SeatController implements Controller {
         @FXML
-        private UserData userData;
-        private FXMLLoader[] loaders;
         private String tempSeatNum;
 
-        public void init(UserData data, FXMLLoader[] loaders) {
-                this.userData = data;
-                this.loaders = loaders;
+        public void init() {
+
         }
 
         @FXML
-        protected void onClickNextPageButton() throws IOException {
-                userData.setSeatNum(tempSeatNum);
-                PrintPageController ppc = loaders[2].getController();
-                ppc.init(userData, loaders);
-                MainController main = loaders[0].getController();
-                main.loadRoot(loaders[2]);
+        protected void onClickNextPageButton(){
+                CurrentData.userData.setSeatNum(tempSeatNum);
+                MainController main = (MainController) Handler.getController(Page.MAIN);
+                main.loadRoot(Page.CHECKINVIEW);
         }
 
-        public void onClickSeat(MouseEvent event) throws IOException {
+        public void onClickSeat(MouseEvent event){
                 Rectangle rect = (Rectangle) event.getSource();
                 rect.setFill(Color.AQUA);
                 tempSeatNum = rect.getId();
