@@ -1,13 +1,16 @@
 package com.example.javafxdemo.controller.user;
 
+import com.example.javafxdemo.controller.Controller;
+import com.example.javafxdemo.controller.Handler;
 import com.example.javafxdemo.controller.MainController;
-import com.example.javafxdemo.data.UserData;
+import com.example.javafxdemo.utils.Page;
+import com.example.javafxdemo.utils.UserData;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 
-public class MealController {
+public class MealController implements Controller {
 
     @FXML
     private Button mealconfirm;
@@ -22,22 +25,17 @@ public class MealController {
 
     public String mealselection;
 
-    private FXMLLoader[] loaders;
-    private UserData userData;
-    private FXMLLoader currentLoader;
 
-    public void init(UserData data, FXMLLoader[] loaders){
-        this.userData = data;
-        this.loaders = loaders;
+
+    public void init(){
+
 
     }
 
     @FXML public void onClickConfirmButton(){
         //跳转到smconfrim界面
-        SmConfirmController smcc = loaders[2].getController();
-        smcc.init(userData, loaders);
-        MainController main = loaders[0].getController();
-        main.loadRoot(loaders[2]);
+        MainController main = (MainController)Handler.getController(Page.MAIN);
+        main.loadRoot(Page.SMCONFIRM);
     }
 
     @FXML public void onClickChooseStaple(){
