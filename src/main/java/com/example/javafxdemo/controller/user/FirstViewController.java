@@ -15,10 +15,9 @@ import javafx.scene.control.Alert;
 public class FirstViewController implements Controller {
     @FXML
     public AnchorPane firstViewAnchor;
-
-    private FXMLLoader currentLoader;
     public Label infoContent;
     public Button fvConfirm;
+
     public void init(){
         UserData userData = CurrentData.userData;
         //airline information 打印

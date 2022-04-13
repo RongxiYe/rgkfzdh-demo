@@ -21,8 +21,7 @@ public class PrintPageController implements Controller {
     public Label airLineInfo;
     public Label extraPay;
     public AnchorPane checkinanchor;
-    private UserData userData;
-    private FXMLLoader[] loaders;
+
 
     public void init(){
         UserData userData = CurrentData.userData;

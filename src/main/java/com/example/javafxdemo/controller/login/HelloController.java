@@ -82,7 +82,6 @@ public class HelloController implements Controller {
                         Gson gson = new Gson();
                         CurrentData.userData = gson.fromJson(subObject,UserData.class);
                         //
-                        Controller sc = Handler.getController(Page.SEATSELECT);
                         MainController main = (MainController)Handler.getController(Page.MAIN);
                         main.loadRoot(Page.SEATSELECT);
                         break;
