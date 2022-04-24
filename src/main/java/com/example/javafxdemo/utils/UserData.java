@@ -1,4 +1,4 @@
-package com.example.javafxdemo.data;
+package com.example.javafxdemo.utils;
 
 import java.util.Date;
 

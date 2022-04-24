@@ -11,6 +11,7 @@ module com.example.javafxdemo {
     requires eu.hansolo.tilesfx;
     requires gson;
     requires java.sql;
+    requires org.junit.jupiter.api;
 
     opens com.example.javafxdemo to javafx.fxml;
     exports com.example.javafxdemo;
@@ -27,4 +28,6 @@ module com.example.javafxdemo {
     exports com.example.javafxdemo.data;
 
     opens com.example.javafxdemo.data to gson;
+    exports com.example.javafxdemo.utils;
+    opens com.example.javafxdemo.utils to gson;
 }

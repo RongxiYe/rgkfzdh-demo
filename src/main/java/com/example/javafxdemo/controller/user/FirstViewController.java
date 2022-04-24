@@ -1,34 +1,25 @@
 package com.example.javafxdemo.controller.user;
 
-import com.example.javafxdemo.controller.MainController;
-import com.example.javafxdemo.data.UserData;
+import com.example.javafxdemo.controller.Controller;
+import com.example.javafxdemo.data.CurrentData;
+import com.example.javafxdemo.utils.UserData;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.control.Label;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import com.example.javafxdemo.utils.ClassPath;
-import com.example.javafxdemo.utils.Tool;
-import com.google.gson.*;
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
-import javafx.scene.layout.AnchorPane;
 
-public class FirstViewController {
+import javafx.scene.control.Alert;
+
+public class FirstViewController implements Controller {
     @FXML
     public AnchorPane firstViewAnchor;
-    private FXMLLoader[] loaders;
-    private UserData userData;
-    private FXMLLoader currentLoader;
     public Label infoContent;
     public Button fvConfirm;
-    public void init(UserData data, FXMLLoader[] loaders){
-        this.userData = data;
-        this.loaders = loaders;
+
+    public void init(){
+        UserData userData = CurrentData.userData;
         //airline information 打印
         String bn = userData.getBookingNum();
         String sn = userData.getSurname();
@@ -47,7 +38,7 @@ public class FirstViewController {
         infoContent.setText(string1);
 
     }
-    @FXML public void ConfirmButton() throws IOException{
+    @FXML public void ConfirmButton(){
         //use loaders to enter the next page.
         Alert alert = new Alert(Alert.AlertType.INFORMATION); //
         alert.setHeaderText("Confirmation");

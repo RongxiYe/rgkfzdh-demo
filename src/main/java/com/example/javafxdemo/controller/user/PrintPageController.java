@@ -1,6 +1,8 @@
 package com.example.javafxdemo.controller.user;
 
-import com.example.javafxdemo.data.UserData;
+import com.example.javafxdemo.controller.Controller;
+import com.example.javafxdemo.data.CurrentData;
+import com.example.javafxdemo.utils.UserData;
 import com.example.javafxdemo.utils.ClassPath;
 import com.example.javafxdemo.utils.Tool;
 import com.google.gson.*;
@@ -12,21 +14,18 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.*;
-import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
-import java.text.SimpleDateFormat;
 
-public class PrintPageController {
+public class PrintPageController implements Controller {
     @FXML
     public Label airLineInfo;
     public Label extraPay;
     public AnchorPane checkinanchor;
-    private UserData userData;
-    private FXMLLoader[] loaders;
 
-    public void init(UserData data, FXMLLoader[] loaders){
-        this.userData = data;
-        this.loaders = loaders;
+
+    public void init(){
+        UserData userData = CurrentData.userData;
+
         //airline information 打印
         String bn = userData.getBookingNum();
         String sn = userData.getSurname();
@@ -51,7 +50,7 @@ public class PrintPageController {
     }
 
     @FXML
-    protected void onClickPrintMaterialButton() throws IOException {
+    protected void onClickPrintMaterialButton() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION); //
         alert.setHeaderText("Confirmation");
         alert.setContentText("Are you sure to print all your materials?");
@@ -64,15 +63,14 @@ public class PrintPageController {
         try {
             JsonParser parser = new JsonParser();
             Gson gson = new Gson();
-            String udata = gson.toJson(userData);
+            String udata = gson.toJson(CurrentData.userData);
             JsonObject subObject = parser.parse(udata).getAsJsonObject();
 
-            File file=new File(ClassPath.classPath+userData.getFlightNum()+"_"+userData.getFlyingDate()+".json");
+            File file=new File(ClassPath.classPath+CurrentData.userData.getFlightNum()+"_"+CurrentData.userData.getFlyingDate()+".json");
             if(!file.exists()) //判断文件是否存在，若不存在则新建
             {
                 file.createNewFile();
             }
-
 
             JsonObject object;
             try{
@@ -97,7 +95,7 @@ public class PrintPageController {
 //            String jsonString=subObject.toString();//将subObject转化为字符串
 //            String JsonString=tool.stringToJSON(jsonString);//将subObject字符串格式化
 
-        } catch (JsonIOException | JsonSyntaxException | FileNotFoundException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

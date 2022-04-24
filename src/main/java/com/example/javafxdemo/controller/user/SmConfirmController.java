@@ -1,16 +1,18 @@
 package com.example.javafxdemo.controller.user;
 
+import com.example.javafxdemo.controller.Controller;
+import com.example.javafxdemo.controller.Handler;
 import com.example.javafxdemo.controller.MainController;
-import com.example.javafxdemo.data.UserData;
+import com.example.javafxdemo.data.CurrentData;
+import com.example.javafxdemo.utils.Page;
+import com.example.javafxdemo.utils.UserData;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 
-import java.io.IOException;
-
-public class SmConfirmController {
+public class SmConfirmController implements Controller {
 
     @FXML
     private Button inputInfo;
@@ -22,13 +24,9 @@ public class SmConfirmController {
     private Label mealInfo;
     public AnchorPane smConfirmAnchor;
 
-    private FXMLLoader[] loaders;
-    private UserData userData;
-    private FXMLLoader currentLoader;
 
-    public void init(UserData data, FXMLLoader[] loaders){
-        this.userData = data;
-        this.loaders = loaders;
+    public void init(){
+        UserData userData = CurrentData.userData;
         //show page information depending on whether user has extra payments.
         seatInfo.setText(userData.getSeatNum());
         mealInfo.setText(userData.getMeal());
@@ -47,26 +45,24 @@ public class SmConfirmController {
 
     @FXML public void onClickInputButton(){
         //use loaders to enter the next page.
-        CreditInfoController cic = loaders[2].getController();
-        cic.init(userData, loaders);
-        MainController main = loaders[0].getController();
-        main.loadRoot(loaders[2]);
+        MainController main = (MainController) Handler.getController(Page.MAIN);
+        main.loadRoot(Page.EXTRAPAY);
     }
 
     @FXML public void onClickConfirmButton(){
         //use loaders to enter the next page.
-        PrintPageController ppc = loaders[2].getController();
-        ppc.init(userData, loaders);
-        MainController main = loaders[0].getController();
-        main.loadRoot(loaders[2]);
+        MainController main = (MainController) Handler.getController(Page.MAIN);
+        main.loadRoot(Page.CHECKINVIEW);
     }
 
     @FXML public void onClickChangeSeat(){
-
+        MainController main = (MainController) Handler.getController(Page.MAIN);
+        main.loadRoot(Page.SEATSELECT);
     }
 
     @FXML public void onClickChangeMeal(){
-
+        MainController main = (MainController) Handler.getController(Page.MAIN);
+        main.loadRoot(Page.MEALSELECT);
     }
 
 
