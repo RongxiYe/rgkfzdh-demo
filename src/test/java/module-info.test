@@ -1,3 +1,0 @@
---patch-module com.example.javafxdemo=src/main/java
---add-opens
-    com.example.javafxdemo=org.junit.platform.commons
