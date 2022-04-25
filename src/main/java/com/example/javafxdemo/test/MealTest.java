@@ -1,4 +1,4 @@
-package com.example.javafxdemo;
+package com.example.javafxdemo.test;
 
 import com.example.javafxdemo.HelloApplication;
 import com.example.javafxdemo.controller.MainController;

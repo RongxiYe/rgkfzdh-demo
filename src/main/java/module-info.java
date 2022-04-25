@@ -11,7 +11,6 @@ module com.example.javafxdemo {
     requires eu.hansolo.tilesfx;
     requires gson;
     requires java.sql;
-    requires org.junit.jupiter.api;
 
     opens com.example.javafxdemo to javafx.fxml, javafx.graphics;
     exports com.example.javafxdemo;
