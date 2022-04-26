@@ -38,65 +38,65 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Rectangle fx:id="F1" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="ORANGE" height="21.0" layoutX="170.0" layoutY="143.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle fx:id="F2" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="ORANGE" height="21.0" layoutX="205.0" layoutY="143.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle fx:id="F3" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="240.0" layoutY="143.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle fx:id="F4" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="276.0" layoutY="143.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle fx:id="F5" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#9c9ea1" height="21.0" layoutX="312.0" layoutY="143.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="ORANGE" height="21.0" layoutX="170.0" layoutY="143.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="F1" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="ORANGE" height="21.0" layoutX="205.0" layoutY="143.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="F2" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="240.0" layoutY="143.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="F3" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="276.0" layoutY="143.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="F4" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="312.0" layoutY="143.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
       <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="ORANGE" height="21.0" layoutX="170.0" layoutY="166.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#9c9ea1" height="21.0" layoutX="205.0" layoutY="166.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="240.0" layoutY="166.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#9c9ea1" height="21.0" layoutX="276.0" layoutY="166.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#9c9ea1" height="21.0" layoutX="312.0" layoutY="166.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#9c9ea1" height="21.0" layoutX="346.0" layoutY="143.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="381.0" layoutY="143.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="416.0" layoutY="143.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="452.0" layoutY="143.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="E1" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="ORANGE" height="21.0" layoutX="205.0" layoutY="166.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="E2" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="240.0" layoutY="166.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="E3" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="276.0" layoutY="166.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="E4" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="312.0" layoutY="166.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="F5" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="346.0" layoutY="143.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="F6" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="381.0" layoutY="143.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="F7" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="416.0" layoutY="143.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="F8" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="452.0" layoutY="143.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
       <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="488.0" layoutY="143.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#9c9ea1" height="21.0" layoutX="346.0" layoutY="166.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="381.0" layoutY="166.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="416.0" layoutY="166.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="452.0" layoutY="166.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="E5" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="346.0" layoutY="166.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="E6" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="381.0" layoutY="166.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="E7" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="416.0" layoutY="166.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="E8" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="452.0" layoutY="166.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
       <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="488.0" layoutY="166.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
       <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="ORANGE" height="21.0" layoutX="170.0" layoutY="197.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#9c9ea1" height="21.0" layoutX="205.0" layoutY="197.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="240.0" layoutY="197.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#9c9ea1" height="21.0" layoutX="276.0" layoutY="197.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#9c9ea1" height="21.0" layoutX="312.0" layoutY="197.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="D1" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="ORANGE" height="21.0" layoutX="205.0" layoutY="197.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="D2" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="240.0" layoutY="197.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="D3" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="276.0" layoutY="197.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="D4" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="312.0" layoutY="197.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
       <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="ORANGE" height="21.0" layoutX="170.0" layoutY="220.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="ORANGE" height="21.0" layoutX="205.0" layoutY="220.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="240.0" layoutY="220.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="276.0" layoutY="220.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#9c9ea1" height="21.0" layoutX="312.0" layoutY="220.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="346.0" layoutY="197.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="381.0" layoutY="197.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="416.0" layoutY="197.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="452.0" layoutY="197.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="C1" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="ORANGE" height="21.0" layoutX="205.0" layoutY="220.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="C2" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="240.0" layoutY="220.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="C3" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="276.0" layoutY="220.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="C4" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="312.0" layoutY="220.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="D5" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="346.0" layoutY="197.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="D6" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="381.0" layoutY="197.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="D7" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="416.0" layoutY="197.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="D8" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="452.0" layoutY="197.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
       <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="488.0" layoutY="197.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="346.0" layoutY="220.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="381.0" layoutY="220.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="416.0" layoutY="220.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="452.0" layoutY="220.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="C5" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="346.0" layoutY="220.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="C6" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="381.0" layoutY="220.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="C7" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="416.0" layoutY="220.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="C8" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="452.0" layoutY="220.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
       <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="488.0" layoutY="220.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
       <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="ORANGE" height="21.0" layoutX="170.0" layoutY="251.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="ORANGE" height="21.0" layoutX="205.0" layoutY="251.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="240.0" layoutY="251.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#9c9ea1" height="21.0" layoutX="276.0" layoutY="251.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="312.0" layoutY="251.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="B1" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="ORANGE" height="21.0" layoutX="205.0" layoutY="251.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="B2" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="240.0" layoutY="251.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="B3" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="276.0" layoutY="251.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="B4" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="312.0" layoutY="251.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
       <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="ORANGE" height="21.0" layoutX="170.0" layoutY="274.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="205.0" layoutY="274.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="240.0" layoutY="274.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="276.0" layoutY="274.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="312.0" layoutY="274.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="346.0" layoutY="251.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="381.0" layoutY="251.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="416.0" layoutY="251.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="452.0" layoutY="251.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="A1" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="ORANGE" height="21.0" layoutX="205.0" layoutY="274.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="A2" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="240.0" layoutY="274.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="A3" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="276.0" layoutY="274.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="A4" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="312.0" layoutY="274.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="B5" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="346.0" layoutY="251.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="B6" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="381.0" layoutY="251.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="B7" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="416.0" layoutY="251.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="B8" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="452.0" layoutY="251.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
       <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="488.0" layoutY="251.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="346.0" layoutY="274.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="381.0" layoutY="274.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="416.0" layoutY="274.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
-      <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="452.0" layoutY="274.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="A5" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="346.0" layoutY="274.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="A6" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="381.0" layoutY="274.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="A7" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="416.0" layoutY="274.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
+      <Rectangle fx:id="A8" onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="452.0" layoutY="274.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
       <Rectangle onMouseClicked="#onClickSeat" arcHeight="5.0" arcWidth="5.0" fill="#b8bbde" height="21.0" layoutX="488.0" layoutY="274.0" stroke="BLACK" strokeType="INSIDE" width="21.0" />
       <QuadCurve controlX="-193.1999969482422" controlY="38.600006103515625" endX="47.5999755859375" endY="-55.79998779296875" fill="#ffffff00" layoutX="108.0" layoutY="178.0" startX="55.5999755859375" startY="137.80001831054688" stroke="BLACK" strokeType="INSIDE" />
       <Line endX="211.99993896484375" endY="-16.199981689453125" layoutX="346.0" layoutY="332.0" startX="-182.4000244140625" startY="-16.199981689453125" />

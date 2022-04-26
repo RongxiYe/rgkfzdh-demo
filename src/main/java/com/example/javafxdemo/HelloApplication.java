@@ -14,13 +14,12 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) {
-//        Handler h = new Handler();
-//        CurrentData cd = new CurrentData();
+        Handler.stage = stage;
         AnchorPane root = Handler.getRoot(Page.MAIN);
         Controller main = Handler.getController(Page.MAIN);
         main.init();
         Scene scene = new Scene(root, 900, 600);
-        stage.setTitle("Hello!");
+        stage.setTitle("Smart Check In!");
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();

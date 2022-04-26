@@ -2,6 +2,7 @@ package com.example.javafxdemo.controller.user;
 
 import com.example.javafxdemo.controller.Controller;
 import com.example.javafxdemo.data.CurrentData;
+import com.example.javafxdemo.utils.PrintProgress;
 import com.example.javafxdemo.utils.UserData;
 import com.example.javafxdemo.utils.ClassPath;
 import com.example.javafxdemo.utils.Tool;
@@ -10,6 +11,7 @@ import com.google.gson.stream.JsonReader;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 
@@ -21,6 +23,7 @@ public class PrintPageController implements Controller {
     public Label airLineInfo;
     public Label extraPay;
     public AnchorPane checkinanchor;
+    public Button confirmCheckIn;
 
 
     public void init(){
@@ -30,9 +33,7 @@ public class PrintPageController implements Controller {
         String bn = userData.getBookingNum();
         String sn = userData.getSurname();
         String an = userData.getFlightNum();
-        //目前日期没有值，无法转换格式
-//        java.text.SimpleDateFormat formatter = new SimpleDateFormat( "yyyy-MM-dd ");
-//        String date = formatter.format(userData.getFlyingDate());
+
         String date = userData.getFlyingDate();
         String po = userData.getDelayStatus();
         String cg = userData.getLuggage();
@@ -59,7 +60,15 @@ public class PrintPageController implements Controller {
         //打印出信息文件
         //生成发给后台系统的文件
 
-        Tool tool = new Tool();
+        PrintProgress.show();
+        PrintProgress.half();
+        PrintProgress.finish();
+        sendToBack();
+
+
+    }
+
+    public void sendToBack(){
         try {
             JsonParser parser = new JsonParser();
             Gson gson = new Gson();
@@ -100,5 +109,8 @@ public class PrintPageController implements Controller {
         }
     }
 
+    public boolean printInfo(){
+        return true;
+    }
 
 }

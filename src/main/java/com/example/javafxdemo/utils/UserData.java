@@ -6,6 +6,7 @@ public class UserData {
     private String bookingNum;
     private String surname;
     private String firstname;
+    private String id;
     private String flightNum;
     private String seatNum;
     private String meal;
@@ -16,6 +17,14 @@ public class UserData {
     private String delayStatus;
     private String luggage;
     private String carryOn;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getCarryOn() {
         return carryOn;
