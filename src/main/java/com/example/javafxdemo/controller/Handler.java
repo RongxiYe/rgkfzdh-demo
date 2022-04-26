@@ -23,6 +23,7 @@ public class Handler {
             FXMLLoader printLoader = new FXMLLoader(HelloApplication.class.getResource("checkin-view.fxml"));
             FXMLLoader seatLoader = new FXMLLoader(HelloApplication.class.getResource("seat-select.fxml"));
             FXMLLoader mealLoader = new FXMLLoader(HelloApplication.class.getResource("meal-select.fxml"));
+            FXMLLoader smConfirmLoader = new FXMLLoader(HelloApplication.class.getResource("sm-confirm.fxml"));
 
             mainLoader.load();
             helloLoader.load();
@@ -30,6 +31,7 @@ public class Handler {
             printLoader.load();
             uploadLoader.load();
             mealLoader.load();
+            smConfirmLoader.load();
 
             loaders.put(MAIN,mainLoader);
             loaders.put(BOOKNUMLOGIN,helloLoader);
@@ -37,6 +39,8 @@ public class Handler {
             loaders.put(SEATSELECT,seatLoader);
             loaders.put(IDCARDLOGIN,uploadLoader);
             loaders.put(MEALSELECT,mealLoader);
+            loaders.put(SMCONFIRM,smConfirmLoader);
+
         }catch (Exception e){
             e.printStackTrace();
         }
