@@ -10,7 +10,9 @@ import com.google.gson.JsonParser;
 import javafx.scene.control.Alert;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.util.ArrayList;
 
 public class Utils {
     public static UserData login(String... args){
@@ -66,5 +68,23 @@ public class Utils {
             MainController main = (MainController) Handler.getController(Page.MAIN);
             main.loadRoot(Page.SEATSELECT);
         }
+    }
+
+    public static ArrayList<String> initialSeatPage(){
+        ArrayList<String> occupiedSeat = new ArrayList<String>();
+        File file = new File(ClassPath.classPath + CurrentData.userData.getFlightNum() + "_" + CurrentData.userData.getFlyingDate() + ".json"); //Json
+        JsonParser parser = new JsonParser();
+        JsonObject object = null;
+        try {
+            object = (JsonObject) parser.parse(new FileReader(file));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        JsonArray array = object.get("UserData").getAsJsonArray();
+        for(int i = 0; i < array.size(); i++) {
+            JsonObject subObject = array.get(i).getAsJsonObject();
+            occupiedSeat.add(subObject.get("seatNum").getAsString());
+        }
+        return occupiedSeat;
     }
 }
