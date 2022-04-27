@@ -77,14 +77,15 @@ public class Utils {
         JsonObject object = null;
         try {
             object = (JsonObject) parser.parse(new FileReader(file));
+            JsonArray array = object.get("UserData").getAsJsonArray();
+            for(int i = 0; i < array.size(); i++) {
+                JsonObject subObject = array.get(i).getAsJsonObject();
+                occupiedSeat.add(subObject.get("seatNum").getAsString());
+            }
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            System.out.println("File not exist");
+        }finally {
+            return occupiedSeat;
         }
-        JsonArray array = object.get("UserData").getAsJsonArray();
-        for(int i = 0; i < array.size(); i++) {
-            JsonObject subObject = array.get(i).getAsJsonObject();
-            occupiedSeat.add(subObject.get("seatNum").getAsString());
-        }
-        return occupiedSeat;
     }
 }
