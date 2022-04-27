@@ -20,13 +20,16 @@ public class Handler {
             FXMLLoader mainLoader = new FXMLLoader(HelloApplication.class.getResource("main.fxml"));
             FXMLLoader helloLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
             FXMLLoader uploadLoader = new FXMLLoader(HelloApplication.class.getResource("scan-id.fxml"));
+            FXMLLoader inputLoader = new FXMLLoader(HelloApplication.class.getResource("input-id.fxml"));
             FXMLLoader printLoader = new FXMLLoader(HelloApplication.class.getResource("checkin-view.fxml"));
             FXMLLoader seatLoader = new FXMLLoader(HelloApplication.class.getResource("seat-select.fxml"));
             FXMLLoader mealLoader = new FXMLLoader(HelloApplication.class.getResource("meal-select.fxml"));
             FXMLLoader smConfirmLoader = new FXMLLoader(HelloApplication.class.getResource("sm-confirm.fxml"));
 
+
             mainLoader.load();
             helloLoader.load();
+            inputLoader.load();
             seatLoader.load();
             printLoader.load();
             uploadLoader.load();
@@ -35,6 +38,7 @@ public class Handler {
 
             loaders.put(MAIN,mainLoader);
             loaders.put(BOOKNUMLOGIN,helloLoader);
+            loaders.put(IDINFOLOGIN,inputLoader);
             loaders.put(CHECKINVIEW,printLoader);
             loaders.put(SEATSELECT,seatLoader);
             loaders.put(IDCARDLOGIN,uploadLoader);

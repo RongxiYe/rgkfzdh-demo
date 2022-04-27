@@ -17,6 +17,8 @@ public class ScanFileController implements Controller {
     private Button confirmUpload;
     @FXML
     private Hyperlink booknum;
+    @FXML
+    private Hyperlink inputID;
     private File file;
 
     @Override
@@ -51,6 +53,12 @@ public class ScanFileController implements Controller {
     public void inputBooknum(){
         MainController main = (MainController) Handler.getController(Page.MAIN);
         main.loadRoot(Page.BOOKNUMLOGIN);
+    }
+
+    @FXML
+    protected void inputID(){
+        MainController main = (MainController)Handler.getController(Page.MAIN);
+        main.loadRoot(Page.IDINFOLOGIN);
     }
 
 }

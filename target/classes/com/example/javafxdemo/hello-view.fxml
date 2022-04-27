@@ -14,7 +14,7 @@
             </font></Label>
         <TextField fx:id="bn" layoutX="154.0" layoutY="99.0" prefHeight="35.0" prefWidth="304.0" />
         <Label layoutX="206.0" layoutY="172.0" text="Forget booking number? Try: " />
-        <Hyperlink layoutX="161.0" layoutY="210.0" prefHeight="52.0" prefWidth="105.0" text="Input ID info" wrapText="true" />
+        <Hyperlink fx:id="inputID" layoutX="161.0" layoutY="210.0" prefHeight="52.0" prefWidth="105.0" text="Input ID info" wrapText="true" onMouseClicked="#inputID"/>
         <Hyperlink fx:id="upload" layoutX="334.0" layoutY="210.0" prefHeight="52.0" prefWidth="124.0" text="Upload ID card" wrapText="true" onMouseClicked="#uploadId"/>
         <Button fx:id="confirmChekin" layoutX="253.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#onClickCheckInButton" prefHeight="45.0" prefWidth="105.0" text="Confirm">
             <font>

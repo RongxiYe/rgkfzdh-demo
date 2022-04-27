@@ -15,6 +15,8 @@ public class HelloController implements Controller {
     public AnchorPane helloanchor;
     @FXML
     private Hyperlink upload;
+    @FXML
+    private Hyperlink inputID;
 
     @Override
     public void init() {}
@@ -37,5 +39,10 @@ public class HelloController implements Controller {
     protected void uploadId(){
         MainController main = (MainController)Handler.getController(Page.MAIN);
         main.loadRoot(Page.IDCARDLOGIN);
+    }
+    @FXML
+    protected void inputID(){
+        MainController main = (MainController)Handler.getController(Page.MAIN);
+        main.loadRoot(Page.IDINFOLOGIN);
     }
 }
