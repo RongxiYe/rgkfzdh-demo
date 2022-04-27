@@ -30,7 +30,7 @@
         <Label alignment="TOP_LEFT" layoutX="307.0" layoutY="97.0" prefHeight="27.0" prefWidth="46.0" text="Seat">
 
         </Label>
-        <Button fx:id="confirmCheckIn" layoutX="299.0" layoutY="315.0" mnemonicParsing="false" onAction="#onClickPrintMaterialButton" prefHeight="38.0" prefWidth="205.0" text="PRINT YOUR MATERIALS" />
+        <Button fx:id="confirmChekin" layoutX="299.0" layoutY="315.0" mnemonicParsing="false" onAction="#onClickPrintMaterialButton" prefHeight="38.0" prefWidth="205.0" text="PRINT YOUR MATERIALS" />
         <Label layoutX="39.0" layoutY="138.0" text="Surname" />
         <Label layoutX="39.0" layoutY="176.0" text="Air No." />
         <Label layoutX="39.0" layoutY="210.0" prefHeight="24.0" prefWidth="61.0" text="Date" />

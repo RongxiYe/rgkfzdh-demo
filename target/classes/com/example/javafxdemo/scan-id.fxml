@@ -11,7 +11,7 @@
                 <Font size="20.0" />
             </font></Label>
         <Label layoutX="237.0" layoutY="172.0" text="Cannot upload? Try: " />
-        <Hyperlink layoutX="165.0" layoutY="210.0" prefHeight="52.0" prefWidth="105.0" text="Input ID info" wrapText="true" />
+        <Hyperlink fx:id="inputID" layoutX="165.0" layoutY="210.0" prefHeight="52.0" prefWidth="105.0" text="Input ID info" wrapText="true" onMouseClicked="#inputID"/>
         <Hyperlink fx:id="booknum" layoutX="340.0" layoutY="210.0" prefHeight="52.0" prefWidth="124.0" text="Input booking number" textAlignment="CENTER" wrapText="true" onMouseClicked="#inputBooknum"/>
         <Button fx:id="confirmUpload" layoutX="257.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#onClickConfirmUpload" prefHeight="45.0" prefWidth="105.0" text="Confirm">
             <font>

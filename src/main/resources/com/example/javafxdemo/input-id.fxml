@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="helloanchor" layoutX="150.0" layoutY="97.0" prefHeight="436.0" prefWidth="633.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.login.InputIdController">
+    <children>
+            <Label alignment="CENTER" layoutX="150.0" layoutY="46.0" text="Please Input Your ID information:">
+                <font>
+                    <Font size="20.0" />
+                </font></Label>
+            <Label layoutX="228.0" layoutY="186.0" text="Cannot Input? Try: " />
+            <Hyperlink fx:id="upload" layoutX="165.0" layoutY="210.0" onMouseClicked="#uploadId" prefHeight="52.0" prefWidth="105.0" text="Upload ID card" wrapText="true" />
+            <Hyperlink fx:id="booknum" layoutX="340.0" layoutY="210.0" onMouseClicked="#inputBooknum" prefHeight="52.0" prefWidth="124.0" text="Input booking number" textAlignment="CENTER" wrapText="true" />
+            <Button fx:id="confirmInput" layoutX="257.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#onClickConfirmInput" prefHeight="45.0" prefWidth="105.0" text="Confirm">
+                <font>
+                    <Font size="18.0" />
+                </font></Button>
+      <TextField fx:id="surname" layoutX="260.0" layoutY="90.0" prefHeight="14.0" prefWidth="194.0" />
+      <Text layoutX="144.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Surname:" />
+      <Text layoutX="144.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID no." wrappingWidth="73.3603515625" />
+      <TextField fx:id="idnumber" layoutX="260.0" layoutY="141.0" prefHeight="27.0" prefWidth="194.0" />
+        </children>
+
+</AnchorPane>
