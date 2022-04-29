@@ -9,6 +9,10 @@ public enum Page {
             return null;
         }
     },
+    FIRSTPAGE{
+        public Page next(){return null;}
+        public Page back(){return null;}
+    },
     BOOKNUMLOGIN{
         public Page next(){
             return null;

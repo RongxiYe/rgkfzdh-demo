@@ -35,6 +35,6 @@
         <Label fx:id="DessertDrink" layoutX="400.0" layoutY="94.0" prefHeight="75.0" prefWidth="160.0" />
         <Button fx:id="choosestaple" layoutX="60.0" layoutY="189.0" mnemonicParsing="false" text="Staple Food" onMouseClicked="#onClickChooseStaple"/>
         <Button fx:id="choosehalal" layoutX="260.0" layoutY="189.0" mnemonicParsing="false" text="Halal Food" onMouseClicked="#onClickChooseHalal"/>
-        <Button fx:id="chooseDAD" layoutX="400.0" layoutY="189.0" mnemonicParsing="false" text="Dessert and Drinks (Additional payment)" onMouseClicked="#onClickChooseDAD"/>
+        <Button fx:id="chooseset" layoutX="400.0" layoutY="189.0" mnemonicParsing="false" onMouseClicked="#onClickChooseSET" text="Set Meal (Additional payment)" />
     </children>
 </AnchorPane>

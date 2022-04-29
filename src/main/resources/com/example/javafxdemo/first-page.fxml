@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:id="firstpageanchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.FirstPage.FirstPageController">
+    <children>
+        <Button onMouseClicked="#onClickButton" layoutX="240.0" layoutY="323.0" mnemonicParsing="false" text="CLICK TO CHECK IN" />
+    </children>
+</AnchorPane>
+
