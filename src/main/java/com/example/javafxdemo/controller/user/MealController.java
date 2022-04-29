@@ -46,6 +46,7 @@ public class MealController implements Controller {
         userData.setMeal(mealselection);
     }
 
+
     @FXML public void onClickChooseHalal(){
         //令。。。等于halal
         mealselection = "halal";
