@@ -26,8 +26,6 @@ public class MealController implements Controller {
 
     public String mealselection;
 
-
-
     public void init(){
 
 
