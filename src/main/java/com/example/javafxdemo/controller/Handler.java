@@ -18,6 +18,7 @@ public class Handler {
         loaders = new HashMap<>();
         try{
             FXMLLoader mainLoader = new FXMLLoader(HelloApplication.class.getResource("main.fxml"));
+            FXMLLoader firstPageLoader = new FXMLLoader(HelloApplication.class.getResource("first-page.fxml"));
             FXMLLoader helloLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
             FXMLLoader uploadLoader = new FXMLLoader(HelloApplication.class.getResource("scan-id.fxml"));
             FXMLLoader inputLoader = new FXMLLoader(HelloApplication.class.getResource("input-id.fxml"));
@@ -26,7 +27,7 @@ public class Handler {
             FXMLLoader mealLoader = new FXMLLoader(HelloApplication.class.getResource("meal-select.fxml"));
             FXMLLoader smConfirmLoader = new FXMLLoader(HelloApplication.class.getResource("sm-confirm.fxml"));
 
-
+            firstPageLoader.load();
             mainLoader.load();
             helloLoader.load();
             inputLoader.load();
@@ -36,6 +37,7 @@ public class Handler {
             mealLoader.load();
             smConfirmLoader.load();
 
+            loaders.put(FIRSTPAGE,firstPageLoader);
             loaders.put(MAIN,mainLoader);
             loaders.put(BOOKNUMLOGIN,helloLoader);
             loaders.put(IDINFOLOGIN,inputLoader);
