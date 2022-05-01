@@ -7,8 +7,8 @@ import com.example.javafxdemo.data.CurrentData;
 import com.example.javafxdemo.utils.Page;
 import com.example.javafxdemo.utils.UserData;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 
 public class MealController implements Controller {
@@ -21,6 +21,8 @@ public class MealController implements Controller {
     private Button choosehalal;
     @FXML
     private Button chooseDAD;
+    @FXML
+    private Label mealInfo;
 
     public AnchorPane mealAnchor;
 

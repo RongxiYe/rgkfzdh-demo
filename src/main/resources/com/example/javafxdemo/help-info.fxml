@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="helpinfoanchor" layoutX="150.0" layoutY="97.0" prefHeight="436.0" prefWidth="633.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.MainController">
+<children>
+    <Label alignment="CENTER" layoutX="209.0" layoutY="23.0" prefHeight="27.0" prefWidth="216.0" text="Help Information" textOverrun="CENTER_ELLIPSIS">
+        <font>
+            <Font size="20.0" />
+        </font>
+    </Label>
+    <Label alignment="CENTER" layoutX="189.0" layoutY="136.0" prefHeight="24.0" prefWidth="256.0" text="Customer Service Hotline" textFill="#1aa7ec">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Label>
+      <Label alignment="CENTER" layoutX="189.0" layoutY="206.0" prefHeight="24.0" prefWidth="256.0" text="1234 - 5678901" textFill="#1aa7ec">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+</children>
+</AnchorPane>

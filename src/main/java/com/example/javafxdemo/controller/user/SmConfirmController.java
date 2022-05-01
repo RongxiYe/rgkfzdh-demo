@@ -7,7 +7,6 @@ import com.example.javafxdemo.data.CurrentData;
 import com.example.javafxdemo.utils.Page;
 import com.example.javafxdemo.utils.UserData;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
@@ -31,6 +30,12 @@ public class SmConfirmController implements Controller {
         seatInfo.setText(userData.getSeatNum());
         mealInfo.setText(userData.getMeal());
         //show extra money how?
+
+        //if (meal = "extra"){
+        //进行金钱的计算，seat&meal (mealextra： + $5)
+        // }
+        //..........
+
         if(true){
             //have extra payments
             smConfirmAnchor.getChildren().get(5).setVisible(false);

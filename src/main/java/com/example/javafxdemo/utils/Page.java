@@ -100,6 +100,14 @@ public enum Page {
         public Page back(){
             return null;
         }
+    },
+    HELPINFO{
+        public Page next(){
+            return null;
+        }
+        public Page back(){
+            return null;
+        }
     };
     public abstract Page next();
     public abstract Page back();

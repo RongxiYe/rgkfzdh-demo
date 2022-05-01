@@ -26,6 +26,7 @@ public class Handler {
             FXMLLoader seatLoader = new FXMLLoader(HelloApplication.class.getResource("seat-select.fxml"));
             FXMLLoader mealLoader = new FXMLLoader(HelloApplication.class.getResource("meal-select.fxml"));
             FXMLLoader smConfirmLoader = new FXMLLoader(HelloApplication.class.getResource("sm-confirm.fxml"));
+            FXMLLoader helpInfoLoader = new FXMLLoader(HelloApplication.class.getResource("help-info.fxml"));
 
             firstPageLoader.load();
             mainLoader.load();
@@ -36,6 +37,7 @@ public class Handler {
             uploadLoader.load();
             mealLoader.load();
             smConfirmLoader.load();
+            helpInfoLoader.load();
 
             loaders.put(FIRSTPAGE,firstPageLoader);
             loaders.put(MAIN,mainLoader);
@@ -46,6 +48,7 @@ public class Handler {
             loaders.put(IDCARDLOGIN,uploadLoader);
             loaders.put(MEALSELECT,mealLoader);
             loaders.put(SMCONFIRM,smConfirmLoader);
+            loaders.put(HELPINFO, helpInfoLoader);
 
         }catch (Exception e){
             e.printStackTrace();
