@@ -40,7 +40,7 @@ public class MainController implements Controller{
         Handler.getController(page).init();
         CurrentData.currentPage = page;
         int num = mainanchor.getChildren().size();
-        if (page==Page.BOOKNUMLOGIN){
+        if (page==Page.FIRSTPAGE){
             mainanchor.getChildren().get(num-2).setVisible(false);
         }else{
             mainanchor.getChildren().get(num-2).setVisible(true);
@@ -63,7 +63,8 @@ public class MainController implements Controller{
 
     @FXML
     public void help(){
-
+        MainController main = (MainController)Handler.getController(Page.MAIN);
+        main.loadRoot(Page.HELPINFO);
     }
 
     @FXML
