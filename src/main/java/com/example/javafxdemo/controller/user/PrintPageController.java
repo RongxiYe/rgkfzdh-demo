@@ -2,14 +2,15 @@ package com.example.javafxdemo.controller.user;
 
 import com.example.javafxdemo.controller.Controller;
 import com.example.javafxdemo.data.CurrentData;
+import com.example.javafxdemo.utils.ClassPath;
 import com.example.javafxdemo.utils.PrintProgress;
 import com.example.javafxdemo.utils.UserData;
-import com.example.javafxdemo.utils.ClassPath;
-import com.example.javafxdemo.utils.Tool;
-import com.google.gson.*;
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import com.google.gson.stream.JsonReader;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -22,6 +23,7 @@ public class PrintPageController implements Controller {
     @FXML
     public Label airLineInfo;
     public Label extraPay;
+    public Label payment;
     public AnchorPane checkinanchor;
     public Button confirmCheckIn;
 
@@ -48,6 +50,27 @@ public class PrintPageController implements Controller {
         //airLineInfo和extraPay换行显示data
         airLineInfo.setText(string1);
         extraPay.setText(string2);
+        if(ml == "Set Meal" && stn.charAt(1) == '1'){
+            String pays = "50$";
+            String paym = "5$";
+            String stringpay = pays + "\n" + "\n" + "\n" + paym;
+            payment.setText(stringpay);
+        }else if(ml != "Set Meal" && stn.charAt(1) == '1'){
+            String pays = "50$";
+            String paym = "0$";
+            String stringpay = pays + "\n" + "\n" + "\n" + paym;
+            payment.setText(stringpay);
+        }else if(ml == "Set Meal" && stn.charAt(1) != '1'){
+            String pays = "0$";
+            String paym = "5$";
+            String stringpay = pays + "\n" + "\n" + "\n" + paym;
+            payment.setText(stringpay);
+        }else{
+            String pays = "0$";
+            String paym = "0$";
+            String stringpay = pays + "\n" + "\n" + "\n" + paym;
+            payment.setText(stringpay);
+        }
     }
 
     @FXML

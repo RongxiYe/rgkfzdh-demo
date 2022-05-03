@@ -22,11 +22,11 @@
                 <Font size="18.0" />
             </font>
         </Label>
-        <Label alignment="CENTER" layoutX="111.0" layoutY="227.0" prefHeight="62.0" prefWidth="402.0" text="Please click to input your credit card information to complete extra payment." textAlignment="CENTER" textFill="RED" wrapText="true" />
-        <Button fx:id="inputInfo" layoutX="212.0" layoutY="308.0" mnemonicParsing="false" onMouseClicked="#onClickInputButton" prefHeight="38.0" prefWidth="205.0" text="Input Information" />
-        <Button fx:id="confirmSelect" layoutX="212.0" layoutY="308.0" mnemonicParsing="false" onMouseClicked="#onClickConfirmButton" prefHeight="38.0" prefWidth="205.0" text="Input Information" />
-        <Label fx:id="seatInfo" layoutX="21.0" layoutY="94.0" prefHeight="75.0" prefWidth="259.0" />
-        <Label fx:id="mealInfo" layoutX="365.0" layoutY="91.0" prefHeight="75.0" prefWidth="211.0" />
+        <Button fx:id="confirmSelect" layoutX="212.0" layoutY="308.0" prefHeight="38.0" prefWidth="205.0" mnemonicParsing="false" onMouseClicked="#onClickConfirmButton" text="Confirm and Payment" />
+        <Label fx:id="seatInfo" layoutX="41.0" layoutY="90.0" prefHeight="40.0" prefWidth="250.0" />
+        <Label fx:id="mealInfo" layoutX="365.0" layoutY="90.0" prefHeight="40.0" prefWidth="250.0" />
+        <Label fx:id="seatselect" layoutX="41.0" layoutY="134.0" prefHeight="40.0" prefWidth="250.0" />
+        <Label fx:id="mealselect" layoutX="365.0" layoutY="134.0" prefHeight="40.0" prefWidth="250.0" />
       <Button layoutX="117.0" layoutY="189.0" mnemonicParsing="false" text="Change" onMouseClicked="#onClickChangeSeat"/>
       <Button layoutX="430.0" layoutY="189.0" mnemonicParsing="false" text="Change" onMouseClicked="#onClickChangeMeal"/>
     </children>
