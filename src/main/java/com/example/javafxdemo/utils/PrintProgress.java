@@ -1,5 +1,6 @@
 package com.example.javafxdemo.utils;
 
+import com.example.javafxdemo.controller.user.PrintPageController;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -22,6 +23,7 @@ public class PrintProgress {
         btn1.setOnMouseClicked(event -> {
             System.out.println("ok");
             stage.close();
+            PrintPageController.finish = 1;
         });
         vBox.getChildren().addAll(label,pb);
         vBox.setAlignment(Pos.CENTER);

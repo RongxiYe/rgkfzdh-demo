@@ -25,9 +25,8 @@ public class MainController implements Controller{
 
 
     public void init(){
-
-        AnchorPane root = Handler.getRoot(Page.FIRSTPAGE);
-        Controller hello = Handler.getController(Page.FIRSTPAGE);
+        AnchorPane root = Handler.getRoot(Page.BOOKNUMLOGIN);
+        Controller hello = Handler.getController(Page.BOOKNUMLOGIN);
         hello.init();
         mainanchor.getChildren().add(root);
         int num = mainanchor.getChildren().size();
