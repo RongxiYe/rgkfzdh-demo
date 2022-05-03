@@ -1,8 +1,11 @@
 package com.example.javafxdemo.controller.user;
 
 import com.example.javafxdemo.controller.Controller;
+import com.example.javafxdemo.controller.Handler;
+import com.example.javafxdemo.controller.MainController;
 import com.example.javafxdemo.data.CurrentData;
 import com.example.javafxdemo.utils.ClassPath;
+import com.example.javafxdemo.utils.Page;
 import com.example.javafxdemo.utils.PrintProgress;
 import com.example.javafxdemo.utils.UserData;
 import com.google.gson.Gson;
@@ -26,6 +29,8 @@ public class PrintPageController implements Controller {
     public Label payment;
     public AnchorPane checkinanchor;
     public Button confirmCheckIn;
+
+    public static int finish = 0;
 
 
     public void init(){
@@ -82,11 +87,33 @@ public class PrintPageController implements Controller {
 
         //打印出信息文件
         //生成发给后台系统的文件
-
         PrintProgress.show();
         PrintProgress.half();
         PrintProgress.finish();
+        Runnable r = new Runnable() {
+            @Override
+            public void run() {
+                while(finish!=1){}
+                Thread.currentThread().notifyAll();
+            }
+        };
+        Thread th = new Thread(r);
+        try{
+            Thread.currentThread().wait();
+        }catch (Exception e){
+
+        }
+        th.start();
         sendToBack();
+
+        alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setHeaderText("Thanks!");
+        alert.setContentText("Thank you for using smart check-in system!");
+        alert.showAndWait();
+        CurrentData.userData = null;
+        finish = 0;
+        MainController main = (MainController) Handler.getController(Page.MAIN);
+        main.loadRoot(Page.HELPINFO);
 
 
     }
@@ -133,6 +160,8 @@ public class PrintPageController implements Controller {
     }
 
     public boolean printInfo(){
+        //收集userdata中所需的信息，并生成一个图片文件
+        //将图片文件显示在屏幕上（机票）
         return true;
     }
 

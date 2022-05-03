@@ -15,9 +15,9 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) {
         Handler.stage = stage;
-        AnchorPane root = Handler.getRoot(Page.MAIN);
-        Controller main = Handler.getController(Page.MAIN);
-        main.init();
+        AnchorPane root = Handler.getRoot(Page.FIRSTPAGE);
+        Controller first = Handler.getController(Page.FIRSTPAGE);
+        first.init();
         Scene scene = new Scene(root, 900, 600);
         stage.setTitle("Smart Check In!");
         stage.setScene(scene);

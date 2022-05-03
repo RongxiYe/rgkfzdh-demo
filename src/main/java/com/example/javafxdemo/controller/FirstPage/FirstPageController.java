@@ -4,6 +4,8 @@ import com.example.javafxdemo.controller.Controller;
 import com.example.javafxdemo.controller.Handler;
 import com.example.javafxdemo.controller.MainController;
 import com.example.javafxdemo.utils.Page;
+import javafx.fxml.FXML;
+import javafx.scene.layout.AnchorPane;
 
 public class FirstPageController implements Controller {
 
@@ -12,9 +14,12 @@ public class FirstPageController implements Controller {
 
     }
 
+    @FXML
     public void onClickButton(){
-        MainController main = (MainController) Handler.getController(Page.MAIN);
-        main.loadRoot(Page.BOOKNUMLOGIN);
+        AnchorPane root = Handler.getRoot(Page.MAIN);
+        Controller main = Handler.getController(Page.MAIN);
+        Handler.stage.getScene().setRoot(root);
+        main.init();
     }
 
 
