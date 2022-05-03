@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="helloanchor" layoutX="150.0" layoutY="97.0" prefHeight="436.0" prefWidth="633.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.user.CreditInfoController">
+    <children>
+            <Label alignment="CENTER" layoutX="150.0" layoutY="46.0" text="Please Input Your Credit Card information:">
+                <font>
+                    <Font size="20.0" />
+                </font></Label>
+
+            <Button fx:id="confirmInput" layoutX="257.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#onClickConfirmInput" prefHeight="45.0" prefWidth="105.0" text="Confirm">
+                <font>
+                    <Font size="18.0" />
+                </font></Button>
+        <Text layoutX="144.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please input your Credit Card ID :" />
+        <TextField fx:id="cardID" layoutX="260.0" layoutY="140.0" prefHeight="14.0" prefWidth="194.0" />
+        <Text layoutX="144.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please input your Password :" />
+        <PasswordField fx:id="password" layoutX="260.0" layoutY="227.0" prefHeight="27.0" prefWidth="194.0" />
+        </children>
+
+</AnchorPane>

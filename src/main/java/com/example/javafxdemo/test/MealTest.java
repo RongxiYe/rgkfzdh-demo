@@ -1,13 +1,6 @@
 package com.example.javafxdemo.test;
 
-import com.example.javafxdemo.HelloApplication;
-import com.example.javafxdemo.controller.MainController;
-import com.example.javafxdemo.controller.user.MealController;
-import com.example.javafxdemo.utils.UserData;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;

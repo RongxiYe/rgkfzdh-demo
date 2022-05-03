@@ -27,6 +27,7 @@ public class Handler {
             FXMLLoader mealLoader = new FXMLLoader(HelloApplication.class.getResource("meal-select.fxml"));
             FXMLLoader smConfirmLoader = new FXMLLoader(HelloApplication.class.getResource("sm-confirm.fxml"));
             FXMLLoader helpInfoLoader = new FXMLLoader(HelloApplication.class.getResource("help-info.fxml"));
+            FXMLLoader creditinfoLoader = new FXMLLoader(HelloApplication.class.getResource("credit-info.fxml"));
 
             firstPageLoader.load();
             mainLoader.load();
@@ -38,6 +39,7 @@ public class Handler {
             mealLoader.load();
             smConfirmLoader.load();
             helpInfoLoader.load();
+            creditinfoLoader.load();
 
             loaders.put(FIRSTPAGE,firstPageLoader);
             loaders.put(MAIN,mainLoader);
@@ -49,6 +51,7 @@ public class Handler {
             loaders.put(MEALSELECT,mealLoader);
             loaders.put(SMCONFIRM,smConfirmLoader);
             loaders.put(HELPINFO, helpInfoLoader);
+            loaders.put(CREDITINFO, creditinfoLoader);
 
         }catch (Exception e){
             e.printStackTrace();

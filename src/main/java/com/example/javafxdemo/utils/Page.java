@@ -85,6 +85,14 @@ public enum Page {
             return null;
         }
     },
+    CREDITINFO{
+        public Page next(){
+            return null;
+        }
+        public Page back(){
+            return SMCONFIRM;
+        }
+    },
     PRINT{
         public Page next(){
             return null;

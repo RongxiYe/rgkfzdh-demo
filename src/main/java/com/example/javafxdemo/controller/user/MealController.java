@@ -7,9 +7,13 @@ import com.example.javafxdemo.data.CurrentData;
 import com.example.javafxdemo.utils.Page;
 import com.example.javafxdemo.utils.UserData;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+
+import java.util.Optional;
 
 public class MealController implements Controller {
 
@@ -34,6 +38,15 @@ public class MealController implements Controller {
     }
 
     @FXML public void onClickConfirmButton(){
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Confirmation");
+        alert.setHeaderText("Please Confirm Your Meal");
+        if(mealselection == "Set Meal"){
+            alert.setContentText("Meal: " + mealselection + "\n" + "EXTRA PAYMENT: 5$");
+        }else{
+            alert.setContentText("Meal: " + mealselection + "\n" + "NO EXTRA PAYMENT");
+        }
+        Optional<ButtonType> result = alert.showAndWait();
         //跳转到smconfrim界面
         MainController main = (MainController)Handler.getController(Page.MAIN);
         main.loadRoot(Page.SMCONFIRM);
@@ -57,7 +70,7 @@ public class MealController implements Controller {
     @FXML public void onClickChooseSET(){
         //如果选择了套餐，则需要额外加钱，先将值赋给meal，
         //跳转到smconfirm界面后，通过判断值是否为extra，如果是extra，则在smconfirm界面计算金额
-        mealselection = "extra";
+        mealselection = "Set Meal";
         UserData userData = CurrentData.userData;
         userData.setMeal(mealselection);
     }
