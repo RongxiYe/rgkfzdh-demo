@@ -26,7 +26,7 @@
             <Font size="18.0" />
         </font>
     </Label>
-    <Button fx:id="mealconfirm" layoutX="200.0" layoutY="308.0" mnemonicParsing="false" onMouseClicked="#onClickConfirmButton" prefHeight="38.0" prefWidth="205.0" text="Next Page" />
+    <Button fx:id="nextpage" layoutX="200.0" layoutY="308.0" mnemonicParsing="false" onMouseClicked="#onClickNextPageButton" prefHeight="38.0" prefWidth="205.0" text="NEXT PAGE" />
     <Label fx:id="Staple" layoutX="40.0" layoutY="94.0" prefHeight="75.0" prefWidth="160.0" />
     <Label fx:id="Halal" layoutX="220.0" layoutY="94.0" prefHeight="75.0" prefWidth="160.0" />
     <Label fx:id="SetMeal" layoutX="400.0" layoutY="94.0" prefHeight="75.0" prefWidth="160.0" />

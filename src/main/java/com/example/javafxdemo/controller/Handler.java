@@ -41,15 +41,15 @@ public class Handler {
             helpInfoLoader.load();
             creditinfoLoader.load();
 
-            loaders.put(FIRSTPAGE,firstPageLoader);
-            loaders.put(MAIN,mainLoader);
-            loaders.put(BOOKNUMLOGIN,helloLoader);
-            loaders.put(IDINFOLOGIN,inputLoader);
-            loaders.put(CHECKINVIEW,printLoader);
-            loaders.put(SEATSELECT,seatLoader);
-            loaders.put(IDCARDLOGIN,uploadLoader);
-            loaders.put(MEALSELECT,mealLoader);
-            loaders.put(SMCONFIRM,smConfirmLoader);
+            loaders.put(FIRSTPAGE, firstPageLoader);
+            loaders.put(MAIN, mainLoader);
+            loaders.put(BOOKNUMLOGIN, helloLoader);
+            loaders.put(IDINFOLOGIN, inputLoader);
+            loaders.put(CHECKINVIEW, printLoader);
+            loaders.put(SEATSELECT, seatLoader);
+            loaders.put(IDCARDLOGIN, uploadLoader);
+            loaders.put(MEALSELECT, mealLoader);
+            loaders.put(SMCONFIRM, smConfirmLoader);
             loaders.put(HELPINFO, helpInfoLoader);
             loaders.put(CREDITINFO, creditinfoLoader);
 

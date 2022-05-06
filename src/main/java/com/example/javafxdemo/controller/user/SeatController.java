@@ -46,7 +46,6 @@ public class SeatController implements Controller {
                         rect.setDisable(true);
                         rect.setFill(Color.RED);
                 }
-
         }
 
         @FXML
@@ -59,11 +58,11 @@ public class SeatController implements Controller {
                 }else{
                         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                         alert.setTitle("Confirmation");
-                        alert.setHeaderText("Please Confirm Your Seat");
+                        alert.setHeaderText("Please Check Out Your Seat Information");
                         if(tempSeatNum.charAt(1) == '1'){
                                 alert.setContentText("SEAT: " + tempSeatNum + "\n" + "EXTRA PAYMENT: 50$");
                         }else{
-                                alert.setContentText("SEAT: " + tempSeatNum + "\n" + "EXTRA PAYMENT: 0");
+                                alert.setContentText("SEAT: " + tempSeatNum + "\n" + "NO EXTRA PAYMENT");
                         }
                         Optional<ButtonType> result = alert.showAndWait();
                         if (result.get() == ButtonType.OK){

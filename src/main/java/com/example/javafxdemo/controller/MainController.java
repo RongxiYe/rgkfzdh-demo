@@ -62,8 +62,11 @@ public class MainController implements Controller{
 
     @FXML
     public void help(){
-        MainController main = (MainController)Handler.getController(Page.MAIN);
-        main.loadRoot(Page.HELPINFO);
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Help Information");
+        alert.setHeaderText("Customer Service Hotline");
+        alert.setContentText("1234 - 5678960");
+        Optional<ButtonType> result = alert.showAndWait();
     }
 
     @FXML

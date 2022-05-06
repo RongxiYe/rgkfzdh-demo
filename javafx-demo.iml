@@ -42,14 +42,6 @@
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.32" level="project" />
     <orderEntry type="library" name="Maven: com.beust:jcommander:1.78" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.webjars:jquery:3.5.1" level="project" />
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/gson-2.2.4.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
+    <orderEntry type="library" name="gson-2.2.4" level="project" />
   </component>
 </module>
