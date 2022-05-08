@@ -22,8 +22,6 @@
                 <Font size="18.0" />
             </font>
         </Label>
-        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="282.0" layoutY="270.0" prefHeight="24.0" prefWidth="95.0" text="ID card Info:" textFill="RED" />
-        <Label alignment="CENTER" layoutX="416.0" layoutY="270.0" prefHeight="19.0" prefWidth="116.0" text="NOT CHECKED!" textFill="RED" />
         <Label alignment="TOP_LEFT" contentDisplay="TOP" layoutX="39.0" layoutY="98.0" prefHeight="19.0" prefWidth="95.0" text="Booking No." textOverrun="WORD_ELLIPSIS" wrapText="true">
 
         </Label>

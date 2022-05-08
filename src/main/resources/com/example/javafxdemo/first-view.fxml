@@ -2,36 +2,26 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
-<AnchorPane fx:id="firstViewAnchor" layoutX="150.0" layoutY="97.0" prefHeight="436.0" prefWidth="633.0"
-            style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.javafxdemo.controller.user.FirstViewController">
-    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="26.0" layoutY="28.0"
-           text="Please confirm your flight information:" textOverrun="CENTER_ELLIPSIS">
+<AnchorPane fx:id="firstViewAnchor" layoutX="150.0" layoutY="97.0" prefHeight="436.0" prefWidth="633.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.user.FirstViewController">
+    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="26.0" layoutY="28.0" text="Please confirm your flight information:" textOverrun="CENTER_ELLIPSIS">
         <font>
-            <Font size="20.0"/>
+            <Font size="20.0" />
         </font>
     </Label>
-    <Label alignment="TOP_LEFT" layoutX="103.0" layoutY="70.0" prefHeight="338.0" prefWidth="487.0"/>
-    <Label alignment="TOP_LEFT" layoutX="85.0" layoutY="90.0" prefHeight="27.0" prefWidth="87.0" text="Surname:"/>
-    <Label layoutX="86.0" layoutY="125.0" prefHeight="27.0" prefWidth="100.0" text="First name:"/>
-    <Label layoutX="85.0" layoutY="162.0" text="Flight Number:"/>
-    <Label layoutX="87.0" layoutY="199.0" text="From:"/>
-    <Label layoutX="85.0" layoutY="239.0" text="To:"/>
-    <Label layoutX="87.0" layoutY="274.0" text="Departure Time:"/>
-    <Label layoutX="86.0" layoutY="313.0" text="Carry-on Baggage:"/>
-    <Label layoutX="85.0" layoutY="390.0" text="Delay:"/>
-    <Label layoutX="86.0" layoutY="349.0" text="Check-in Baggage:"/>
-    <Label fx:id="infoContent" alignment="TOP_LEFT" layoutX="248.0" layoutY="90.0" prefHeight="321.0" prefWidth="118.0"
-           wrapText="true"/>
+    <Label alignment="TOP_LEFT" layoutX="103.0" layoutY="70.0" prefHeight="338.0" prefWidth="487.0" />
+    <Label alignment="TOP_LEFT" layoutX="85.0" layoutY="90.0" prefHeight="27.0" prefWidth="87.0" text="Surname:" />
+    <Label layoutX="86.0" layoutY="123.0" prefHeight="27.0" prefWidth="100.0" text="First name:" />
+    <Label layoutX="85.0" layoutY="162.0" text="Flight Number:" />
+    <Label layoutX="87.0" layoutY="199.0" text="From:" />
+    <Label layoutX="85.0" layoutY="239.0" text="To:" />
+    <Label layoutX="87.0" layoutY="278.0" text="Departure Time:" />
+    <Label layoutX="86.0" layoutY="317.0" text="Carry-on Baggage:" />
+    <Label layoutX="85.0" layoutY="394.0" text="Delay:" />
+    <Label layoutX="86.0" layoutY="350.0" text="Check-in Baggage:" />
+    <Label fx:id="infoContent" alignment="TOP_LEFT" layoutX="248.0" layoutY="90.0" prefHeight="344.0" prefWidth="118.0" wrapText="true" />
 
-    <Label alignment="TOP_LEFT" layoutX="402.0" layoutY="88.0" prefHeight="303.0" prefWidth="100.0"
-           text="TIPS: If you have luggage to check in which you didn't reserve, please go to the counter!"
-           textFill="#f50505" wrapText="true"/>
-    <Button fx:id="fvConfirm" layoutX="402.0" layoutY="343.0" mnemonicParsing="false" prefHeight="60.0"
-            prefWidth="153.0" text="Go to Select Seat and Meal" wrapText="true" onAction="#ConfirmButton"/>
+    <Label alignment="TOP_LEFT" layoutX="402.0" layoutY="88.0" prefHeight="93.0" prefWidth="181.0" text="TIPS: If you have luggage to check in which you didn't reserve, please go to the counter!" textAlignment="CENTER" textFill="#f50505" wrapText="true" />
+    <Button fx:id="fvConfirm" layoutX="402.0" layoutY="343.0" mnemonicParsing="false" onAction="#ConfirmButton" prefHeight="60.0" prefWidth="153.0" text="Go to Select Seat and Meal" textAlignment="CENTER" wrapText="true" />
 </AnchorPane>

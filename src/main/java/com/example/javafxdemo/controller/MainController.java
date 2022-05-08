@@ -39,7 +39,7 @@ public class MainController implements Controller{
         Handler.getController(page).init();
         CurrentData.currentPage = page;
         int num = mainanchor.getChildren().size();
-        if (page==Page.FIRSTPAGE){
+        if (page==Page.IDINFOLOGIN||page==Page.BOOKNUMLOGIN||page==Page.IDCARDLOGIN){
             mainanchor.getChildren().get(num-2).setVisible(false);
         }else{
             mainanchor.getChildren().get(num-2).setVisible(true);
@@ -54,8 +54,9 @@ public class MainController implements Controller{
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Would you like to exit?", ButtonType.YES, ButtonType.NO);
         alert.setHeaderText("Exit");
         Optional<ButtonType> result = alert.showAndWait();
-        if(result.get()==ButtonType.YES)
+        if(result.get()==ButtonType.YES){
             System.exit(0);
+        }
 
     }
 

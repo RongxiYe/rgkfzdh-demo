@@ -66,7 +66,7 @@ public class Utils {
             //给userData赋值
             CurrentData.userData = ud;
             MainController main = (MainController) Handler.getController(Page.MAIN);
-            main.loadRoot(Page.SEATSELECT);
+            main.loadRoot(Page.FIRSTVIEW);
         }
     }
 
@@ -74,7 +74,7 @@ public class Utils {
         ArrayList<String> occupiedSeat = new ArrayList<String>();
         File file = new File(ClassPath.classPath + CurrentData.userData.getFlightNum() + "_" + CurrentData.userData.getFlyingDate() + ".json"); //Json
         JsonParser parser = new JsonParser();
-        JsonObject object = null;
+        JsonObject object;
         try {
             object = (JsonObject) parser.parse(new FileReader(file));
             JsonArray array = object.get("UserData").getAsJsonArray();
