@@ -2,9 +2,15 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="firstpageanchor" layoutX="150.0" layoutY="97.0" prefHeight="436.0" prefWidth="633.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.FirstPage.FirstPageController">
+<AnchorPane fx:id="firstpageanchor" prefHeight="600.0" prefWidth="900.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.FirstPage.FirstPageController">
     <children>
-        <Button layoutX="252.0" layoutY="324.0" mnemonicParsing="false" onMouseClicked="#onClickButton" text="CLICK TO CHECK IN" />
+        <Button layoutX="361.0" layoutY="399.0" mnemonicParsing="false" onMouseClicked="#onClickButton" text="CLICK TO CHECK IN" />
+      <Label layoutX="222.0" layoutY="184.0" text="Welcome to our smart check in software!" textAlignment="CENTER" textFill="#2b8ce0">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>
