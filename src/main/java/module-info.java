@@ -11,6 +11,7 @@ module com.example.javafxdemo {
     requires eu.hansolo.tilesfx;
     requires gson;
     requires java.sql;
+    requires java.desktop;
 
     opens com.example.javafxdemo to javafx.fxml, javafx.graphics;
     exports com.example.javafxdemo;

@@ -90,6 +90,7 @@ public class PrintPageController implements Controller {
     }
 
     public void sendToBack(){
+        //还没有考虑重复登录的问题
         try {
             JsonParser parser = new JsonParser();
             Gson gson = new Gson();

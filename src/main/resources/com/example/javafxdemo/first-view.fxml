@@ -5,7 +5,7 @@
 <?import javafx.scene.text.*?>
 
 <AnchorPane fx:id="firstViewAnchor" layoutX="150.0" layoutY="97.0" prefHeight="436.0" prefWidth="633.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.user.FirstViewController">
-    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="26.0" layoutY="28.0" text="Please confirm your flight information:" textOverrun="CENTER_ELLIPSIS">
+    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="131.0" layoutY="28.0" text="Please confirm your flight information:" textOverrun="CENTER_ELLIPSIS">
         <font>
             <Font size="20.0" />
         </font>
@@ -19,9 +19,9 @@
     <Label layoutX="87.0" layoutY="278.0" text="Departure Time:" />
     <Label layoutX="86.0" layoutY="317.0" text="Carry-on Baggage:" />
     <Label layoutX="85.0" layoutY="394.0" text="Delay:" />
-    <Label layoutX="86.0" layoutY="350.0" text="Check-in Baggage:" />
+    <Label layoutX="86.0" layoutY="354.0" text="Check-in Baggage:" />
     <Label fx:id="infoContent" alignment="TOP_LEFT" layoutX="248.0" layoutY="90.0" prefHeight="344.0" prefWidth="118.0" wrapText="true" />
 
-    <Label alignment="TOP_LEFT" layoutX="402.0" layoutY="88.0" prefHeight="93.0" prefWidth="181.0" text="TIPS: If you have luggage to check in which you didn't reserve, please go to the counter!" textAlignment="CENTER" textFill="#f50505" wrapText="true" />
+    <Label alignment="TOP_LEFT" layoutX="402.0" layoutY="171.0" prefHeight="93.0" prefWidth="181.0" text="TIPS: If you have luggage to check in which you didn't reserve, please go to the counter!" textAlignment="CENTER" textFill="#f50505" wrapText="true" />
     <Button fx:id="fvConfirm" layoutX="402.0" layoutY="343.0" mnemonicParsing="false" onAction="#ConfirmButton" prefHeight="60.0" prefWidth="153.0" text="Go to Select Seat and Meal" textAlignment="CENTER" wrapText="true" />
 </AnchorPane>

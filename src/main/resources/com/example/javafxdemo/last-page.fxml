@@ -6,7 +6,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.user.LastPageController">
     <children>
-        <Button layoutX="361.0" layoutY="399.0" mnemonicParsing="false" onMouseClicked="#onClickButton" text="CLICK TO EXIT" />
+        <Button layoutX="390.0" layoutY="398.0" mnemonicParsing="false" onMouseClicked="#onClickButton" text="CLICK TO EXIT" />
         <Label layoutX="222.0" layoutY="184.0" text="Thanks for using smart check in software!" textAlignment="CENTER" textFill="#2b8ce0">
             <font>
                 <Font name="System Bold" size="22.0" />

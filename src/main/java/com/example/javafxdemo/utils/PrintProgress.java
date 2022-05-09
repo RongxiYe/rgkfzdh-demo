@@ -20,7 +20,7 @@ import static com.example.javafxdemo.utils.PrintProgress.runTask;
 
 public class PrintProgress {
     public static ProgressBar pb = new ProgressBar(0);
-    public static VBox vBox = new VBox();
+    public static VBox vBox = new VBox(20);
     public static Button btn1 = new Button("OK, I have taken all my materials.");
     public static Stage stage = new Stage();
     public static Label label = new Label();
@@ -29,6 +29,8 @@ public class PrintProgress {
     static {
         stage.initModality(Modality.APPLICATION_MODAL);
         label.setText("Do not leave before all materials have been printed!");
+        pb.setPrefWidth(200);
+        pb.setPrefHeight(30);
         btn1.setOnMouseClicked(event -> {
             System.out.println("ok");
             stage.close();
@@ -40,7 +42,8 @@ public class PrintProgress {
             MainController main = (MainController) Handler.getController(Page.MAIN);
             main.loadRoot(Page.LASTPAGE);
         });
-        vBox.getChildren().addAll(label,pb);
+        vBox.getChildren().addAll(label,pb,btn1);
+        btn1.setVisible(false);
         vBox.setAlignment(Pos.CENTER);
         stage.setScene(scene);
         stage.setTitle("Printing...");
@@ -94,7 +97,7 @@ public class PrintProgress {
     }
     public static void taskComplete() {
         pb.setDisable(true);
-        vBox.getChildren().add(btn1);
+        btn1.setVisible(true);
     }
     private static class MyTask extends Task {
         @Override
@@ -112,15 +115,21 @@ public class PrintProgress {
                     updateValue(i*30);
                     if(i==1){
                         UserData userData = CurrentData.userData;
+                        //print boarding pass
                         String sn = userData.getSurname();
+                        String fn = userData.getFirstname();
                         String an = userData.getFlightNum();
                         String date = userData.getFlyingDate();
                         String stn = userData.getSeatNum();
                         String ml = userData.getMeal();
-                        String co = userData.getCarryOn();
 
-                        String string1 = sn+"\n"+"\n"+an+"\n"+"\n"+date+"\n"+co;
-                        String string2 = stn+"\n"+"\n"+"\n"+ml;
+
+                        //print carry-on tag
+                        //print check in baggage ticket
+                        String co = userData.getCarryOn();
+                        String ba = userData.getLuggage();
+
+
                     }
                     Thread.sleep(50);
                     i++;

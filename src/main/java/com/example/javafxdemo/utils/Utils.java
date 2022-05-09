@@ -9,10 +9,14 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import javafx.scene.control.Alert;
 
+import javax.imageio.ImageIO;
+import java.awt.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.awt.image.BufferedImage;
 
 public class Utils {
     public static UserData login(String... args){
@@ -88,4 +92,39 @@ public class Utils {
             return occupiedSeat;
         }
     }
+
+    /**
+     * @param backgroundPath
+     * @param message
+     * @param outPutPath
+     * @throws IOException
+     */
+    public static void overlapImage(String backgroundPath, String message, String outPutPath,int x,int y) throws IOException {
+
+        BufferedImage backgroundImage = resizeImage(941, 331, ImageIO.read(new File(backgroundPath)));
+        Graphics2D graphics = backgroundImage.createGraphics();
+
+        graphics.setColor(Color.black);
+        graphics.setFont(new Font("Calibri", Font.BOLD, 22));
+        graphics.drawString(message, x, y);
+        graphics.dispose();
+
+        // 输出新的图片
+        ImageIO.write(backgroundImage, "png", new File(outPutPath));
+    }
+
+    /**
+     * resize image
+     *
+     * @param width
+     * @param height
+     * @param bufferedImage
+     * @return
+     */
+    private static BufferedImage resizeImage(int width, int height, BufferedImage bufferedImage) {
+        BufferedImage newBufferedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+        newBufferedImage.getGraphics().drawImage(bufferedImage.getScaledInstance(width, height, Image.SCALE_SMOOTH), 0, 0, null);
+        return newBufferedImage;
+    }
+
 }
