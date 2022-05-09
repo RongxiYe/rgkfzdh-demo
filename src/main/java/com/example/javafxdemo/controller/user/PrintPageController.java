@@ -5,10 +5,7 @@ import com.example.javafxdemo.data.CurrentData;
 import com.example.javafxdemo.utils.ClassPath;
 import com.example.javafxdemo.utils.PrintProgress;
 import com.example.javafxdemo.utils.UserData;
-import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
+import com.google.gson.*;
 import com.google.gson.stream.JsonReader;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -90,7 +87,6 @@ public class PrintPageController implements Controller {
     }
 
     public void sendToBack(){
-        //还没有考虑重复登录的问题
         try {
             JsonParser parser = new JsonParser();
             Gson gson = new Gson();
@@ -107,8 +103,16 @@ public class PrintPageController implements Controller {
             try{
                 object = gson.fromJson(new JsonReader(new FileReader(file, StandardCharsets.UTF_8)),JsonObject.class);
                 JsonArray array = object.get("UserData").getAsJsonArray();
-                System.out.println(array);
+//                System.out.println(array);
+                for(JsonElement jo :array){
+                    if(jo.getAsJsonObject().get("bookingNum").getAsString().equals(CurrentData.userData.getBookingNum())){
+                        array.remove(jo);
+                        break;
+                    }
+                }
                 array.add(subObject);
+
+
                 object.add("UserData", array);
             }catch (Exception e){
                 object = new JsonObject();
