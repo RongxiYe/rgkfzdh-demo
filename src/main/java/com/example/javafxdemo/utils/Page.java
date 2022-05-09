@@ -93,14 +93,6 @@ public enum Page {
             return SMCONFIRM;
         }
     },
-    PRINT{
-        public Page next(){
-            return null;
-        }
-        public Page back(){
-            return null;
-        }
-    },
     LASTPAGE{
         public Page next(){
             return null;

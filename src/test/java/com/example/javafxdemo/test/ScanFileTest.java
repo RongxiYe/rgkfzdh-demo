@@ -1,11 +1,11 @@
 package com.example.javafxdemo.test;
 
-import com.example.javafxdemo.HelloApplication;
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
+
+import com.example.javafxdemo.utils.ClassPath;
+import com.example.javafxdemo.utils.Utils;
 import org.junit.Test;
+
+import java.io.IOException;
 
 
 public class ScanFileTest {

@@ -22,17 +22,20 @@ public class Handler {
             FXMLLoader helloLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
             FXMLLoader uploadLoader = new FXMLLoader(HelloApplication.class.getResource("scan-id.fxml"));
             FXMLLoader inputLoader = new FXMLLoader(HelloApplication.class.getResource("input-id.fxml"));
+            FXMLLoader firstViewLoader = new FXMLLoader(HelloApplication.class.getResource("first-view.fxml"));
             FXMLLoader printLoader = new FXMLLoader(HelloApplication.class.getResource("checkin-view.fxml"));
             FXMLLoader seatLoader = new FXMLLoader(HelloApplication.class.getResource("seat-select.fxml"));
             FXMLLoader mealLoader = new FXMLLoader(HelloApplication.class.getResource("meal-select.fxml"));
             FXMLLoader smConfirmLoader = new FXMLLoader(HelloApplication.class.getResource("sm-confirm.fxml"));
             FXMLLoader helpInfoLoader = new FXMLLoader(HelloApplication.class.getResource("help-info.fxml"));
             FXMLLoader creditinfoLoader = new FXMLLoader(HelloApplication.class.getResource("credit-info.fxml"));
+            FXMLLoader lastLoader = new FXMLLoader(HelloApplication.class.getResource("last-page.fxml"));
 
             firstPageLoader.load();
             mainLoader.load();
             helloLoader.load();
             inputLoader.load();
+            firstViewLoader.load();
             seatLoader.load();
             printLoader.load();
             uploadLoader.load();
@@ -40,6 +43,7 @@ public class Handler {
             smConfirmLoader.load();
             helpInfoLoader.load();
             creditinfoLoader.load();
+            lastLoader.load();
 
             loaders.put(FIRSTPAGE, firstPageLoader);
             loaders.put(MAIN, mainLoader);
@@ -52,6 +56,8 @@ public class Handler {
             loaders.put(SMCONFIRM, smConfirmLoader);
             loaders.put(HELPINFO, helpInfoLoader);
             loaders.put(CREDITINFO, creditinfoLoader);
+            loaders.put(FIRSTVIEW,firstViewLoader);
+            loaders.put(LASTPAGE,lastLoader);
 
         }catch (Exception e){
             e.printStackTrace();

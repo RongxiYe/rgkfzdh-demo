@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="mealAnchor" layoutX="150.0" layoutY="97.0" prefHeight="400.0" prefWidth="600.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.user.MealController">
+<AnchorPane fx:id="mealAnchor" layoutX="150.0" layoutY="97.0" prefHeight="400.0" prefWidth="600.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.user.MealController">
 <children>
     <Label alignment="CENTER" contentDisplay="CENTER" layoutX="200.0" layoutY="23.0" text="Select The Meal You Want" textOverrun="CENTER_ELLIPSIS">
         <font>
@@ -21,7 +21,7 @@
             <Font size="18.0" />
         </font>
     </Label>
-    <Label alignment="CENTER" layoutX="420.0" layoutY="60.0" text="Set Meal">
+    <Label alignment="CENTER" layoutX="435.0" layoutY="60.0" text="Set Meal">
         <font>
             <Font size="18.0" />
         </font>
@@ -31,8 +31,8 @@
     <Label fx:id="Halal" layoutX="220.0" layoutY="94.0" prefHeight="75.0" prefWidth="160.0" />
     <Label fx:id="SetMeal" layoutX="400.0" layoutY="94.0" prefHeight="75.0" prefWidth="160.0" />
     <Button fx:id="choosestaple" layoutX="60.0" layoutY="189.0" mnemonicParsing="false" onMouseClicked="#onClickChooseStaple" text="Staple Food" />
-    <Button fx:id="choosehalal" layoutX="260.0" layoutY="189.0" mnemonicParsing="false" onMouseClicked="#onClickChooseHalal" text="Halal Food" />
-    <Button fx:id="chooseset" layoutX="400.0" layoutY="189.0" mnemonicParsing="false" onMouseClicked="#onClickChooseSET" text="Set Meal (Additional payment)" />
+    <Button fx:id="choosehalal" layoutX="252.0" layoutY="189.0" mnemonicParsing="false" onMouseClicked="#onClickChooseHalal" text="Halal Food" />
+    <Button fx:id="chooseset" layoutX="402.0" layoutY="189.0" mnemonicParsing="false" onMouseClicked="#onClickChooseSET" text="Set Meal (Extra Money)" />
     <Accordion layoutX="-9.0" layoutY="84.0" />
 </children>
 </AnchorPane>
