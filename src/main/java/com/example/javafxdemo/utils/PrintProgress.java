@@ -107,33 +107,55 @@ public class PrintProgress {
             updateValue(0);
             Thread.sleep(2000);
             try {
-                //这里使用while循环表示执行的任务，每循环一次更新一次label
-                int i = 0;
-                while (i < 3) {
-                    updateProgress(30*i, 100);
-                    updateMessage("Printing...  " + i + "% ");
-                    updateValue(i*30);
-                    if(i==1){
+
+                    updateProgress(30, 100);
+                    updateMessage("Printing...  " + 30 + "% ");
+                    updateValue(30);
+
                         UserData userData = CurrentData.userData;
                         //print boarding pass
-                        String sn = userData.getSurname();
-                        String fn = userData.getFirstname();
-                        String an = userData.getFlightNum();
-                        String date = userData.getFlyingDate();
-                        String stn = userData.getSeatNum();
-                        String ml = userData.getMeal();
+                        String[] str0 = new String[9];
+                        str0[0] = userData.getFirstname()+" "+userData.getSurname();
+                        str0[1] = userData.getSeatNum();
+                        str0[2] = userData.getMeal();
+                        str0[3] = userData.getFlyingDate();
+                        str0[4] = "";
+                        str0[5] = userData.getFlightNum();
+                        str0[6] = userData.getDepAddr();
+                        str0[7] = userData.getDesAddr();
+                        if(userData.getSeatNum().charAt(1)=='1'){
+                            str0[8] = "FIRST CLASS";
+                        }else{
+                            str0[8] = "ECONOMY";
+                        }
+                        Utils.printBoarding(str0);
+                updateProgress(60, 100);
+                updateMessage("Printing...  " + 60 + "% ");
+                updateValue(60);
 
-
-                        //print carry-on tag
-                        //print check in baggage ticket
-                        String co = userData.getCarryOn();
-                        String ba = userData.getLuggage();
-
-
+                //print carry-on tag
+                    if (userData.getCarryOn().equalsIgnoreCase("true")) {
+                        String[] str1 = new String[3];
+                        str1[0] = userData.getFirstname() + " " + userData.getSurname();
+                        str1[1] = userData.getDepAddr();
+                        str1[2] = userData.getDesAddr();
+                        Utils.printTag(str1);
                     }
-                    Thread.sleep(50);
-                    i++;
-                }
+
+                updateProgress(90, 100);
+                updateMessage("Printing...  " + 90 + "% ");
+                updateValue(90);
+                    //print check in baggage ticket
+                    if (!userData.getLuggage().equalsIgnoreCase("None")) {
+                        String[] str2 = new String[4];
+                        str2[0] = userData.getFirstname() + " " + userData.getSurname();
+                        str2[1] = userData.getDepAddr();
+                        str2[2] = userData.getDesAddr();
+                        str2[3] = userData.getFlightNum();
+                        Utils.printTicket(str2);
+                    }
+
+
                 updateProgress(100,100);
                 updateValue(100);
                 updateMessage("Printing succeed！");
