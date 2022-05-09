@@ -13,7 +13,7 @@
 		"totalTime":"1.5h",
 		"delayStatus":"No",
 		"luggage":"1.5kg",
-		"carryOn": "123"
+		"carryOn": "true"
 	},
 	{
 		"bookingNum":"002",
@@ -29,7 +29,7 @@
 		"totalTime":"2.5h",
 		"delayStatus":"No",
 		"luggage":"2kg",
-		"carryOn": "123"
+		"carryOn": "false"
 	},
 	{
 		"bookingNum":"003",
@@ -45,6 +45,6 @@
 		"totalTime":"2h",
 		"delayStatus":"No",
 		"luggage":"1kg",
-		"carryOn": "123"
+		"carryOn": "true"
 	}]
 }

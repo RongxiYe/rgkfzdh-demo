@@ -102,8 +102,9 @@ public class Utils {
         overlapImage(backgroundPath, message, outPutPath, x, y, fontSize,Color.black);
     }
 
+
     public static void overlapImage(String backgroundPath, String message, String outPutPath,int x,int y, int fontSize,Color c) throws IOException{
-        BufferedImage backgroundImage = resizeImage(941, 331, ImageIO.read(new File(backgroundPath)));
+        BufferedImage backgroundImage = ImageIO.read(new File(backgroundPath));
         Graphics2D graphics = backgroundImage.createGraphics();
 
         graphics.setColor(c);
@@ -116,19 +117,6 @@ public class Utils {
     }
 
 
-    /**
-     * resize image
-     *
-     * @param width
-     * @param height
-     * @param bufferedImage
-     * @return
-     */
-    private static BufferedImage resizeImage(int width, int height, BufferedImage bufferedImage) {
-        BufferedImage newBufferedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
-        newBufferedImage.getGraphics().drawImage(bufferedImage.getScaledInstance(width, height, Image.SCALE_SMOOTH), 0, 0, null);
-        return newBufferedImage;
-    }
 
     public static void printBoarding(String[] str) throws IOException {
         String backgroundPath = ClassPath.classPath+ "boarding.png";
@@ -162,9 +150,25 @@ public class Utils {
     }
 
     public static void printTag(String[] str) throws IOException{
+        String backgroundPath = ClassPath.classPath+ "tag.png";
+        String outPutPath = ClassPath.classPath+ "user-tag.png";
+        Utils.overlapImage(backgroundPath, str[0], outPutPath,136,130,25);
+
+        Utils.overlapImage(outPutPath, str[1], outPutPath,136,169,25);
+
+        Utils.overlapImage(outPutPath, str[2], outPutPath,136,210,25);
 
     }
     public static void printTicket(String[] str) throws IOException{
+        String backgroundPath = ClassPath.classPath+ "ticket.png";
+        String outPutPath = ClassPath.classPath+ "user-ticket.png";
+        Utils.overlapImage(backgroundPath, str[0], outPutPath,87,169,22);
+
+        Utils.overlapImage(outPutPath, str[1], outPutPath,91,194,22);
+
+        Utils.overlapImage(outPutPath, str[2], outPutPath,85,121,22);
+
+        Utils.overlapImage(outPutPath, str[3], outPutPath,58,146,22);
 
     }
 
