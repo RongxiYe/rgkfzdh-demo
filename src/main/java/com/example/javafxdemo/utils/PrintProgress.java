@@ -142,6 +142,9 @@ public class PrintProgress {
                 updateProgress(60, 100);
                 updateMessage("Printing...  " + 60 + "% ");
                 updateValue(60);
+                Image img1 = new Image(new File(ClassPath.classPath+"user-boarding.png").toURI().toString());
+                board.setImage(img1);
+                board.setVisible(true);
 
                 //print carry-on tag
                     if (userData.getCarryOn().equalsIgnoreCase("true")) {
@@ -150,6 +153,9 @@ public class PrintProgress {
                         str1[1] = userData.getDepAddr();
                         str1[2] = userData.getDesAddr();
                         Utils.printTag(str1);
+                        Image img2 = new Image(new File(ClassPath.classPath+"user-tag.png").toURI().toString());
+                        tag.setImage(img2);
+                        tag.setVisible(true);
                     }
 
                 updateProgress(90, 100);
@@ -163,21 +169,14 @@ public class PrintProgress {
                         str2[2] = userData.getDesAddr();
                         str2[3] = userData.getFlightNum();
                         Utils.printTicket(str2);
+                        Image img3 = new Image(new File(ClassPath.classPath+"user-ticket.png").toURI().toString());
+                        ticket.setImage(img3);
+                        ticket.setVisible(true);
                     }
 
                 updateProgress(100,100);
                 updateValue(100);
                 updateMessage("Printing succeed！");
-
-                Image img1 = new Image(new File(ClassPath.classPath+"user-boarding.png").toURI().toString());
-                Image img2 = new Image(new File(ClassPath.classPath+"user-tag.png").toURI().toString());
-                Image img3 = new Image(new File(ClassPath.classPath+"user-ticket.png").toURI().toString());
-                board.setImage(img1);
-                tag.setImage(img2);
-                ticket.setImage(img3);
-                board.setVisible(true);
-                tag.setVisible(true);
-                ticket.setVisible(true);
 
                 return 1;
             } catch (Exception e) {

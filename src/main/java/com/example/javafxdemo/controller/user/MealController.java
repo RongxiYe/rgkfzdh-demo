@@ -76,26 +76,18 @@ public class MealController implements Controller {
     }
 
     @FXML public void onClickChooseStaple(){
-        //令。。。等于normal,修改userdata
-        mealType = "normal";
-        UserData userData = CurrentData.userData;
-        userData.setMeal(mealType);
+        CurrentData.userData.setMeal("normal");
     }
 
 
     @FXML public void onClickChooseHalal(){
-        //令。。。等于halal
-        mealType = "halal";
-        UserData userData = CurrentData.userData;
-        userData.setMeal(mealType);
+        CurrentData.userData.setMeal("halal");
     }
 
     @FXML public void onClickChooseSET(){
         //如果选择了套餐，则需要额外加钱，先将值赋给meal，
         //跳转到smconfirm界面后，通过判断值是否为extra，如果是extra，则在smconfirm界面计算金额
-        mealType = "Set Meal";
-        UserData userData = CurrentData.userData;
-        userData.setMeal(mealType);
+        CurrentData.userData.setMeal("Set Meal");
     }
 
 
