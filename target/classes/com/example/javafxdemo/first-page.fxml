@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="firstpageanchor" prefHeight="600.0" prefWidth="900.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.FirstPage.FirstPageController">
+<AnchorPane fx:id="firstpageanchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.FirstPage.FirstPageController">
     <children>
-        <Button layoutX="361.0" layoutY="399.0" mnemonicParsing="false" onMouseClicked="#onClickButton" text="CLICK TO CHECK IN" />
-      <Label layoutX="222.0" layoutY="184.0" text="Welcome to our smart check in software!" textAlignment="CENTER" textFill="#2b8ce0">
+        <Button layoutX="361.0" layoutY="432.0" mnemonicParsing="false" onMouseClicked="#onClickButton" text="CLICK TO CHECK IN" />
+      <Label layoutX="216.0" layoutY="37.0" text="Welcome to our smart check in software!" textAlignment="CENTER" textFill="#2b8ce0">
          <font>
             <Font name="System Bold" size="22.0" />
          </font>
       </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="291.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../java/com/example/javafxdemo/picture/plane.jpg" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>
