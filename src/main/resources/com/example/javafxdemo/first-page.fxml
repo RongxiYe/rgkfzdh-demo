@@ -1,27 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="firstpageanchor" prefHeight="458.0" prefWidth="758.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.FirstPage.FirstPageController">
+<AnchorPane fx:id="firstpageanchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.FirstPage.FirstPageController">
     <children>
-      <ImageView fitHeight="331.0" fitWidth="650.0" layoutX="108.0" layoutY="119.0" opacity="0.65">
-         <image>
-            <Image url="@airport.jpeg" />
-         </image>
-      </ImageView>
-      <Label layoutX="135.0" layoutY="215.0" prefHeight="24.0" prefWidth="596.0" text="Welcome to our smart check in software!" textAlignment="CENTER" textFill="#2b8ce0">
+        <Button layoutX="365.0" layoutY="474.0" mnemonicParsing="false" onMouseClicked="#onClickButton" text="CLICK TO CHECK IN" />
+      <Label layoutX="216.0" layoutY="67.0" text="Welcome to our smart check in software!" textAlignment="CENTER" textFill="#2b8ce0">
          <font>
-            <Font name="Copperplate Gothic Bold" size="25.0" />
+            <Font name="System Bold" size="22.0" />
          </font>
       </Label>
-        <Button layoutX="329.0" layoutY="328.0" mnemonicParsing="false" onMouseClicked="#onClickButton" prefHeight="35.0" prefWidth="208.0" text="CLICK TO CHECK IN">
-         <font>
-            <Font name="Verdana" size="18.0" />
-         </font>
-      </Button>
+      <ImageView fitHeight="422.0" fitWidth="555.0" layoutX="167.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@plane.png" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>
