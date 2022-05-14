@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.user.LastPageController">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.user.LastPageController">
     <children>
-        <Button layoutX="390.0" layoutY="398.0" mnemonicParsing="false" onMouseClicked="#onClickButton" text="CLICK TO EXIT" />
-        <Label layoutX="222.0" layoutY="184.0" text="Thanks for using smart check in software!" textAlignment="CENTER" textFill="#2b8ce0">
+      <ImageView fitHeight="389.0" fitWidth="663.0" layoutX="165.0" layoutY="146.0" opacity="0.77">
+         <image>
+            <Image url="@airport.jpeg" />
+         </image>
+      </ImageView>
+        <Button layoutX="421.0" layoutY="401.0" mnemonicParsing="false" onMouseClicked="#onClickButton" prefHeight="35.0" prefWidth="149.0" text="CLICK TO EXIT">
+         <font>
+            <Font name="Verdana" size="13.0" />
+         </font></Button>
+        <Label layoutX="203.0" layoutY="272.0" text="Thanks for using smart check in software!" textAlignment="CENTER" textFill="#2b8ce0">
             <font>
-                <Font name="System Bold" size="22.0" />
+                <Font name="Copperplate Gothic Bold" size="24.0" />
             </font>
         </Label>
     </children>
