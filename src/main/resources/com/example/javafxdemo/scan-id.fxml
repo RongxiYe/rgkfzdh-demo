@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="helloanchor" layoutX="150.0" layoutY="97.0" prefHeight="436.0" prefWidth="633.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.login.ScanFileController">
+<AnchorPane fx:id="helloanchor" layoutX="150.0" layoutY="97.0" prefHeight="436.0" prefWidth="633.0" style="-fx-border-color: #FFC78E;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.login.ScanFileController">
     <children>
         <Label alignment="CENTER" layoutX="166.0" layoutY="45.0" text="Please Upload Your ID Card:">
             <font>
                 <Font size="20.0" />
             </font></Label>
         <Label layoutX="237.0" layoutY="172.0" text="Cannot upload? Try: " />
-        <Hyperlink fx:id="inputID" layoutX="165.0" layoutY="210.0" prefHeight="52.0" prefWidth="105.0" text="Input ID info" wrapText="true" onMouseClicked="#inputID"/>
-        <Hyperlink fx:id="booknum" layoutX="340.0" layoutY="210.0" prefHeight="52.0" prefWidth="124.0" text="Input booking number" textAlignment="CENTER" wrapText="true" onMouseClicked="#inputBooknum"/>
+        <Hyperlink fx:id="inputID" layoutX="165.0" layoutY="210.0" onMouseClicked="#inputID" prefHeight="52.0" prefWidth="105.0" text="Input ID info" wrapText="true" />
+        <Hyperlink fx:id="booknum" layoutX="340.0" layoutY="210.0" onMouseClicked="#inputBooknum" prefHeight="52.0" prefWidth="124.0" text="Input booking number" textAlignment="CENTER" wrapText="true" />
         <Button fx:id="confirmUpload" layoutX="257.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#onClickConfirmUpload" prefHeight="45.0" prefWidth="105.0" text="Confirm">
             <font>
                 <Font size="18.0" />
             </font></Button>
-      <Button fx:id="uploadId" layoutX="232.0" layoutY="108.0" mnemonicParsing="false" text="CLICK TO UPLOAD!" onMouseClicked="#onClickUploadId"/>
+      <Button fx:id="uploadId" layoutX="232.0" layoutY="108.0" mnemonicParsing="false" onMouseClicked="#onClickUploadId" text="CLICK TO UPLOAD!" />
     </children>
 </AnchorPane>
