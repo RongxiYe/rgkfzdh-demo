@@ -39,7 +39,7 @@
             <Font name="Bookman Old Style Bold Italic" size="18.0" />
         </font>
       </Button>
-      <Label layoutX="52.0" layoutY="254.0" text="Notice: These selections cannot be changed after comfirmed!" textAlignment="CENTER" textFill="RED" wrapText="true">
+      <Label layoutX="52.0" layoutY="254.0" text="Notice: These selections CANNOT be changed after comfirmed!" textAlignment="CENTER" textFill="RED" wrapText="true">
          <font>
             <Font name="Bookman Old Style Bold Italic" size="17.0" />
          </font>
