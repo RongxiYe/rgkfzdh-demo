@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="helloanchor" layoutX="150.0" layoutY="97.0" prefHeight="436.0" prefWidth="633.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.user.CreditInfoController">
+<AnchorPane fx:id="helloanchor" layoutX="150.0" layoutY="97.0" prefHeight="436.0" prefWidth="633.0" style="-fx-border-color: #47b0a5;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.user.CreditInfoController">
     <children>
-            <Label alignment="CENTER" layoutX="150.0" layoutY="46.0" text="Please Input Your Credit Card information:">
+            <Label alignment="CENTER" layoutX="111.0" layoutY="46.0" text="Please Input Your Credit Card information:" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)">
                 <font>
-                    <Font size="20.0" />
+                    <Font name="Bookman Old Style Bold Italic" size="20.0" />
                 </font></Label>
 
-            <Button fx:id="confirmInput" layoutX="257.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#onClickConfirmInput" prefHeight="45.0" prefWidth="105.0" text="Confirm">
+            <Button fx:id="confirmInput" layoutX="257.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#onClickConfirmInput" prefHeight="45.0" prefWidth="105.0" text="Confirm" style="-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%);-fx-text-fill: #ffff">
                 <font>
-                    <Font size="18.0" />
+                    <Font name="Bookman Old Style Bold Italic" size="18.0" />
                 </font></Button>
-        <Text layoutX="144.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please input your Credit Card ID :" />
+        <Label layoutX="144.0" layoutY="101.0" text="Please input your Credit Card ID :" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)">
+        <font>
+            <Font name="Bookman Old Style Bold Italic" size="17.0" />
+        </font>
+        </Label>
         <TextField fx:id="cardID" layoutX="260.0" layoutY="140.0" prefHeight="14.0" prefWidth="194.0" />
-        <Text layoutX="144.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please input your Password :" />
+        <Label layoutX="144.0" layoutY="187.0" text="Please input your Password :" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)">
+        <font>
+            <Font name="Bookman Old Style Bold Italic" size="17.0" />
+        </font>
+        </Label>
         <PasswordField fx:id="password" layoutX="260.0" layoutY="227.0" prefHeight="27.0" prefWidth="194.0" />
         </children>
 
