@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
@@ -9,9 +8,9 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="mainanchor" prefHeight="600.0" prefWidth="900.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.MainController">
+<AnchorPane fx:id="mainanchor" prefHeight="600.0" prefWidth="900.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.MainController">
     <children>
-        <Button fx:id="help" contentDisplay="RIGHT" graphicTextGap="12.0" layoutX="20.0" layoutY="478.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#help" prefHeight="36.0" prefWidth="106.0" text="HELP">
+        <Button fx:id="help" contentDisplay="RIGHT" graphicTextGap="12.0" layoutX="20.0" layoutY="478.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#help" prefHeight="36.0" prefWidth="106.0" style="-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%);-fx-text-fill: #ffff;" text="HELP">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -19,7 +18,7 @@
             <Blend opacity="0.65" />
          </effect>
          <font>
-            <Font name="Verdana" size="16.0" />
+            <Font name="Bookman Old Style Bold Italic" size="16.0" />
          </font>
          <graphic>
             <ImageView blendMode="SRC_ATOP" fitHeight="25.0" fitWidth="25.0">
@@ -27,12 +26,17 @@
                   <Image url="@search.png" />
                </image>
             </ImageView>
-         </graphic></Button>
+         </graphic>
+        </Button>
         <Circle fill="DODGERBLUE" layoutX="70.0" layoutY="61.0" radius="38.0" stroke="BLACK" strokeType="INSIDE" />
-        <Text fx:id="day" layoutX="705.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ddmmyy " wrappingWidth="173.62695503234863" />
-        <Button fx:id="exit" contentDisplay="RIGHT" graphicTextGap="12.0" layoutX="20.0" layoutY="432.0" mnemonicParsing="false" onMouseClicked="#exit" prefHeight="29.0" prefWidth="106.0" text="EXIT">
+        <Label fx:id="day" layoutX="705.0" layoutY="45.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="ddmmyy " >
+                <font>
+                    <Font name="Bookman Old Style Bold Italic" size="16.0" />
+                </font>
+        </Label>
+        <Button fx:id="exit" contentDisplay="RIGHT" graphicTextGap="12.0" layoutX="20.0" layoutY="432.0" mnemonicParsing="false" onMouseClicked="#exit" prefHeight="36.0" prefWidth="106.0" style="-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%);-fx-text-fill: #ffff" text="EXIT">
          <font>
-            <Font name="Verdana" size="16.0" />
+            <Font name="Bookman Old Style Bold Italic" size="16.0" />
          </font>
          <graphic>
             <ImageView blendMode="SRC_ATOP" fitHeight="25.0" fitWidth="25.0">
@@ -41,9 +45,10 @@
                </image>
             </ImageView>
          </graphic></Button>
-        <Button fx:id="back" layoutX="20.0" layoutY="384.0" mnemonicParsing="false" onMouseClicked="#back" prefHeight="29.0" prefWidth="106.0" text="GO BACK">
+        <Button fx:id="back" layoutX="20.0" layoutY="385.0" mnemonicParsing="false" onMouseClicked="#back" prefHeight="36.0" prefWidth="106.0" style="-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%);-fx-text-fill: #ffff;" text="GO BACK">
          <font>
-            <Font name="Verdana" size="16.0" />
-         </font></Button>
+            <Font name="Bookman Old Style Bold Italic" size="16.0" />
+         </font>
+        </Button>
     </children>
 </AnchorPane>

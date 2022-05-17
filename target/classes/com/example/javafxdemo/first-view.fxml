@@ -1,27 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="firstViewAnchor" layoutX="150.0" layoutY="97.0" prefHeight="436.0" prefWidth="633.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.user.FirstViewController">
-    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="131.0" layoutY="28.0" text="Please confirm your flight information:" textOverrun="CENTER_ELLIPSIS">
-        <font>
-            <Font size="20.0" />
-        </font>
-    </Label>
-    <Label alignment="TOP_LEFT" layoutX="103.0" layoutY="70.0" prefHeight="338.0" prefWidth="487.0" />
-    <Label alignment="TOP_LEFT" layoutX="85.0" layoutY="90.0" prefHeight="27.0" prefWidth="87.0" text="Surname:" />
-    <Label layoutX="86.0" layoutY="123.0" prefHeight="27.0" prefWidth="100.0" text="First name:" />
-    <Label layoutX="85.0" layoutY="162.0" text="Flight Number:" />
-    <Label layoutX="87.0" layoutY="199.0" text="From:" />
-    <Label layoutX="85.0" layoutY="239.0" text="To:" />
-    <Label layoutX="87.0" layoutY="278.0" text="Departure Time:" />
-    <Label layoutX="86.0" layoutY="317.0" text="Carry-on Baggage:" />
-    <Label layoutX="85.0" layoutY="394.0" text="Delay:" />
-    <Label layoutX="86.0" layoutY="354.0" text="Check-in Baggage:" />
-    <Label fx:id="infoContent" alignment="TOP_LEFT" layoutX="248.0" layoutY="90.0" prefHeight="344.0" prefWidth="118.0" wrapText="true" />
-
-    <Label alignment="TOP_LEFT" layoutX="402.0" layoutY="171.0" prefHeight="93.0" prefWidth="181.0" text="TIPS: If you have luggage to check in which you didn't reserve, please go to the counter!" textAlignment="CENTER" textFill="#f50505" wrapText="true" />
-    <Button fx:id="fvConfirm" layoutX="402.0" layoutY="343.0" mnemonicParsing="false" onAction="#ConfirmButton" prefHeight="60.0" prefWidth="153.0" text="Go to Select Seat and Meal" textAlignment="CENTER" wrapText="true" />
+<AnchorPane fx:id="firstViewAnchor" layoutX="150.0" layoutY="97.0" prefHeight="436.0" prefWidth="633.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.user.FirstViewController" style="-fx-border-color: #47b0a5;">
+   <children>
+       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="131.0" layoutY="28.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Please confirm your flight information:" textOverrun="CENTER_ELLIPSIS">
+           <font>
+               <Font name="Bookman Old Style Bold Italic" size="20.0" />
+           </font>
+       </Label>
+       <Label alignment="TOP_LEFT" layoutX="85.0" layoutY="90.0" prefHeight="27.0" prefWidth="87.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Surname:">
+           <font>
+               <Font name="Bookman Old Style Bold" size="15.0" />
+           </font>
+       </Label>
+       <Label layoutX="86.0" layoutY="123.0" prefHeight="27.0" prefWidth="100.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="First name:">
+           <font>
+               <Font name="Bookman Old Style Bold" size="15.0" />
+           </font>
+       </Label>
+       <Label layoutX="85.0" layoutY="162.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Flight Number:">
+           <font>
+               <Font name="Bookman Old Style Bold" size="15.0" />
+           </font>
+       </Label>
+       <Label layoutX="87.0" layoutY="199.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="From:">
+           <font>
+               <Font name="Bookman Old Style Bold" size="15.0" />
+           </font>
+       </Label>
+       <Label layoutX="85.0" layoutY="239.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="To:">
+           <font>
+               <Font name="Bookman Old Style Bold" size="15.0" />
+           </font>
+       </Label>
+       <Label layoutX="87.0" layoutY="278.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Departure Time:">
+           <font>
+               <Font name="Bookman Old Style Bold" size="15.0" />
+           </font>
+       </Label>
+       <Label layoutX="86.0" layoutY="317.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Carry-on Baggage:">
+           <font>
+               <Font name="Bookman Old Style Bold" size="15.0" />
+           </font>
+       </Label>
+       <Label layoutX="85.0" layoutY="394.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Delay:">
+           <font>
+               <Font name="Bookman Old Style Bold" size="15.0" />
+           </font>
+       </Label>
+       <Label layoutX="86.0" layoutY="354.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Check-in Baggage:">
+           <font>
+               <Font name="Bookman Old Style Bold" size="15.0" />
+           </font>
+       </Label>
+       <Label fx:id="infoContent" alignment="TOP_LEFT" layoutX="248.0" layoutY="90.0" prefHeight="344.0" prefWidth="118.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" wrapText="true">
+           <font>
+               <Font name="Bookman Old Style Bold" size="16.0" />
+           </font>
+       </Label>
+   
+       <Label alignment="CENTER" layoutX="402.0" layoutY="135.0" mouseTransparent="true" prefHeight="141.0" prefWidth="181.0" text="TIPS: If you have luggage to check in which you didn't reserve, please go to the counter!" textAlignment="CENTER" textFill="#f50505" wrapText="true" AnchorPane.topAnchor="135.0">
+         <padding>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </padding>
+         <effect>
+            <Blend />
+         </effect>
+         <font>
+            <Font name="Bookman Old Style Bold Italic" size="19.0" />
+         </font></Label>
+       <Button fx:id="fvConfirm" cacheHint="QUALITY" layoutX="408.0" layoutY="343.0" mnemonicParsing="false" onAction="#ConfirmButton" prefHeight="60.0" prefWidth="153.0" style="-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%);-fx-text-fill: #ffff" text="Go to Select Seat and Meal" textAlignment="CENTER" wrapText="true">
+       <font>
+           <Font name="Bookman Old Style Bold Italic" size="14.0" />
+       </font>
+       </Button>
+   </children>
 </AnchorPane>

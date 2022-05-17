@@ -106,6 +106,7 @@ public class PrintPageController implements Controller {
 //                System.out.println(array);
                 for(JsonElement jo :array){
                     if(jo.getAsJsonObject().get("bookingNum").getAsString().equals(CurrentData.userData.getBookingNum())){
+                        array.remove(jo);
                         break;
                     }
                 }

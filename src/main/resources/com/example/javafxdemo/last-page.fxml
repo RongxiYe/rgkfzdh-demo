@@ -5,20 +5,20 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.user.LastPageController">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.user.LastPageController">
     <children>
-      <ImageView fitHeight="389.0" fitWidth="663.0" layoutX="165.0" layoutY="146.0" opacity="0.77">
+      <ImageView fitHeight="600.0" fitWidth="900.0" opacity="0.44">
          <image>
             <Image url="@airport.jpeg" />
          </image>
       </ImageView>
-        <Button layoutX="421.0" layoutY="401.0" mnemonicParsing="false" onMouseClicked="#onClickButton" prefHeight="35.0" prefWidth="149.0" text="CLICK TO EXIT">
-         <font>
-            <Font name="Verdana" size="13.0" />
-         </font></Button>
-        <Label layoutX="203.0" layoutY="272.0" text="Thanks for using smart check in software!" textAlignment="CENTER" textFill="#2b8ce0">
+        <Button layoutX="387.0" layoutY="402.0" mnemonicParsing="false" onMouseClicked="#onClickButton" prefHeight="35.0" prefWidth="149.0" style="-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: #2b8ce0;-fx-text-fill: #ffff" text="Exit">
             <font>
-                <Font name="Copperplate Gothic Bold" size="24.0" />
+                <Font name="Bookman Old Style Bold Italic" size="18.0" />
+            </font></Button>
+        <Label layoutX="156.0" layoutY="164.0" text="Thanks for using smart check in software!" textAlignment="CENTER" textFill="#2b8ce0">
+            <font>
+                <Font name="Bookman Old Style Bold Italic" size="27.0" />
             </font>
         </Label>
     </children>

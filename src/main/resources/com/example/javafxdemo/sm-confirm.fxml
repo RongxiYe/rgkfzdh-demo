@@ -4,34 +4,44 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="smConfirmAnchor" layoutX="150.0" layoutY="97.0" prefHeight="436.0" prefWidth="633.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.user.SmConfirmController">
+<AnchorPane fx:id="smConfirmAnchor" layoutX="150.0" layoutY="97.0" prefHeight="436.0" prefWidth="633.0" style="-fx-border-color: #47b0a5;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.user.SmConfirmController">
     <children>
 
-        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="238.0" layoutY="23.0" text="Extra Payment" textOverrun="CENTER_ELLIPSIS">
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="238.0" layoutY="23.0" text="Extra Payment" textOverrun="CENTER_ELLIPSIS" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)">
             <font>
-                <Font size="20.0" />
+                <Font name="Bookman Old Style Bold Italic" size="20.0" />
             </font>
         </Label>
-        <Label alignment="CENTER" layoutX="85.0" layoutY="57.0" text="Seat Selection">
+        <Label alignment="CENTER" layoutX="85.0" layoutY="57.0" text="Seat Selection" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)">
             <font>
-                <Font size="18.0" />
+                <Font name="Bookman Old Style Bold Italic" size="20.0" />
             </font>
         </Label>
-        <Label alignment="CENTER" layoutX="389.0" layoutY="57.0" text="Meal Selection">
+        <Label alignment="CENTER" layoutX="389.0" layoutY="57.0" text="Meal Selection" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)">
             <font>
-                <Font size="18.0" />
+                <Font name="Bookman Old Style Bold Italic" size="18.0" />
             </font>
         </Label>
-        <Button fx:id="confirmSelect" layoutX="212.0" layoutY="308.0" mnemonicParsing="false" onMouseClicked="#onClickConfirmButton" prefHeight="38.0" prefWidth="205.0" text="Confirm and Payment" />
-        <Label fx:id="seatInfo" layoutX="86.0" layoutY="90.0" prefHeight="40.0" prefWidth="205.0" textAlignment="CENTER" />
-        <Label fx:id="mealInfo" layoutX="392.0" layoutY="90.0" prefHeight="40.0" prefWidth="223.0" textAlignment="CENTER" />
-        <Label fx:id="seatselect" layoutX="86.0" layoutY="134.0" prefHeight="40.0" prefWidth="205.0" />
-        <Label fx:id="mealselect" layoutX="392.0" layoutY="134.0" prefHeight="40.0" prefWidth="223.0" />
-      <Button layoutX="117.0" layoutY="189.0" mnemonicParsing="false" onMouseClicked="#onClickChangeSeat" text="Change" />
-      <Button layoutX="430.0" layoutY="189.0" mnemonicParsing="false" onMouseClicked="#onClickChangeMeal" text="Change" />
+        <Button fx:id="confirmSelect" layoutX="217.0" layoutY="308.0" mnemonicParsing="false" onMouseClicked="#onClickConfirmButton" prefHeight="38.0" prefWidth="223.0" style="-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%);-fx-text-fill: #ffff" text="Confirm and Pay">
+        <font>
+            <Font name="Bookman Old Style Bold Italic" size="20.0" />
+        </font>
+        </Button>
+        <Label fx:id="seatselect" layoutX="86.0" layoutY="87.0" prefHeight="87.0" prefWidth="205.0" />
+        <Label fx:id="mealselect" layoutX="392.0" layoutY="87.0" prefHeight="87.0" prefWidth="223.0" />
+      <Button layoutX="117.0" layoutY="189.0" mnemonicParsing="false" onMouseClicked="#onClickChangeSeat" style="-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%);-fx-text-fill: #ffff" text="Change">
+        <font>
+            <Font name="Bookman Old Style Bold Italic" size="18.0" />
+        </font>
+      </Button>
+      <Button layoutX="430.0" layoutY="189.0" mnemonicParsing="false" onMouseClicked="#onClickChangeMeal" style="-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%);-fx-text-fill: #ffff" text="Change">
+        <font>
+            <Font name="Bookman Old Style Bold Italic" size="18.0" />
+        </font>
+      </Button>
       <Label layoutX="52.0" layoutY="254.0" text="Notice: These selections cannot be changed after comfirmed!" textAlignment="CENTER" textFill="RED" wrapText="true">
          <font>
-            <Font name="System Bold" size="17.0" />
+            <Font name="Bookman Old Style Bold Italic" size="17.0" />
          </font>
       </Label>
     </children>

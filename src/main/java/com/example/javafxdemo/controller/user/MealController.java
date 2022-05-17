@@ -20,18 +20,18 @@ import java.util.Optional;
 
 public class MealController implements Controller {
 
-    /*@FXML
+    @FXML
     private Button nextpage;
     @FXML
     private Button choosestaple;
     @FXML
     private Button choosehalal;
     @FXML
-    private Button chooseDAD;
+    private Button chooseset;
     @FXML
     private Label mealInfo;
 
-    public AnchorPane mealAnchor;*/
+    public AnchorPane mealAnchor;
 
     private String mealType;
 
@@ -76,18 +76,28 @@ public class MealController implements Controller {
     }
 
     @FXML public void onClickChooseStaple(){
+        choosestaple.setStyle("-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%);-fx-text-fill: #ffff ");
+        choosehalal.setStyle("-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: #fff4e6;-fx-text-fill: #f49e31; ");
+        chooseset.setStyle("-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: #fff4e6;-fx-text-fill: #f49e31; ");
         CurrentData.userData.setMeal("normal");
+        mealType = "normal";
     }
 
 
     @FXML public void onClickChooseHalal(){
+        choosestaple.setStyle("-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: #fff4e6;-fx-text-fill: #f49e31; ");
+        choosehalal.setStyle("-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%);-fx-text-fill: #ffff");
+        chooseset.setStyle("-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: #fff4e6;-fx-text-fill: #f49e31; ");
         CurrentData.userData.setMeal("halal");
+        mealType = "halal";
     }
 
     @FXML public void onClickChooseSET(){
-        //如果选择了套餐，则需要额外加钱，先将值赋给meal，
-        //跳转到smconfirm界面后，通过判断值是否为extra，如果是extra，则在smconfirm界面计算金额
+        choosestaple.setStyle("-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: #fff4e6;-fx-text-fill: #f49e31; ");
+        choosehalal.setStyle("-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: #fff4e6;-fx-text-fill: #f49e31; ");
+        chooseset.setStyle("-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%);-fx-text-fill: #ffff");
         CurrentData.userData.setMeal("Set Meal");
+        mealType = "Set Meal";
     }
 
 

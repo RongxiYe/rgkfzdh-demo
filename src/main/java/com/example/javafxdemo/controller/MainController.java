@@ -1,5 +1,6 @@
 package com.example.javafxdemo.controller;
 
+import javafx.scene.control.Label;
 import javafx.scene.text.Text;
 import com.example.javafxdemo.data.CurrentData;
 import com.example.javafxdemo.utils.Page;
@@ -20,7 +21,7 @@ public class MainController implements Controller{
     public Button exit;
     public Button help;
     public Button back;
-    public Text day;
+    public Label day;
 
 
 
