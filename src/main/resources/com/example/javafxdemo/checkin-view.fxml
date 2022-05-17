@@ -66,17 +66,17 @@
                 <Font name="Bookman Old Style Bold" size="17.0" />
             </font>
         </Label>
-        <Label fx:id="extraPay" layoutX="380.0" layoutY="100.0" prefHeight="83.0" prefWidth="60.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" textAlignment="CENTER">
+        <Label fx:id="extraPay" layoutX="380.0" layoutY="100.0" prefHeight="83.0" prefWidth="106.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" textAlignment="CENTER">
             <font>
                 <Font name="Bookman Old Style Bold" size="17.0" />
             </font>
         </Label>
-        <Label layoutX="308.0" layoutY="158.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Meal">
+        <Label layoutX="308.0" layoutY="160.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Meal">
             <font>
                 <Font name="Bookman Old Style Bold" size="17.0" />
             </font>
         </Label>
-        <Label fx:id="payment" layoutX="462.0" layoutY="100.0" prefHeight="83.0" prefWidth="60.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" textAlignment="CENTER">
+        <Label fx:id="payment" layoutX="504.0" layoutY="100.0" prefHeight="83.0" prefWidth="60.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" textAlignment="CENTER">
             <font>
                 <Font name="Bookman Old Style Bold" size="17.0" />
             </font>

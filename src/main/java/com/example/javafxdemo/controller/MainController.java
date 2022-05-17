@@ -23,7 +23,7 @@ import static java.time.format.DateTimeFormatter.ISO_LOCAL_DATE_TIME;
  * Class MainController is used to control main.fxml and
  * load other fxml file as root in AnchorPane.
  *
- * @author Rongxi Ye
+ * @author RongxiYe
  * @version 1.0
  */
 public class MainController implements Controller{
