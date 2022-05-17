@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="firstpageanchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.FirstPage.FirstPageController">
+<AnchorPane fx:id="firstpageanchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #eae8e8;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.FirstPage.FirstPageController">
     <children>
-        <Button layoutX="354.0" layoutY="475.0" mnemonicParsing="false" onMouseClicked="#onClickButton" text="CLICK TO CHECK IN">
-         <font>
-            <Font name="Verdana" size="20.0" />
-         </font></Button>
-      <Label layoutX="171.0" layoutY="66.0" text="Welcome to our smart check in software!" textAlignment="CENTER" textFill="#2b8ce0">
-         <font>
-            <Font name="Copperplate Gothic Bold" size="23.0" />
-         </font>
-      </Label>
-      <ImageView fitHeight="422.0" fitWidth="555.0" layoutX="167.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="625.0" fitWidth="1079.0" layoutX="-132.0" opacity="0.27" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@plane.png" />
          </image>
       </ImageView>
+        <Button layoutX="339.0" layoutY="400.0" mnemonicParsing="false" onMouseClicked="#onClickButton" style="-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%);-fx-text-fill: #ffff" text="Click To Check In">
+         <font>
+            <Font name="Bookman Old Style Bold Italic" size="20.0" />
+         </font></Button>
+      <Label layoutX="136.0" layoutY="106.0" prefHeight="36.0" prefWidth="639.0" text="Welcome to our smart check in software!" textAlignment="CENTER" textFill="#2b8ce0">
+         <font>
+            <Font name="Bookman Old Style Bold Italic" size="29.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>

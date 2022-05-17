@@ -16,6 +16,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -41,6 +42,8 @@ public class PrintProgress {
         label.setText("Do not leave before all materials have been printed!");
         pb.setPrefWidth(200);
         pb.setPrefHeight(30);
+        btn1.setStyle("-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%);-fx-text-fill: #ffff");
+        btn1.setFont(new Font("Bookman Old Style Bold Italic",17));
         btn1.setOnMouseClicked(event -> {
             System.out.println("ok");
             stage.close();
@@ -114,7 +117,6 @@ public class PrintProgress {
     private static class MyTask extends Task {
         @Override
         protected Object call() throws Exception {
-
             updateMessage("Printing...");
             updateValue(0);
             Thread.sleep(2000);

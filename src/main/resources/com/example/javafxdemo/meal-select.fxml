@@ -4,35 +4,51 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="mealAnchor" layoutX="150.0" layoutY="97.0" prefHeight="400.0" prefWidth="600.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.user.MealController">
+<AnchorPane fx:id="mealAnchor" layoutX="150.0" layoutY="97.0" prefHeight="400.0" prefWidth="600.0" style="-fx-border-color: #47b0a5;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.user.MealController">
 <children>
-    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="200.0" layoutY="23.0" text="Select The Meal You Want" textOverrun="CENTER_ELLIPSIS">
+    <Label alignment="CENTER" contentDisplay="CENTER" layoutX="165.0" layoutY="23.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Select The Meal You Want" textOverrun="CENTER_ELLIPSIS">
         <font>
-            <Font size="20.0" />
+            <Font name="Bookman Old Style Bold Italic" size="20.0" />
         </font>
     </Label>
-    <Label alignment="CENTER" layoutX="40.0" layoutY="60.0" text="The Staple Food">
+    <Label alignment="CENTER" layoutX="27.0" layoutY="60.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="The Staple Food">
         <font>
-            <Font size="18.0" />
+            <Font name="Bookman Old Style Bold Italic" size="18.0" />
         </font>
     </Label>
-    <Label alignment="CENTER" layoutX="230.0" layoutY="60.0" text="The Halal Food">
+    <Label alignment="CENTER" layoutX="217.0" layoutY="60.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="The Halal Food">
         <font>
-            <Font size="18.0" />
+            <Font name="Bookman Old Style Bold Italic" size="18.0" />
         </font>
     </Label>
-    <Label alignment="CENTER" layoutX="435.0" layoutY="60.0" text="Set Meal">
+    <Label alignment="CENTER" layoutX="437.0" layoutY="60.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Set Meal">
         <font>
-            <Font size="18.0" />
+            <Font name="Bookman Old Style Bold Italic" size="18.0" />
         </font>
     </Label>
-    <Button fx:id="nextpage" layoutX="200.0" layoutY="308.0" mnemonicParsing="false" onMouseClicked="#onClickNextPageButton" prefHeight="38.0" prefWidth="205.0" text="NEXT PAGE" />
+    <Button fx:id="nextpage" layoutX="200.0" layoutY="308.0" mnemonicParsing="false" onMouseClicked="#onClickNextPageButton" prefHeight="38.0" prefWidth="205.0" style="-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%);-fx-text-fill: #ffff" text="NEXT PAGE">
+    <font>
+        <Font name="Bookman Old Style Bold Italic" size="18.0" />
+    </font>
+    </Button>
     <Label fx:id="Staple" layoutX="40.0" layoutY="94.0" prefHeight="75.0" prefWidth="160.0" />
     <Label fx:id="Halal" layoutX="220.0" layoutY="94.0" prefHeight="75.0" prefWidth="160.0" />
     <Label fx:id="SetMeal" layoutX="400.0" layoutY="94.0" prefHeight="75.0" prefWidth="160.0" />
-    <Button fx:id="choosestaple" layoutX="60.0" layoutY="189.0" mnemonicParsing="false" onMouseClicked="#onClickChooseStaple" text="Staple Food" />
-    <Button fx:id="choosehalal" layoutX="252.0" layoutY="189.0" mnemonicParsing="false" onMouseClicked="#onClickChooseHalal" text="Halal Food" />
-    <Button fx:id="chooseset" layoutX="402.0" layoutY="189.0" mnemonicParsing="false" onMouseClicked="#onClickChooseSET" text="Set Meal (Extra Money)" />
-    <Accordion layoutX="-9.0" layoutY="84.0" />
+    <Button fx:id="choosestaple" layoutX="39.0" layoutY="189.0" mnemonicParsing="false" onMouseClicked="#onClickChooseStaple" style="-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: #fff4e6;-fx-text-fill: #f49e31" text="Staple Food">
+        <font>
+            <Font name="Bookman Old Style Bold Italic" size="18.0" />
+        </font>
+    </Button>
+    <Button fx:id="choosehalal" layoutX="223.0" layoutY="188.0" mnemonicParsing="false" onMouseClicked="#onClickChooseHalal" style="-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: #fff4e6;-fx-text-fill: #f49e31; "  text="Halal Food">
+        <font>
+            <Font name="Bookman Old Style Bold Italic" size="18.0" />
+        </font>
+    </Button>
+    <Button fx:id="chooseset" layoutX="382.0" layoutY="188.0" mnemonicParsing="false" onMouseClicked="#onClickChooseSET" pickOnBounds="false" prefHeight="33.0" prefWidth="205.0" style="-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: #fff4e6;-fx-text-fill: #f49e31" text="Set Meal (Extra $$)">
+        <font>
+            <Font name="Bookman Old Style Bold Italic" size="18.0" />
+        </font>
+    </Button>
+
 </children>
 </AnchorPane>

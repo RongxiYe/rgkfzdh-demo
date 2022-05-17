@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.user.LastPageController">
     <children>
-        <Button layoutX="390.0" layoutY="398.0" mnemonicParsing="false" onMouseClicked="#onClickButton" text="CLICK TO EXIT" />
-        <Label layoutX="222.0" layoutY="184.0" text="Thanks for using smart check in software!" textAlignment="CENTER" textFill="#2b8ce0">
+      <ImageView fitHeight="600.0" fitWidth="900.0" opacity="0.44">
+         <image>
+            <Image url="@airport.jpeg" />
+         </image>
+      </ImageView>
+        <Button layoutX="387.0" layoutY="402.0" mnemonicParsing="false" onMouseClicked="#onClickButton" prefHeight="35.0" prefWidth="149.0" style="-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: #2b8ce0;-fx-text-fill: #ffff" text="Exit">
             <font>
-                <Font name="System Bold" size="22.0" />
+                <Font name="Bookman Old Style Bold Italic" size="18.0" />
+            </font></Button>
+        <Label layoutX="156.0" layoutY="164.0" text="Thanks for using smart check in software!" textAlignment="CENTER" textFill="#2b8ce0">
+            <font>
+                <Font name="Bookman Old Style Bold Italic" size="27.0" />
             </font>
         </Label>
     </children>

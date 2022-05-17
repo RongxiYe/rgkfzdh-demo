@@ -20,10 +20,6 @@ public class SmConfirmController implements Controller {
     @FXML
     private Button confirmSelect;
     @FXML
-    private Label seatInfo;
-    @FXML
-    private Label mealInfo;
-    @FXML
     private Label seatselect;
     @FXML
     private Label mealselect;
@@ -32,52 +28,29 @@ public class SmConfirmController implements Controller {
 
     public void init(){
         UserData userData = CurrentData.userData;
-        //show page information depending on whether user has extra payments.
-        seatInfo.setText(userData.getSeatNum());
-        mealInfo.setText(userData.getMeal());
 
-        String stn = userData.getSeatNum();
-        String ml = userData.getMeal();
-        if(ml == "Set Meal"){
-            String meal1 = "Set Meal";
-            String meal2 = "Need extra payment 5$";
-            String string1 = meal1 + "\n" + meal2;
-            mealselect.setText(string1);
+        if(userData.getMeal() == "Set Meal"){
+            mealselect.setText("Set Meal"+ "\n" + "Need extra payment 5$");
         }else{
-            String meal = "No extra payment";
-            String string1 = meal;
-            mealselect.setText(string1);
+            mealselect.setText(userData.getMeal() + "\n" + "No extra payment");
         }
-        if(stn.charAt(1) == '1'){
-            String seat1 = "Special Seat";
-            String seat2 = "Need extra payment 50$";
-            String string2 = seat1 + "\n" + seat2;
-            seatselect.setText(string2);
+        if(userData.getSeatNum().charAt(1) == '1'){
+            seatselect.setText(userData.getSeatNum() + "\n" +"Special Seat" + "\n" + "Need extra payment 50$");
         }else{
-            String seat = "No extra payment";
-            String string2 = seat;
-            seatselect.setText(string2);
+            seatselect.setText(userData.getSeatNum() + "\n" + "No extra payment");
         }
 
-
-
-        if(true){
-            //have extra payments
-            smConfirmAnchor.getChildren().get(5).setVisible(false);
-            smConfirmAnchor.getChildren().get(4).setVisible(true);
-
-        }else{
-            smConfirmAnchor.getChildren().get(5).setVisible(true);
-            smConfirmAnchor.getChildren().get(4).setVisible(false);
-
-        }
+//        if(extra){
+//            //have extra payments
+//            smConfirmAnchor.getChildren().get(5).setVisible(false);
+//            smConfirmAnchor.getChildren().get(4).setVisible(true);
+//
+//        }else{
+//            smConfirmAnchor.getChildren().get(5).setVisible(true);
+//            smConfirmAnchor.getChildren().get(4).setVisible(false);
+//
+//        }
     }
-
-    //@FXML public void onClickInputButton(){
-        //use loaders to enter the next page.
-    //    MainController main = (MainController) Handler.getController(Page.MAIN);
-    //    main.loadRoot(Page.EXTRAPAY);
-    //}
 
 
     @FXML public void onClickConfirmButton(){

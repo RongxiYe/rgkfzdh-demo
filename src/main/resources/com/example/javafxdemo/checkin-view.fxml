@@ -4,40 +4,87 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="checkinanchor" layoutX="150.0" layoutY="97.0" prefHeight="436.0" prefWidth="633.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.user.PrintPageController">
+<AnchorPane fx:id="checkinanchor" layoutX="150.0" layoutY="97.0" prefHeight="436.0" prefWidth="633.0" style="-fx-border-color: #47b0a5;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.user.PrintPageController">
     <children>
-
-        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="215.0" layoutY="23.0" text="Check-In Information" textOverrun="CENTER_ELLIPSIS">
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="215.0" layoutY="23.0" text="Check-In Information" textFill="#2b8ce0" textOverrun="CENTER_ELLIPSIS">
             <font>
-                <Font size="20.0" />
+                <Font name="Bookman Old Style Bold Italic" size="20.0" />
             </font>
         </Label>
-        <Label alignment="CENTER" layoutX="66.0" layoutY="57.0" text="Airline Information">
+        <Label alignment="CENTER" layoutX="66.0" layoutY="57.0" text="Airline Information" textFill="#2b8ce0">
             <font>
-                <Font size="18.0" />
+                <Font name="Bookman Old Style Bold Italic" size="18.0" />
             </font>
         </Label>
-        <Label alignment="CENTER" layoutX="350.0" layoutY="57.0" text="Extra Payment">
+        <Label alignment="CENTER" layoutX="350.0" layoutY="57.0" text="Extra Payment" textFill="#2b8ce0">
             <font>
-                <Font size="18.0" />
+                <Font name="Bookman Old Style Bold Italic" size="18.0" />
             </font>
         </Label>
-        <Label alignment="TOP_LEFT" contentDisplay="TOP" layoutX="39.0" layoutY="98.0" prefHeight="19.0" prefWidth="95.0" text="Booking No." textOverrun="WORD_ELLIPSIS" wrapText="true">
-
+        <Label alignment="TOP_LEFT" contentDisplay="TOP" layoutX="39.0" layoutY="98.0" prefHeight="20.0" prefWidth="118.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Booking No." textOverrun="WORD_ELLIPSIS" wrapText="true">
+            <font>
+                <Font name="Bookman Old Style Bold Italic" size="17.0" />
+            </font>
         </Label>
-        <Label alignment="TOP_LEFT" layoutX="307.0" layoutY="100.0" prefHeight="27.0" prefWidth="46.0" text="Seat">
-
+        <Label alignment="TOP_LEFT" layoutX="307.0" layoutY="100.0" prefHeight="27.0" prefWidth="46.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Seat">
+            <font>
+                <Font name="Bookman Old Style Bold Italic" size="17.0" />
+            </font>
         </Label>
-        <Button fx:id="confirmChekin" layoutX="299.0" layoutY="315.0" mnemonicParsing="false" onAction="#onClickPrintMaterialButton" prefHeight="38.0" prefWidth="205.0" text="PRINT YOUR MATERIALS" />
-        <Label layoutX="39.0" layoutY="138.0" text="Surname" />
-        <Label layoutX="39.0" layoutY="176.0" text="Air No." />
-        <Label layoutX="39.0" layoutY="210.0" prefHeight="24.0" prefWidth="61.0" text="Date" />
-        <Label layoutX="39.0" layoutY="251.0" text="put-off" />
-        <Label layoutX="39.0" layoutY="290.0" text="baggage" />
-        <Label fx:id="airLineInfo" layoutX="156.0" layoutY="94.0" prefHeight="260.0" prefWidth="124.0" />
-        <Label fx:id="extraPay" layoutX="359.0" layoutY="100.0" prefHeight="75.0" prefWidth="60.0" textAlignment="CENTER" />
-        <Label layoutX="308.0" layoutY="158.0" text="Meal" />
-        <Label fx:id="payment" layoutX="437.0" layoutY="100.0" prefHeight="75.0" prefWidth="60.0" textAlignment="CENTER" />
-        <Label layoutX="39.0" layoutY="328.0" text="carry-on" />
+        <Button fx:id="confirmChekin" layoutX="299.0" layoutY="315.0" mnemonicParsing="false" onAction="#onClickPrintMaterialButton" prefHeight="38.0" prefWidth="262.0" style="-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%);-fx-text-fill: #ffff" text="PRINT YOUR MATERIALS">
+        <font>
+            <Font name="Bookman Old Style Bold Italic" size="17.0" />
+        </font>
+        </Button>
+        <Label layoutX="39.0" layoutY="138.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Surname">
+        <font>
+            <Font name="Bookman Old Style Bold Italic" size="17.0" />
+        </font>
+        </Label>
+        <Label layoutX="39.0" layoutY="176.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Air No.">
+        <font>
+            <Font name="Bookman Old Style Bold Italic" size="17.0" />
+        </font>
+        </Label>
+        <Label layoutX="39.0" layoutY="210.0" prefHeight="24.0" prefWidth="61.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Date">
+        <font>
+            <Font name="Bookman Old Style Bold Italic" size="17.0" />
+        </font>
+        </Label>
+        <Label layoutX="39.0" layoutY="251.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="put-off">
+        <font>
+            <Font name="Bookman Old Style Bold Italic" size="17.0" />
+        </font>
+        </Label>
+        <Label layoutX="39.0" layoutY="290.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="baggage">
+            <font>
+                <Font name="Bookman Old Style Bold Italic" size="17.0" />
+            </font>
+        </Label>
+        <Label fx:id="airLineInfo" layoutX="156.0" layoutY="94.0" prefHeight="260.0" prefWidth="124.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)">
+            <font>
+                <Font name="Bookman Old Style Bold Italic" size="17.0" />
+            </font>
+        </Label>
+        <Label fx:id="extraPay" layoutX="359.0" layoutY="100.0" prefHeight="83.0" prefWidth="60.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" textAlignment="CENTER">
+            <font>
+                <Font name="Bookman Old Style Bold Italic" size="17.0" />
+            </font>
+        </Label>
+        <Label layoutX="308.0" layoutY="158.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Meal">
+            <font>
+                <Font name="Bookman Old Style Bold Italic" size="17.0" />
+            </font>
+        </Label>
+        <Label fx:id="payment" layoutX="437.0" layoutY="100.0" prefHeight="83.0" prefWidth="60.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" textAlignment="CENTER">
+            <font>
+                <Font name="Bookman Old Style Bold Italic" size="17.0" />
+            </font>
+        </Label>
+        <Label layoutX="39.0" layoutY="328.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="carry-on">
+            <font>
+                <Font name="Bookman Old Style Bold Italic" size="17.0" />
+            </font>
+        </Label>
     </children>
 </AnchorPane>

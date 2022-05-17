@@ -1,25 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.image.*?>
-<?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="helloanchor" layoutX="150.0" layoutY="97.0" prefHeight="436.0" prefWidth="633.0" style="-fx-border-color: #FFC78E;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.login.ScanFileController">
+<AnchorPane fx:id="helloanchor" layoutX="150.0" layoutY="97.0" prefHeight="436.0" prefWidth="633.0" style="-fx-border-color: #47b0a5;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.login.ScanFileController">
     <children>
-        <Label alignment="CENTER" layoutX="166.0" layoutY="45.0" text="Please Upload Your ID Card:">
+        <Label alignment="CENTER" layoutX="166.0" layoutY="45.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Please Upload Your ID Card:">
             <font>
-                <Font size="20.0" />
+                <Font name="Bookman Old Style Bold Italic" size="20.0" />
             </font></Label>
-        <Label layoutX="237.0" layoutY="172.0" text="Cannot upload? Try: " />
-        <Hyperlink fx:id="inputID" layoutX="165.0" layoutY="210.0" onMouseClicked="#inputID" prefHeight="52.0" prefWidth="105.0" text="Input ID info" wrapText="true" />
-        <Hyperlink fx:id="booknum" layoutX="340.0" layoutY="210.0" onMouseClicked="#inputBooknum" prefHeight="52.0" prefWidth="124.0" text="Input booking number" textAlignment="CENTER" wrapText="true" />
-        <Button fx:id="confirmUpload" layoutX="257.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#onClickConfirmUpload" prefHeight="45.0" prefWidth="105.0" text="Confirm">
+        <Label layoutX="228.0" layoutY="172.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Cannot upload? Try: ">
+        <font>
+            <Font name="Bookman Old Style Bold Italic" size="17.0" />
+        </font>
+        </Label>
+        <Hyperlink fx:id="inputID" layoutX="165.0" layoutY="210.0" onMouseClicked="#inputID" prefHeight="52.0" prefWidth="124.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Input ID info" wrapText="true">
+        <font>
+            <Font name="Bookman Old Style Bold Italic" size="16.0" />
+        </font>
+        </Hyperlink>
+        <Hyperlink fx:id="booknum" layoutX="340.0" layoutY="210.0" onMouseClicked="#inputBooknum" prefHeight="52.0" prefWidth="174.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Input Booking No." textAlignment="CENTER" wrapText="true">
+        <font>
+            <Font name="Bookman Old Style Bold Italic" size="16.0" />
+        </font>
+        </Hyperlink>
+        <Button fx:id="confirmUpload" layoutX="255.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#onClickConfirmUpload" prefHeight="45.0" prefWidth="137.0" style="-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%);-fx-text-fill: #ffff" text="Confirm">
             <font>
-                <Font size="18.0" />
+                <Font name="Bookman Old Style Bold Italic" size="20.0" />
             </font></Button>
-      <Button fx:id="uploadId" layoutX="232.0" layoutY="108.0" mnemonicParsing="false" onMouseClicked="#onClickUploadId" text="CLICK TO UPLOAD!" />
+      <Button fx:id="uploadId" layoutX="218.0" layoutY="108.0" mnemonicParsing="false" onMouseClicked="#onClickUploadId" style="-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%);-fx-text-fill: #ffff" text="Click To Upload!">
+        <font>
+            <Font name="Bookman Old Style Bold Italic" size="20.0" />
+        </font></Button>
     </children>
 </AnchorPane>

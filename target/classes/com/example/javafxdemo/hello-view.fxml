@@ -1,25 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
-
-<AnchorPane fx:id="helloanchor" layoutX="150.0" layoutY="97.0" prefHeight="436.0" prefWidth="633.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.login.HelloController">
+<AnchorPane fx:id="helloanchor" layoutX="150.0" layoutY="97.0" prefHeight="436.0" prefWidth="633.0" style="-fx-border-color: #47b0a5;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.login.HelloController">
     <children>
-        <Label alignment="CENTER" layoutX="137.0" layoutY="45.0" text="Please Input Your Booking Number :">
+        <Label alignment="CENTER" layoutX="137.0" layoutY="45.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Please Input Your Booking Number :">
             <font>
-                <Font size="20.0" />
-            </font></Label>
+                <Font name="Bookman Old Style Bold Italic" size="20.0" />
+            </font>
+        </Label>
         <TextField fx:id="bn" layoutX="154.0" layoutY="99.0" prefHeight="35.0" prefWidth="304.0" />
-        <Label layoutX="206.0" layoutY="172.0" text="Forget booking number? Try: " />
-        <Hyperlink fx:id="inputID" layoutX="161.0" layoutY="210.0" prefHeight="52.0" prefWidth="105.0" text="Input ID info" wrapText="true" onMouseClicked="#inputID"/>
-        <Hyperlink fx:id="upload" layoutX="334.0" layoutY="210.0" prefHeight="52.0" prefWidth="124.0" text="Upload ID card" wrapText="true" onMouseClicked="#uploadId"/>
-        <Button fx:id="confirmChekin" layoutX="253.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#onClickCheckInButton" prefHeight="45.0" prefWidth="105.0" text="Confirm">
+        <Label layoutX="189.0" layoutY="172.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Forget booking number? Try: ">
             <font>
-                <Font size="18.0" />
-            </font></Button>
+                <Font name="Bookman Old Style Bold Italic" size="16.0" />
+            </font>
+        </Label>
+        <Hyperlink fx:id="inputID" layoutX="150.0" layoutY="210.0" onMouseClicked="#inputID" prefHeight="52.0" prefWidth="133.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Input ID info" wrapText="true">
+        <font>
+            <Font name="Bookman Old Style Bold Italic" size="16.0" />
+        </font>
+        </Hyperlink>
+        <Hyperlink fx:id="upload" layoutX="334.0" layoutY="210.0" onMouseClicked="#uploadId" prefHeight="52.0" prefWidth="145.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Upload ID card" wrapText="true">
+            <font>
+                <Font name="Bookman Old Style Bold Italic" size="16.0" />
+            </font>
+        </Hyperlink>
+        <Button fx:id="confirmChekin" contentDisplay="RIGHT" graphicTextGap="8.0" layoutX="244.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#onClickCheckInButton" prefHeight="45.0" prefWidth="133.0" style="-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%);-fx-text-fill: #ffff" text="Confirm">
+            <font>
+                <Font name="Bookman Old Style Bold Italic" size="18.0" />
+            </font>
+         <graphic>
+            <ImageView blendMode="SRC_ATOP" fitHeight="25.0" fitWidth="25.0">
+               <image>
+                  <Image url="@confirm.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
     </children>
 </AnchorPane>
-
