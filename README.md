@@ -1,6 +1,3 @@
----
-typora-root-url: img\
----
 
 # A Smart Flight Check-In Software
 

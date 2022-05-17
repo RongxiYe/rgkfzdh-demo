@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
@@ -11,17 +12,17 @@
             <Font name="Bookman Old Style Bold Italic" size="20.0" />
         </font>
     </Label>
-    <Label alignment="CENTER" layoutX="27.0" layoutY="60.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="The Staple Food">
+    <Label alignment="CENTER" layoutX="27.0" layoutY="62.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="The Staple Food">
         <font>
             <Font name="Bookman Old Style Bold Italic" size="18.0" />
         </font>
     </Label>
-    <Label alignment="CENTER" layoutX="217.0" layoutY="60.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="The Halal Food">
+    <Label alignment="CENTER" layoutX="217.0" layoutY="62.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="The Halal Food">
         <font>
             <Font name="Bookman Old Style Bold Italic" size="18.0" />
         </font>
     </Label>
-    <Label alignment="CENTER" layoutX="437.0" layoutY="60.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Set Meal">
+    <Label alignment="CENTER" layoutX="437.0" layoutY="62.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Set Meal">
         <font>
             <Font name="Bookman Old Style Bold Italic" size="18.0" />
         </font>
@@ -34,21 +35,36 @@
     <Label fx:id="Staple" layoutX="40.0" layoutY="94.0" prefHeight="75.0" prefWidth="160.0" />
     <Label fx:id="Halal" layoutX="220.0" layoutY="94.0" prefHeight="75.0" prefWidth="160.0" />
     <Label fx:id="SetMeal" layoutX="400.0" layoutY="94.0" prefHeight="75.0" prefWidth="160.0" />
-    <Button fx:id="choosestaple" layoutX="39.0" layoutY="189.0" mnemonicParsing="false" onMouseClicked="#onClickChooseStaple" style="-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: #fff4e6;-fx-text-fill: #f49e31" text="Staple Food">
+    <Button fx:id="choosestaple" layoutX="40.0" layoutY="221.0" mnemonicParsing="false" onMouseClicked="#onClickChooseStaple" style="-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: #fff4e6;-fx-text-fill: #f49e31" text="Staple Food">
         <font>
             <Font name="Bookman Old Style Bold Italic" size="18.0" />
         </font>
     </Button>
-    <Button fx:id="choosehalal" layoutX="223.0" layoutY="188.0" mnemonicParsing="false" onMouseClicked="#onClickChooseHalal" style="-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: #fff4e6;-fx-text-fill: #f49e31; "  text="Halal Food">
+    <Button fx:id="choosehalal" layoutX="226.0" layoutY="221.0" mnemonicParsing="false" onMouseClicked="#onClickChooseHalal" style="-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: #fff4e6;-fx-text-fill: #f49e31; " text="Halal Food">
         <font>
             <Font name="Bookman Old Style Bold Italic" size="18.0" />
         </font>
     </Button>
-    <Button fx:id="chooseset" layoutX="382.0" layoutY="188.0" mnemonicParsing="false" onMouseClicked="#onClickChooseSET" pickOnBounds="false" prefHeight="33.0" prefWidth="205.0" style="-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: #fff4e6;-fx-text-fill: #f49e31" text="Set Meal (Extra $$)">
+    <Button fx:id="chooseset" layoutX="380.0" layoutY="221.0" mnemonicParsing="false" onMouseClicked="#onClickChooseSET" pickOnBounds="false" prefHeight="33.0" prefWidth="205.0" style="-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: #fff4e6;-fx-text-fill: #f49e31" text="Set Meal (Extra $$)">
         <font>
             <Font name="Bookman Old Style Bold Italic" size="18.0" />
         </font>
     </Button>
+    <ImageView fitHeight="85.0" fitWidth="103.0" layoutX="57.0" layoutY="103.0">
+        <image>
+            <Image url="@pizza.jpg" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="85.0" fitWidth="110.0" layoutX="235.0" layoutY="103.0">
+        <image>
+            <Image url="@fruit.jpg" />
+        </image>
+    </ImageView>
+    <ImageView fitHeight="85.0" fitWidth="110.0" layoutX="428.0" layoutY="103.0">
+        <image>
+            <Image url="@package.jpg" />
+        </image>
+    </ImageView>
 
 </children>
 </AnchorPane>

@@ -34,7 +34,7 @@ public class MainController implements Controller{
         mainanchor.getChildren().get(num-2).setVisible(false);
 
         //date
-        DateTimeFormatter format = DateTimeFormatter.ofPattern("dd/MMM/uuuu");
+        DateTimeFormatter format = DateTimeFormatter.ofPattern("dd/MM/uuuu");
         //Convert String to LocalDateTime
         LocalDateTime ldt = LocalDateTime.parse(LocalDateTime.now().toString(), ISO_LOCAL_DATE_TIME);
         day.setText(format.format(ldt));
