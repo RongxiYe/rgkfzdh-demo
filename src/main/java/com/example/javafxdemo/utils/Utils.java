@@ -32,7 +32,6 @@ public class Utils {
                     JsonObject subObject = array.get(i).getAsJsonObject();
                     String number = subObject.get("bookingNum").getAsString();
                     if (booknum.equals(number)) {
-                        //给userData赋值
                         Gson gson = new Gson();
                         return gson.fromJson(subObject,UserData.class);
                     }
@@ -45,7 +44,6 @@ public class Utils {
                     String nameInFile = subObject.get("firstname").getAsString()+" "+subObject.get("surname").getAsString();
                     String idInFile = subObject.get("id").getAsString();
                     if (name.equals(nameInFile)&&id.equals(idInFile)) {
-                        //给userData赋值
                         Gson gson = new Gson();
                         return gson.fromJson(subObject,UserData.class);
                     }

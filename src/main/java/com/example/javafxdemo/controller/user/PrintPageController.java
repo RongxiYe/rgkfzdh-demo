@@ -78,8 +78,6 @@ public class PrintPageController implements Controller {
         alert.setContentText("Are you sure to print all your materials?");
         alert.showAndWait();
 
-        //打印出信息文件
-        //生成发给后台系统的文件
         PrintProgress.show();
         PrintProgress.printInfo();
         sendToBack();
@@ -122,13 +120,10 @@ public class PrintPageController implements Controller {
                 System.out.println(array);
             }
 
-            BufferedWriter bufferedWriter= new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), StandardCharsets.UTF_8));//创建字符缓冲输出流对象
-            bufferedWriter.write(object.toString());//将格式化的subObject字符串写入文件
-            bufferedWriter.flush();//清空缓冲区，强制输出数据
-            bufferedWriter.close();//关闭输出流
-
-//            String jsonString=subObject.toString();//将subObject转化为字符串
-//            String JsonString=tool.stringToJSON(jsonString);//将subObject字符串格式化
+            BufferedWriter bufferedWriter= new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), StandardCharsets.UTF_8));
+            bufferedWriter.write(object.toString());
+            bufferedWriter.flush();//
+            bufferedWriter.close();//
 
         } catch (Exception e) {
             e.printStackTrace();

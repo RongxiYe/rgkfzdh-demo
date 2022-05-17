@@ -6,22 +6,22 @@
 
 <AnchorPane fx:id="checkinanchor" layoutX="150.0" layoutY="97.0" prefHeight="436.0" prefWidth="633.0" style="-fx-border-color: #47b0a5;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.user.PrintPageController">
     <children>
-        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="215.0" layoutY="23.0" textFill="#2b8ce0" text="Check-In Information" textOverrun="CENTER_ELLIPSIS">
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="215.0" layoutY="23.0" text="Check-In Information" textFill="#2b8ce0" textOverrun="CENTER_ELLIPSIS">
             <font>
                 <Font name="Bookman Old Style Bold Italic" size="20.0" />
             </font>
         </Label>
-        <Label alignment="CENTER" layoutX="66.0" layoutY="57.0" textFill="#2b8ce0" text="Airline Information">
+        <Label alignment="CENTER" layoutX="66.0" layoutY="57.0" text="Airline Information" textFill="#2b8ce0">
             <font>
                 <Font name="Bookman Old Style Bold Italic" size="18.0" />
             </font>
         </Label>
-        <Label alignment="CENTER" layoutX="350.0" layoutY="57.0" textFill="#2b8ce0" text="Extra Payment">
+        <Label alignment="CENTER" layoutX="350.0" layoutY="57.0" text="Extra Payment" textFill="#2b8ce0">
             <font>
                 <Font name="Bookman Old Style Bold Italic" size="18.0" />
             </font>
         </Label>
-        <Label alignment="TOP_LEFT" contentDisplay="TOP" layoutX="39.0" layoutY="98.0" prefHeight="19.0" prefWidth="95.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Booking No." textOverrun="WORD_ELLIPSIS" wrapText="true">
+        <Label alignment="TOP_LEFT" contentDisplay="TOP" layoutX="39.0" layoutY="98.0" prefHeight="20.0" prefWidth="118.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Booking No." textOverrun="WORD_ELLIPSIS" wrapText="true">
             <font>
                 <Font name="Bookman Old Style Bold Italic" size="17.0" />
             </font>
@@ -76,7 +76,7 @@
                 <Font name="Bookman Old Style Bold Italic" size="17.0" />
             </font>
         </Label>
-        <Label fx:id="payment" layoutX="437.0" layoutY="100.0" prefHeight="83.0" prefWidth="60.0" textAlignment="CENTER" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)">
+        <Label fx:id="payment" layoutX="437.0" layoutY="100.0" prefHeight="83.0" prefWidth="60.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" textAlignment="CENTER">
             <font>
                 <Font name="Bookman Old Style Bold Italic" size="17.0" />
             </font>

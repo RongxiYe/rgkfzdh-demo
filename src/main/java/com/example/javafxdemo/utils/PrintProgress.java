@@ -71,8 +71,6 @@ public class PrintProgress {
 
 
     public static boolean printInfo(){
-        //收集userdata中所需的信息，并生成一个图片文件
-        //将图片文件显示在屏幕上（机票）
         runTask(new MyTask());
         return true;
     }
@@ -178,11 +176,10 @@ public class PrintProgress {
 
                 updateProgress(100,100);
                 updateValue(100);
-                updateMessage("Printing succeed！");
-
+                updateMessage("Printing succeed! ");
                 return 1;
             } catch (Exception e) {
-                updateMessage("Printing Error！");
+                updateMessage("Printing Error! ");
                 e.printStackTrace();
                 updateValue(-1);
                 updateProgress(-1, 1);
