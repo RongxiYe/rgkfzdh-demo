@@ -1,0 +1,9 @@
+module:com.example.javafxdemo
+com.example.javafxdemo
+com.example.javafxdemo.controller
+com.example.javafxdemo.controller.FirstPage
+com.example.javafxdemo.controller.login
+com.example.javafxdemo.controller.user
+com.example.javafxdemo.data
+com.example.javafxdemo.test
+com.example.javafxdemo.utils
