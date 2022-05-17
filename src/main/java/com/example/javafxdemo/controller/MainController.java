@@ -1,3 +1,7 @@
+/**
+ * Provides all controllers and handler they use.
+ */
+
 package com.example.javafxdemo.controller;
 
 import javafx.scene.control.Label;
@@ -15,16 +19,43 @@ import java.util.Optional;
 
 import static java.time.format.DateTimeFormatter.ISO_LOCAL_DATE_TIME;
 
+/**
+ * Class MainController is used to control main.fxml and
+ * load other fxml file as root in AnchorPane.
+ *
+ * @author Rongxi Ye
+ * @version 1.0
+ */
 public class MainController implements Controller{
+
+    /**
+     * the main anchor pane in the stage
+     */
     @FXML
     public AnchorPane mainanchor;
+    /**
+     * the exit button on main anchor
+     */
     public Button exit;
+    /**
+     * the help button on main anchor
+     */
     public Button help;
+    /**
+     * the back button on main anchor
+     */
     public Button back;
+    /**
+     * the date label on main anchor
+     */
     public Label day;
 
 
-
+    /**
+     * init() is used to initialize main.fxml and load hello-view.fxml.
+     * It also gets local date time and shows it.
+     * At the beginning, the back button is set invisible.
+     */
     public void init(){
         AnchorPane root = Handler.getRoot(Page.BOOKNUMLOGIN);
         Controller hello = Handler.getController(Page.BOOKNUMLOGIN);
@@ -41,6 +72,12 @@ public class MainController implements Controller{
 
     }
 
+    /**
+     * loadRoot() is used to load a Page on main anchor pane.
+     * It calls the init() func of controller to initialize the page.
+     *
+     * @param page the corresponding Page enum of the page.
+     */
     public void loadRoot(Page page) {
         AnchorPane root = Handler.getRoot(page);
         Handler.getController(page).init();
@@ -60,6 +97,9 @@ public class MainController implements Controller{
     }
 
 
+    /**
+     * exit() is for exiting the program whenever user wants.
+     */
     @FXML
     public void exit(){
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Would you like to exit?", ButtonType.YES, ButtonType.NO);
@@ -68,10 +108,12 @@ public class MainController implements Controller{
         if(result.get()==ButtonType.YES){
             System.exit(0);
         }
-
     }
 
 
+    /**
+     * help() generates an alert and show the help information.
+     */
     @FXML
     public void help(){
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -81,17 +123,21 @@ public class MainController implements Controller{
         Optional<ButtonType> result = alert.showAndWait();
     }
 
+    /**
+     * back() is used to load the former page of one page.
+     * The order is defined in Page enum.
+     */
     @FXML
     public void back(){
         Page lastPage = CurrentData.currentPage.back();
-
         if (lastPage==null){
             System.out.println("Error!");
-            System.exit(1);
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText("Cannot go back!");
+            alert.show();
         }else{
             loadRoot(lastPage);
         }
-
     }
 
 }
