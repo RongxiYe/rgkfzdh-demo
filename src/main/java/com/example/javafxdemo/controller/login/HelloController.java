@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TextFormatter;
 import javafx.scene.layout.AnchorPane;
 
 
@@ -19,7 +20,9 @@ public class HelloController implements Controller {
     private Hyperlink inputID;
 
     @Override
-    public void init() {}
+    public void init() {
+        bn.setTextFormatter(new TextFormatter<String>(new IntegerFilter()));
+    }
 
     @FXML
     protected void onClickCheckInButton() {

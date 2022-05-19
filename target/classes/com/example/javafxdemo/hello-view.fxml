@@ -12,7 +12,7 @@
                 <Font name="Bookman Old Style Bold Italic" size="20.0" />
             </font>
         </Label>
-        <TextField fx:id="bn" layoutX="154.0" layoutY="99.0" prefHeight="35.0" prefWidth="304.0" />
+        <TextField fx:id="bn" layoutX="154.0" layoutY="99.0" prefHeight="35.0" prefWidth="304.0" promptText="Only allow digits!" />
         <Label layoutX="189.0" layoutY="172.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Forget booking number? Try: ">
             <font>
                 <Font name="Bookman Old Style Bold Italic" size="16.0" />

@@ -6,22 +6,22 @@
 
 <AnchorPane fx:id="helloanchor" layoutX="150.0" layoutY="97.0" prefHeight="436.0" prefWidth="633.0" style="-fx-border-color: #47b0a5;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.user.CreditInfoController">
     <children>
-            <Label alignment="CENTER" layoutX="111.0" layoutY="46.0" text="Please Input Your Credit Card information:" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)">
+            <Label alignment="CENTER" layoutX="111.0" layoutY="46.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Please Input Your Credit Card information:">
                 <font>
                     <Font name="Bookman Old Style Bold Italic" size="20.0" />
                 </font></Label>
 
-            <Button fx:id="confirmInput" layoutX="257.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#onClickConfirmInput" prefHeight="45.0" prefWidth="105.0" text="Confirm" style="-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%);-fx-text-fill: #ffff">
+            <Button fx:id="confirmInput" layoutX="257.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#onClickConfirmInput" prefHeight="45.0" prefWidth="105.0" style="-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%);-fx-text-fill: #ffff" text="Confirm">
                 <font>
                     <Font name="Bookman Old Style Bold Italic" size="18.0" />
                 </font></Button>
-        <Label layoutX="144.0" layoutY="101.0" text="Please input your Credit Card ID :" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)">
+        <Label layoutX="144.0" layoutY="101.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Please input your Credit Card ID :">
         <font>
             <Font name="Bookman Old Style Bold Italic" size="17.0" />
         </font>
         </Label>
-        <TextField fx:id="cardID" layoutX="260.0" layoutY="140.0" prefHeight="14.0" prefWidth="194.0" />
-        <Label layoutX="144.0" layoutY="187.0" text="Please input your Password :" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)">
+        <TextField fx:id="cardID" layoutX="260.0" layoutY="140.0" prefHeight="14.0" prefWidth="194.0" promptText="Only allow digits!" />
+        <Label layoutX="144.0" layoutY="187.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Please input your Password :">
         <font>
             <Font name="Bookman Old Style Bold Italic" size="17.0" />
         </font>

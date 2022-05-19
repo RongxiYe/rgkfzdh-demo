@@ -6,41 +6,41 @@
 
 <AnchorPane fx:id="helloanchor" layoutX="150.0" layoutY="97.0" prefHeight="436.0" prefWidth="633.0" style="-fx-border-color: #47b0a5;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxdemo.controller.login.InputIdController">
     <children>
-            <Label alignment="CENTER" layoutX="150.0" layoutY="46.0" text="Please Input Your ID information:" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)">
+            <Label alignment="CENTER" layoutX="150.0" layoutY="46.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Please Input Your ID information:">
                 <font>
                     <Font name="Bookman Old Style Bold Italic" size="20.0" />
                 </font></Label>
-            <Label layoutX="228.0" layoutY="186.0" text="Cannot Input? Try: " style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)">
+            <Label layoutX="228.0" layoutY="186.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Cannot Input? Try: ">
         <font>
             <Font name="Bookman Old Style Bold Italic" size="18.0" />
         </font>
             </Label>
-            <Hyperlink fx:id="upload" layoutX="124.0" layoutY="210.0" onMouseClicked="#uploadId" prefHeight="52.0" prefWidth="163.0" text="Upload ID card" wrapText="true" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)">
+            <Hyperlink fx:id="upload" layoutX="124.0" layoutY="210.0" onMouseClicked="#uploadId" prefHeight="52.0" prefWidth="163.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Upload ID card" wrapText="true">
         <font>
             <Font name="Bookman Old Style Bold Italic" size="16.0" />
         </font>
             </Hyperlink>
-            <Hyperlink fx:id="booknum" layoutX="340.0" layoutY="210.0" onMouseClicked="#inputBooknum" prefHeight="52.0" prefWidth="187.0" text="Input Booking No." textAlignment="CENTER" wrapText="true" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)">
+            <Hyperlink fx:id="booknum" layoutX="340.0" layoutY="210.0" onMouseClicked="#inputBooknum" prefHeight="52.0" prefWidth="187.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Input Booking No." textAlignment="CENTER" wrapText="true">
         <font>
             <Font name="Bookman Old Style Bold Italic" size="16.0" />
         </font>
             </Hyperlink>
-            <Button fx:id="confirmInput" graphicTextGap="10.0" layoutX="257.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#onClickConfirmInput" opacity="0.81" prefHeight="45.0" prefWidth="137.0" text="Confirm" style="-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%);-fx-text-fill: #ffff">
+            <Button fx:id="confirmInput" graphicTextGap="10.0" layoutX="257.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#onClickConfirmInput" opacity="0.81" prefHeight="45.0" prefWidth="137.0" style="-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%);-fx-text-fill: #ffff" text="Confirm">
                 <font>
                     <Font name="Bookman Old Style Bold Italic" size="20.0" />
                 </font></Button>
-      <TextField fx:id="surname" depthTest="ENABLE" layoutX="260.0" layoutY="90.0" prefHeight="14.0" prefWidth="194.0"  />
-      <Label layoutX="161.0" layoutY="97.0" text="Name:" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)">
+      <TextField fx:id="surname" depthTest="ENABLE" layoutX="260.0" layoutY="90.0" prefHeight="14.0" prefWidth="194.0" promptText="Special char not allowed!" />
+      <Label layoutX="161.0" layoutY="97.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="Name:">
         <font>
             <Font name="Bookman Old Style Bold Italic" size="17.0" />
         </font>
       </Label>
-      <Label layoutX="161.0" layoutY="148.0" text="ID No." style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)">
+      <Label layoutX="161.0" layoutY="148.0" style="-fx-text-fill:linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%)" text="ID No.">
         <font>
             <Font name="Bookman Old Style Bold Italic" size="17.0" />
         </font>
       </Label>
-      <TextField fx:id="idnumber" layoutX="260.0" layoutY="141.0" prefHeight="27.0" prefWidth="194.0"  />
+      <TextField fx:id="idnumber" layoutX="260.0" layoutY="141.0" prefHeight="27.0" prefWidth="194.0" promptText="Only allow digits!" />
         </children>
 
 </AnchorPane>
