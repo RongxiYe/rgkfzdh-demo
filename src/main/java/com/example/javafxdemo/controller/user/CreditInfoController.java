@@ -4,20 +4,13 @@ import com.example.javafxdemo.controller.Controller;
 import com.example.javafxdemo.controller.Handler;
 import com.example.javafxdemo.controller.MainController;
 import com.example.javafxdemo.data.CurrentData;
-import com.example.javafxdemo.utils.ClassPath;
-import com.example.javafxdemo.utils.Page;
-import com.example.javafxdemo.utils.UserData;
-import com.google.gson.Gson;
+import com.example.javafxdemo.utils.*;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
-
 import java.io.File;
 import java.io.FileReader;
 
@@ -32,7 +25,9 @@ public class CreditInfoController implements Controller {
 
     public AnchorPane CreditInfoAnchor;
 
-    public void init(){}
+    public void init(){
+        cardID.setTextFormatter(new TextFormatter<String>(new IntegerFilter()));
+    }
 
     @FXML
     public void onClickConfirmInput(){

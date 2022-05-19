@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TextFormatter;
 import javafx.stage.FileChooser;
 
 import java.io.File;
@@ -25,11 +26,12 @@ public class InputIdController implements Controller {
     @FXML
     private TextField idnumber;
 
-    public InputIdController() {
-    }
 
     @Override
-    public void init(){}
+    public void init(){
+        idnumber.setTextFormatter(new TextFormatter<String>(new IntegerFilter()));
+        surname.setTextFormatter(new TextFormatter<String>(new IntegerStringFilter()));
+    }
 
     @FXML
     public void onClickConfirmInput(){
