@@ -1,0 +1,4 @@
+--patch-module
+com.example.javafxdemo=_
+--add-reads
+com.example.javafxdemo=ALL-UNNAMED
