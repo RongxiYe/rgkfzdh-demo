@@ -15,6 +15,13 @@ import javafx.scene.layout.AnchorPane;
 
 import java.util.Optional;
 
+/**
+ * Class SmConfirmController is used to control sm-confirm.fxml and
+ * performs a seat and meal confirmation page.
+ *
+ * @author ???
+ * @version 1.0
+ */
 public class SmConfirmController implements Controller {
 
     @FXML
@@ -26,6 +33,9 @@ public class SmConfirmController implements Controller {
     public AnchorPane smConfirmAnchor;
 
 
+    /**
+     * init() is used to initialize sm-confirm.fxml.
+     */
     public void init(){
         UserData userData = CurrentData.userData;
 
@@ -52,7 +62,10 @@ public class SmConfirmController implements Controller {
 //        }
     }
 
-
+    /**
+     * onClickConfirmButton() is used to generate confirmation page for user to check whether
+     * extra payment is included or not.
+     */
     @FXML public void onClickConfirmButton(){
         UserData userData = CurrentData.userData;
         String stn = userData.getSeatNum();
@@ -96,11 +109,19 @@ public class SmConfirmController implements Controller {
         }
     }
 
+    /**
+     * onClickChangeSeat() is used to redirect to SEATSELECT page for user to
+     * change seat choices if needed.
+     */
     @FXML public void onClickChangeSeat(){
         MainController main = (MainController) Handler.getController(Page.MAIN);
         main.loadRoot(Page.SEATSELECT);
     }
 
+    /**
+     * onClickChangeMeal() is used to redirect to MEALSELECT page for user to
+     * change meal choices if needed.
+     */
     @FXML public void onClickChangeMeal(){
         MainController main = (MainController) Handler.getController(Page.MAIN);
         main.loadRoot(Page.MEALSELECT);

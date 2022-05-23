@@ -27,12 +27,24 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Optional;
 
+/**
+ * Class MainController is used to control seat-select.fxml and
+ * performs all interaction of choosing seat for users.
+ *
+ * @author Honey-Mydear
+ * @version 1.0
+ */
 public class SeatController implements Controller {
         @FXML
         private String tempSeatNum;
         private Rectangle lastRect;
         private boolean ifClicked = false;
 
+        /**
+         * init() is used to initialize seat-select.fxml and load it.
+         * It scans all file that has been printed and see which seat has been taken.
+         * It displays all occupied seat in color red.
+         */
         public void init(){
                 System.out.println("Initialing seat info");
                 /*ArrayList<String> seatOccupied = new ArrayList<String>();
@@ -48,6 +60,11 @@ public class SeatController implements Controller {
                 }
         }
 
+        /**
+         * onClickNextPageButton() is used to display a confirmation box after user clicked next page button.
+         * It generates mechanism to improve robustness of the code.
+         * It sends seat information to back end user object.
+         */
         @FXML
         protected void onClickNextPageButton(){
                 if(tempSeatNum == null){
@@ -73,6 +90,9 @@ public class SeatController implements Controller {
                 }
         }
 
+        /**
+         * onClickSeat() is used to ensure that only one seat can be selected at a time.
+         */
         public void onClickSeat(MouseEvent event){
                 Rectangle rect = (Rectangle) event.getSource();
                 if(!rect.isDisabled()) {
