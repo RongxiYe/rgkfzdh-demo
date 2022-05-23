@@ -16,16 +16,45 @@ import javafx.scene.layout.AnchorPane;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 
+/**
+ * Class PrintPageController is used to control checkin-view.fxml and
+ * it helps to print out the ticket of the user with all informations.
+ *
+ * @author ???
+ * @version 1.0
+ */
 public class PrintPageController implements Controller {
     @FXML
+    /**
+     * the Airline Information label on main anchor
+     */
     public Label airLineInfo;
+
+    /**
+     * the Extra Payment label on main anchor
+     */
     public Label extraPay;
+
+    /**
+     * the invisible payment label on main anchor which show prices of seat and meal
+     */
     public Label payment;
+
+    /**
+     * the main anchor pane in the stage
+     */
     public AnchorPane checkinanchor;
+
+    /**
+     * the PRINT YOUR MATERIALS button on main anchor
+     */
     public Button confirmCheckIn;
 
 
-
+    /**
+     * init() is used to initially load the fist appearance of the page on main anchor pane.
+     * It displays all flight info including payment of seat and meal on the page.
+     */
     public void init(){
         UserData userData = CurrentData.userData;
 
@@ -71,6 +100,10 @@ public class PrintPageController implements Controller {
         }
     }
 
+    /**
+     * onClickPrintMaterialButton() is used to generate a confirmation alert box for user to refer to.
+     * It asks the user whether or not to print the page.
+     */
     @FXML
     protected void onClickPrintMaterialButton() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION); //
@@ -84,6 +117,10 @@ public class PrintPageController implements Controller {
 
     }
 
+    /**
+     * sendToBack() is used to print out all information(write information of the user in to a file).
+     * The file is of json format.
+     */
     public void sendToBack(){
         try {
             JsonParser parser = new JsonParser();

@@ -11,8 +11,19 @@ import java.util.HashMap;
 
 import static com.example.javafxdemo.utils.Page.*;
 
+/**
+ * Class Handler is used to provide fundamental FXMLLoaders
+ * and connect them with pages.
+ *
+ * @author ???
+ * @version 1.0
+ */
 public class Handler {
     private static HashMap<Page, FXMLLoader> loaders;
+
+    /**
+     * the stage of the whole program.
+     */
     public static Stage stage;
     static{
         loaders = new HashMap<>();
@@ -64,12 +75,33 @@ public class Handler {
         }
 
     }
+
+    /**
+     * getPage() is used to return the current page.
+     *
+     * @param page the corresponding Page enum of the page.
+     * @return the corresponding Page enum of the page.
+     */
     public static FXMLLoader getPage(Page page){
         return loaders.get(page);
     }
+
+    /**
+     * getRoot() is used to return the root of the current page.
+     *
+     * @param page the corresponding Page enum of the page.
+     * @return the corresponding root of the page.
+     */
     public static AnchorPane getRoot(Page page){
         return loaders.get(page).getRoot();
     }
+
+    /**
+     * getController() is used to return the controller of the current page.
+     *
+     * @param page the corresponding Page enum of the page.
+     * @return the corresponding controller of the page.
+     */
     public static Controller getController(Page page){
         return loaders.get(page).getController();
     }
