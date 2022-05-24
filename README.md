@@ -26,13 +26,22 @@ jre 15.0
 java -jar <name-of-jar>.jar
 
 
+## Directory
+java
+   com
+      example
+         javafxdemo
+            controller *** Controller files for every page ***
+            data *** Data of current user and page information ***
+            res
+            test *** Test codes ***
+            utils
+            Entry
+            HelloApplication *** Start up procedure ***
+resources *** Includes fxml files, picture files used in pages and json files ***
+
+
 
 ## Sketches
 
-![image-20220418134737227](image-20220418134737227.png)
 
-![image-20220418134904339](/image-20220418134904339.png)
-
-![image-20220418134921079](/image-20220418134921079.png)
-
-![image-20220418134939195](/image-20220418134939195.png)

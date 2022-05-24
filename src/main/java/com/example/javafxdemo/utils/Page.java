@@ -1,5 +1,11 @@
 package com.example.javafxdemo.utils;
 
+/**
+ * Enumerate pages and return parameters.
+ *
+ * @author RongxiYe
+ * @version 1.0
+ */
 public enum Page {
     MAIN{
         public Page back(){
@@ -35,13 +41,11 @@ public enum Page {
         }
     },
     MEALSELECT{
-
         public Page back(){
             return SEATSELECT;
         }
     },
     SMCONFIRM{
-
         public Page back(){
             return MEALSELECT;
         }
