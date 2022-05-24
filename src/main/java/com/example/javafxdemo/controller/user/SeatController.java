@@ -16,6 +16,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonBar;
 import javafx.scene.control.ButtonType;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
@@ -69,11 +70,17 @@ public class SeatController implements Controller {
         protected void onClickNextPageButton(){
                 if(tempSeatNum == null){
                         Alert alert = new Alert(Alert.AlertType.WARNING);
+                        ButtonType buttonModify = new ButtonType("OK", ButtonBar.ButtonData.CANCEL_CLOSE);
+                        alert.setTitle("Warning");
                         alert.setHeaderText("Seat Not Selected");
                         alert.setContentText("Required to choose your seat before going to next page!");
+                        alert.getButtonTypes().setAll(buttonModify);
                         alert.showAndWait();
                 }else{
                         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                        ButtonType buttonConfirm = new ButtonType("Yes", ButtonBar.ButtonData.NEXT_FORWARD);
+                        ButtonType buttonModify = new ButtonType("No", ButtonBar.ButtonData.CANCEL_CLOSE);
+                        alert.getButtonTypes().setAll(buttonConfirm, buttonModify);
                         alert.setTitle("Confirmation");
                         alert.setHeaderText("Please Check Out Your Seat Information");
                         if(tempSeatNum.charAt(1) == '1'){
@@ -82,7 +89,7 @@ public class SeatController implements Controller {
                                 alert.setContentText("SEAT: " + tempSeatNum + "\n" + "NO EXTRA PAYMENT");
                         }
                         Optional<ButtonType> result = alert.showAndWait();
-                        if (result.get() == ButtonType.OK){
+                        if (result.get() == buttonConfirm){
                                 CurrentData.userData.setSeatNum(tempSeatNum);
                                 MainController main = (MainController) Handler.getController(Page.MAIN);
                                 main.loadRoot(Page.MEALSELECT);

@@ -34,6 +34,10 @@ public class CreditInfoController implements Controller {
         Alert alert;
         if (cardID.getText().trim().isEmpty() || cardID.getText() == null || password.getText().trim().isEmpty() || password.getText()  == null) {
             alert = new Alert(Alert.AlertType.ERROR, "Empty input! Please input something!");
+            ButtonType buttonModify = new ButtonType("OK", ButtonBar.ButtonData.CANCEL_CLOSE);
+            alert.setTitle("Error!");
+            alert.setHeaderText("Error!");
+            alert.getButtonTypes().setAll(buttonModify);
             alert.showAndWait();
             System.out.println("empty");
         } else {
@@ -42,6 +46,10 @@ public class CreditInfoController implements Controller {
                 main.loadRoot(Page.CHECKINVIEW);
             }else{
                 alert = new Alert(Alert.AlertType.ERROR, "Error! Please input correct info!");
+                ButtonType buttonModify = new ButtonType("OK", ButtonBar.ButtonData.CANCEL_CLOSE);
+                alert.setTitle("Error!");
+                alert.setHeaderText("Error!");
+                alert.getButtonTypes().setAll(buttonModify);
                 alert.showAndWait();
             }
 

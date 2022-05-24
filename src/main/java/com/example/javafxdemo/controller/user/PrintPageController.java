@@ -8,13 +8,12 @@ import com.example.javafxdemo.utils.UserData;
 import com.google.gson.*;
 import com.google.gson.stream.JsonReader;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.util.Optional;
 
 /**
  * Class PrintPageController is used to control checkin-view.fxml and
@@ -106,15 +105,19 @@ public class PrintPageController implements Controller {
      */
     @FXML
     protected void onClickPrintMaterialButton() {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION); //
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        ButtonType buttonConfirm = new ButtonType("Yes", ButtonBar.ButtonData.NEXT_FORWARD);
+        ButtonType buttonModify = new ButtonType("No", ButtonBar.ButtonData.CANCEL_CLOSE);
+        alert.getButtonTypes().setAll(buttonConfirm, buttonModify);
+        alert.setTitle("Confirmation");
         alert.setHeaderText("Confirmation");
         alert.setContentText("Are you sure to print all your materials?");
-        alert.showAndWait();
-
-        PrintProgress.show();
-        PrintProgress.printInfo();
-        sendToBack();
-
+        Optional<ButtonType> result = alert.showAndWait();
+        if(result.get()==buttonConfirm){
+            PrintProgress.show();
+            PrintProgress.printInfo();
+            sendToBack();
+        }
     }
 
     /**

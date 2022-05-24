@@ -15,7 +15,7 @@ import static com.example.javafxdemo.utils.Page.*;
  * Class Handler is used to provide fundamental FXMLLoaders
  * and connect them with pages.
  *
- * @author ???
+ * @author RongxiYe
  * @version 1.0
  */
 public class Handler {

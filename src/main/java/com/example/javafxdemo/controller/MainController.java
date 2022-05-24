@@ -4,14 +4,11 @@
 
 package com.example.javafxdemo.controller;
 
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import com.example.javafxdemo.data.CurrentData;
 import com.example.javafxdemo.utils.Page;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
 import javafx.scene.layout.AnchorPane;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -102,10 +99,14 @@ public class MainController implements Controller{
      */
     @FXML
     public void exit(){
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Would you like to exit?", ButtonType.YES, ButtonType.NO);
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Would you like to exit?");
+        ButtonType buttonConfirm = new ButtonType("Yes", ButtonBar.ButtonData.NEXT_FORWARD);
+        ButtonType buttonModify = new ButtonType("No", ButtonBar.ButtonData.CANCEL_CLOSE);
+        alert.getButtonTypes().setAll(buttonConfirm, buttonModify);
         alert.setHeaderText("Exit");
+        alert.setTitle("Exit");
         Optional<ButtonType> result = alert.showAndWait();
-        if(result.get()==ButtonType.YES){
+        if(result.get()==buttonConfirm){
             System.exit(0);
         }
     }
@@ -120,7 +121,9 @@ public class MainController implements Controller{
         alert.setTitle("Help Information");
         alert.setHeaderText("Customer Service Hotline");
         alert.setContentText("1234 - 5678960");
-        Optional<ButtonType> result = alert.showAndWait();
+        ButtonType buttonModify = new ButtonType("OK", ButtonBar.ButtonData.CANCEL_CLOSE);
+        alert.getButtonTypes().setAll(buttonModify);
+        alert.showAndWait();
     }
 
     /**
@@ -133,7 +136,10 @@ public class MainController implements Controller{
         if (lastPage==null){
             System.out.println("Error!");
             Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error!");
             alert.setContentText("Cannot go back!");
+            ButtonType buttonModify = new ButtonType("OK", ButtonBar.ButtonData.CANCEL_CLOSE);
+            alert.getButtonTypes().setAll(buttonModify);
             alert.show();
         }else{
             loadRoot(lastPage);

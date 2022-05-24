@@ -37,7 +37,7 @@ public class MealController implements Controller {
 
     public void init(){
         System.out.println("Initialing meal info");
-        mealType = null;
+        mealType = CurrentData.userData.getMeal();
     }
 
     @FXML public void onClickNextPageButton(){
@@ -52,8 +52,8 @@ public class MealController implements Controller {
         }
         else {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-            ButtonType buttonConfirm = new ButtonType("CONFIRM", ButtonData.NEXT_FORWARD);
-            ButtonType buttonModify = new ButtonType("MODIFY", ButtonData.CANCEL_CLOSE);
+            ButtonType buttonConfirm = new ButtonType("Confirm", ButtonData.NEXT_FORWARD);
+            ButtonType buttonModify = new ButtonType("Modify", ButtonData.CANCEL_CLOSE);
             alert.setTitle("Confirmation");
             alert.setHeaderText("Please Check Out Your Meal Information");
             alert.getButtonTypes().setAll(buttonConfirm, buttonModify);

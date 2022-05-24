@@ -8,14 +8,11 @@ import com.example.javafxdemo.utils.Page;
 import com.example.javafxdemo.utils.UserData;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.control.Label;
+
 import java.io.IOException;
 import java.util.Optional;
-
-import javafx.scene.control.Alert;
 
 public class FirstViewController implements Controller {
     @FXML
@@ -46,11 +43,15 @@ public class FirstViewController implements Controller {
     }
     @FXML public void ConfirmButton(){
         //use loaders to enter the next page.
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION,"Are you sure the information is correct?", ButtonType.YES, ButtonType.NO); //
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION,"Are you sure the information is correct?"); //
+        ButtonType buttonConfirm = new ButtonType("Yes", ButtonBar.ButtonData.NEXT_FORWARD);
+        ButtonType buttonModify = new ButtonType("No", ButtonBar.ButtonData.CANCEL_CLOSE);
+        alert.getButtonTypes().setAll(buttonConfirm, buttonModify);
         alert.setHeaderText("Confirmation");
+        alert.setTitle("Confirmation");
         Optional<ButtonType> result = alert.showAndWait();
         MainController main = (MainController) Handler.getController(Page.MAIN);
-        if(result.get()==ButtonType.YES){
+        if(result.get()==buttonConfirm){
             main.loadRoot(Page.SEATSELECT);
         }
 

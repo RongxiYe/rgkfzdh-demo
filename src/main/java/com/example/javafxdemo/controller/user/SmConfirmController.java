@@ -7,10 +7,7 @@ import com.example.javafxdemo.data.CurrentData;
 import com.example.javafxdemo.utils.Page;
 import com.example.javafxdemo.utils.UserData;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 
 import java.util.Optional;
@@ -19,7 +16,7 @@ import java.util.Optional;
  * Class SmConfirmController is used to control sm-confirm.fxml and
  * performs a seat and meal confirmation page.
  *
- * @author ???
+ * @author RongxiYe
  * @version 1.0
  */
 public class SmConfirmController implements Controller {
@@ -72,40 +69,60 @@ public class SmConfirmController implements Controller {
         String ml = userData.getMeal();
         if(ml == "Set Meal" && stn.charAt(1) == '1'){
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            ButtonType buttonConfirm = new ButtonType("Yes", ButtonBar.ButtonData.NEXT_FORWARD);
+            ButtonType buttonModify = new ButtonType("No", ButtonBar.ButtonData.CANCEL_CLOSE);
+            alert.getButtonTypes().setAll(buttonConfirm, buttonModify);
             alert.setTitle("Confirmation");
             alert.setHeaderText("Please pay for your extra payment");
             alert.setContentText("SEAT: " + stn + "\n" + "MEAL: " + ml + "\n" + "EXTRA PAYMENT: 55$");
             Optional<ButtonType> result = alert.showAndWait();
             //use loaders to enter the next page.
-            MainController main = (MainController) Handler.getController(Page.MAIN);
-            main.loadRoot(Page.CREDITINFO);
+            if(result.get()==buttonConfirm){
+                MainController main = (MainController) Handler.getController(Page.MAIN);
+                main.loadRoot(Page.CREDITINFO);
+            }
         }else if(ml == "Set Meal" && stn.charAt(1) != '1'){
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            ButtonType buttonConfirm = new ButtonType("Yes", ButtonBar.ButtonData.NEXT_FORWARD);
+            ButtonType buttonModify = new ButtonType("No", ButtonBar.ButtonData.CANCEL_CLOSE);
+            alert.getButtonTypes().setAll(buttonConfirm, buttonModify);
             alert.setTitle("Confirmation");
             alert.setHeaderText("Please pay for your extra payment");
             alert.setContentText("SEAT: " + stn + "\n" + "MEAL: " + ml + "\n" + "EXTRA PAYMENT: 5$");
             Optional<ButtonType> result = alert.showAndWait();
             //use loaders to enter the next page.
-            MainController main = (MainController) Handler.getController(Page.MAIN);
-            main.loadRoot(Page.CREDITINFO);
+            if(result.get()==buttonConfirm){
+                MainController main = (MainController) Handler.getController(Page.MAIN);
+                main.loadRoot(Page.CREDITINFO);
+            }
         }else if(ml != "Set Meal" && stn.charAt(1) == '1'){
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            ButtonType buttonConfirm = new ButtonType("Yes", ButtonBar.ButtonData.NEXT_FORWARD);
+            ButtonType buttonModify = new ButtonType("No", ButtonBar.ButtonData.CANCEL_CLOSE);
+            alert.getButtonTypes().setAll(buttonConfirm, buttonModify);
             alert.setTitle("Confirmation");
             alert.setHeaderText("Please pay for your extra payment");
             alert.setContentText("SEAT: " + stn + "\n" + "MEAL: " + ml  + "\n" + "EXTRA PAYMENT: 50$");
             Optional<ButtonType> result = alert.showAndWait();
             //use loaders to enter the next page.
-            MainController main = (MainController) Handler.getController(Page.MAIN);
-            main.loadRoot(Page.CREDITINFO);
+            if(result.get()==buttonConfirm){
+                MainController main = (MainController) Handler.getController(Page.MAIN);
+                main.loadRoot(Page.CREDITINFO);
+            }
         }else{
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            ButtonType buttonConfirm = new ButtonType("Yes", ButtonBar.ButtonData.NEXT_FORWARD);
+            ButtonType buttonModify = new ButtonType("No", ButtonBar.ButtonData.CANCEL_CLOSE);
+            alert.getButtonTypes().setAll(buttonConfirm, buttonModify);
             alert.setTitle("Confirmation");
             alert.setHeaderText("Please pay for your extra payment");
             alert.setContentText("There is no extra payment.");
             Optional<ButtonType> result = alert.showAndWait();
             //use loaders to enter the next page.
-            MainController main = (MainController) Handler.getController(Page.MAIN);
-            main.loadRoot(Page.CHECKINVIEW);
+            if(result.get()==buttonConfirm){
+                MainController main = (MainController) Handler.getController(Page.MAIN);
+                main.loadRoot(Page.CHECKINVIEW);
+            }
         }
     }
 

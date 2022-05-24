@@ -8,6 +8,8 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonBar;
+import javafx.scene.control.ButtonType;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -41,7 +43,7 @@ public class Utils {
                 String id = args[1];
                 for (int i = 0; i < array.size(); i++) {
                     JsonObject subObject = array.get(i).getAsJsonObject();
-                    String nameInFile = subObject.get("firstname").getAsString()+" "+subObject.get("surname").getAsString();
+                    String nameInFile = subObject.get("surname").getAsString();
                     String idInFile = subObject.get("id").getAsString();
                     if (name.equals(nameInFile)&&id.equals(idInFile)) {
                         Gson gson = new Gson();
@@ -60,10 +62,18 @@ public class Utils {
         Alert alert;
         if (ud==null){
             alert = new Alert(Alert.AlertType.ERROR, msg);
+            ButtonType buttonCancel = new ButtonType("OK", ButtonBar.ButtonData.CANCEL_CLOSE);
+            alert.getButtonTypes().setAll(buttonCancel);
+            alert.setHeaderText("Error!");
+            alert.setTitle("Error");
             alert.showAndWait();
         }else {
             System.out.println(ud.getBookingNum());
             alert = new Alert(Alert.AlertType.INFORMATION, "Check in successfully!");
+            ButtonType buttonCancel = new ButtonType("OK", ButtonBar.ButtonData.CANCEL_CLOSE);
+            alert.getButtonTypes().setAll(buttonCancel);
+            alert.setHeaderText("OK");
+            alert.setTitle("OK");
             alert.showAndWait();
             CurrentData.userData = ud;
             MainController main = (MainController) Handler.getController(Page.MAIN);
