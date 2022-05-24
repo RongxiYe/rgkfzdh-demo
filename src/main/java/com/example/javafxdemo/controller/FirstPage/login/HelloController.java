@@ -8,19 +8,45 @@ import javafx.scene.control.Hyperlink;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
-
+/**
+ * Class HelloController is used to control hello-view.fxml
+ * which for inputting booking number
+ *
+ * @author RongxiYe
+ * @version 1.0
+ */
 public class HelloController implements Controller {
+    /**
+     * the helloanchor pane in the stage
+     */
+    public AnchorPane helloanchor;
+    /**
+     * the textfield on helloanchor
+     */
     @FXML
     private TextField bn;
-    public AnchorPane helloanchor;
+    /**
+     * the hyperlink to scan-id.fxml on helloanchor
+     */
     @FXML
     private Hyperlink upload;
+    /**
+     * the hyperlink to input-id.fxml on helloanchor
+     */
     @FXML
     private Hyperlink inputID;
 
+    /**
+     * init() is used to initialize.
+     */
     @Override
     public void init() {}
 
+    /**
+     * onClickCheckInButton() is used to react to the click of confirm button.
+     * If input is empty, it will alert.
+     * If input number does not exist, it will alert wrong number.
+     */
     @FXML
     protected void onClickCheckInButton() {
         String booknum = bn.getText().trim();
@@ -35,11 +61,17 @@ public class HelloController implements Controller {
         }
     }
 
+    /**
+     * uploadId() is used to get to the scan-id.fxml after clicking hyperlink.
+     */
     @FXML
     protected void uploadId(){
         MainController main = (MainController)Handler.getController(Page.MAIN);
         main.loadRoot(Page.IDCARDLOGIN);
     }
+    /**
+     * inputId() is used to get to the input-id.fxml after clicking hyperlink.
+     */
     @FXML
     protected void inputID(){
         MainController main = (MainController)Handler.getController(Page.MAIN);

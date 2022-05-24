@@ -20,7 +20,7 @@ import java.nio.charset.StandardCharsets;
  * Class PrintPageController is used to control checkin-view.fxml and
  * it helps to print out the ticket of the user with all informations.
  *
- * @author ???
+ * @author dxzSabrina, RongxiYe
  * @version 1.0
  */
 public class PrintPageController implements Controller {
