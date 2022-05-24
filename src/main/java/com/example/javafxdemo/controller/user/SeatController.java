@@ -112,6 +112,7 @@ public class SeatController implements Controller {
                                         tempSeatNum = rect.getId();
                                 }
                         }
+
                         lastRect = rect;
                 }
         }
