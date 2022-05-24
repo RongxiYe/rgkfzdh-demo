@@ -106,11 +106,7 @@ public class SeatController implements Controller {
                                 } else {
                                         lastRect.setFill(Color.web("#b8bbde"));
                                 }
-                                if(lastRect == rect){
-                                        tempSeatNum = null;
-                                }else{
-                                        tempSeatNum = rect.getId();
-                                }
+                                tempSeatNum = rect.getId();
                         }
 
                         lastRect = rect;
