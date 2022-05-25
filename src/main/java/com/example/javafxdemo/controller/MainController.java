@@ -137,6 +137,7 @@ public class MainController implements Controller{
             System.out.println("Error!");
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Error!");
+            alert.setHeaderText("Error!");
             alert.setContentText("Cannot go back!");
             ButtonType buttonModify = new ButtonType("OK", ButtonBar.ButtonData.CANCEL_CLOSE);
             alert.getButtonTypes().setAll(buttonModify);

@@ -131,7 +131,7 @@ public class PrintPageController implements Controller {
             String udata = gson.toJson(CurrentData.userData);
             JsonObject subObject = parser.parse(udata).getAsJsonObject();
 
-            File file=new File(ClassPath.classPath+CurrentData.userData.getFlightNum()+"_"+CurrentData.userData.getFlyingDate()+".json");
+            File file=new File("./"+CurrentData.userData.getFlightNum()+"_"+CurrentData.userData.getFlyingDate()+".json");
             if(!file.exists()) //判断文件是否存在，若不存在则新建
             {
                 file.createNewFile();

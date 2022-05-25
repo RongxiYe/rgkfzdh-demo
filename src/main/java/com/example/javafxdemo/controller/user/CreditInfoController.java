@@ -1,5 +1,6 @@
 package com.example.javafxdemo.controller.user;
 
+import com.example.javafxdemo.HelloApplication;
 import com.example.javafxdemo.controller.Controller;
 import com.example.javafxdemo.controller.Handler;
 import com.example.javafxdemo.controller.MainController;
@@ -11,8 +12,11 @@ import com.google.gson.JsonParser;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
+
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.InputStreamReader;
 
 public class CreditInfoController implements Controller {
 
@@ -57,10 +61,9 @@ public class CreditInfoController implements Controller {
     }
 
     private boolean creditCheck(String no, String pass){
-        File file = new File(ClassPath.classPath+"Credit.json");
         try {
             JsonParser parser = new JsonParser();
-            JsonObject object = (JsonObject) parser.parse(new FileReader(file));
+            JsonObject object = (JsonObject) parser.parse(new InputStreamReader(HelloApplication.class.getResourceAsStream("/com/example/javafxdemo/Credit.json")));
             JsonArray array = object.get("CreditCard").getAsJsonArray();
             for (int i = 0; i < array.size(); i++) {
                 JsonObject subObject = array.get(i).getAsJsonObject();

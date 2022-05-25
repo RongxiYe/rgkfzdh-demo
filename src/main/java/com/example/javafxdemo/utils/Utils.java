@@ -1,5 +1,6 @@
 package com.example.javafxdemo.utils;
 
+import com.example.javafxdemo.HelloApplication;
 import com.example.javafxdemo.controller.Handler;
 import com.example.javafxdemo.controller.MainController;
 import com.example.javafxdemo.data.CurrentData;
@@ -13,10 +14,8 @@ import javafx.scene.control.ButtonType;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.net.URL;
 import java.util.ArrayList;
 import java.awt.image.BufferedImage;
 
@@ -37,10 +36,9 @@ public class Utils {
      */
     public static UserData login(String... args){
         int argc = args.length;
-        File file = new File(ClassPath.classPath+"Data.json"); //Json
         try {
             JsonParser parser = new JsonParser();
-            JsonObject object = (JsonObject) parser.parse(new FileReader(file));
+            JsonObject object = (JsonObject) parser.parse(new InputStreamReader(HelloApplication.class.getResourceAsStream("/com/example/javafxdemo/Data.json")));
             JsonArray array = object.get("UserData").getAsJsonArray();
             if (argc==1){
                 String booknum = args[0];
@@ -112,13 +110,13 @@ public class Utils {
         JsonParser parser = new JsonParser();
         JsonObject object;
         try {
-            object = (JsonObject) parser.parse(new FileReader(file));
+            object = (JsonObject) parser.parse(new InputStreamReader(HelloApplication.class.getResourceAsStream("/com/example/javafxdemo/"+ CurrentData.userData.getFlightNum() + "_" + CurrentData.userData.getFlyingDate() + ".json")));
             JsonArray array = object.get("UserData").getAsJsonArray();
             for(int i = 0; i < array.size(); i++) {
                 JsonObject subObject = array.get(i).getAsJsonObject();
                 occupiedSeat.add(subObject.get("seatNum").getAsString());
             }
-        } catch (FileNotFoundException e) {
+        } catch (Exception e) {
             System.out.println("File not exist");
         }finally {
             return occupiedSeat;
@@ -133,6 +131,9 @@ public class Utils {
      * @param outPutPath Output path
      * @throws IOException Image failed to load
      */
+    public static void overlapImage(URL backgroundPath, String message, String outPutPath,int x,int y, int fontSize) throws IOException {
+        overlapImage(backgroundPath, message, outPutPath, x, y, fontSize,Color.black);
+    }
     public static void overlapImage(String backgroundPath, String message, String outPutPath,int x,int y, int fontSize) throws IOException {
         overlapImage(backgroundPath, message, outPutPath, x, y, fontSize,Color.black);
     }
@@ -149,10 +150,21 @@ public class Utils {
      * @param c colour
      * @throws IOException Image failed to load
      */
-    public static void overlapImage(String backgroundPath, String message, String outPutPath,int x,int y, int fontSize,Color c) throws IOException{
-        BufferedImage backgroundImage = ImageIO.read(new File(backgroundPath));
+    public static void overlapImage(URL backgroundPath, String message, String outPutPath, int x, int y, int fontSize, Color c) throws IOException{
+        BufferedImage backgroundImage = ImageIO.read(backgroundPath);
         Graphics2D graphics = backgroundImage.createGraphics();
 
+        graphics.setColor(c);
+        graphics.setFont(new Font("Calibri", Font.BOLD, fontSize));
+        graphics.drawString(message, x, y);
+        graphics.dispose();
+
+
+        ImageIO.write(backgroundImage, "png", new File(outPutPath));
+    }
+    public static void overlapImage(String backgroundPath, String message, String outPutPath, int x, int y, int fontSize, Color c) throws IOException{
+        BufferedImage backgroundImage = ImageIO.read(new File(backgroundPath));
+        Graphics2D graphics = backgroundImage.createGraphics();
         graphics.setColor(c);
         graphics.setFont(new Font("Calibri", Font.BOLD, fontSize));
         graphics.drawString(message, x, y);
@@ -169,7 +181,7 @@ public class Utils {
      * @throws IOException Error loading images or data
      */
     public static void printBoarding(String[] str) throws IOException {
-        String backgroundPath = ClassPath.classPath+ "boarding.png";
+        URL backgroundPath = HelloApplication.class.getResource("/com/example/javafxdemo/boarding.png");
         String outPutPath = ClassPath.classPath+ "user-boarding.png";
 
         Utils.overlapImage(backgroundPath, str[0], outPutPath,45,126,22);
@@ -206,7 +218,7 @@ public class Utils {
      * @throws IOException Error loading images or data
      */
     public static void printTag(String[] str) throws IOException{
-        String backgroundPath = ClassPath.classPath+ "tag.png";
+        URL backgroundPath = HelloApplication.class.getResource("/com/example/javafxdemo/tag.png");
         String outPutPath = ClassPath.classPath+ "user-tag.png";
         Utils.overlapImage(backgroundPath, str[0], outPutPath,136,130,25);
 
@@ -223,7 +235,7 @@ public class Utils {
      * @throws IOException Error loading images or data
      */
     public static void printTicket(String[] str) throws IOException{
-        String backgroundPath = ClassPath.classPath+ "ticket.png";
+        URL backgroundPath = HelloApplication.class.getResource("/com/example/javafxdemo/ticket.png");
         String outPutPath = ClassPath.classPath+ "user-ticket.png";
         Utils.overlapImage(backgroundPath, str[0], outPutPath,87,169,22);
 
