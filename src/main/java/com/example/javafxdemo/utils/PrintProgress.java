@@ -1,5 +1,6 @@
 package com.example.javafxdemo.utils;
 
+import com.example.javafxdemo.HelloApplication;
 import com.example.javafxdemo.controller.Handler;
 import com.example.javafxdemo.controller.MainController;
 import com.example.javafxdemo.data.CurrentData;
@@ -18,6 +19,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.File;
+import java.net.URL;
 
 import static com.example.javafxdemo.utils.PrintProgress.runTask;
 
@@ -186,8 +188,6 @@ public class PrintProgress {
      * Combine the specific degree of page loading with the progress bar.
      * Reach the point where the progress bar can show the loading percentage.
      *
-     * @return {@code return 1} If the page loads successfully, the value of 1 is returned
-     *         {@code  return -1} If the page loaded with an error, loaded unsuccessfully, the value of -1 is returned
      */
     private static class MyTask extends Task {
         @Override
@@ -219,7 +219,7 @@ public class PrintProgress {
                 updateProgress(60, 100);
                 updateMessage("Printing...  " + 60 + "% ");
                 updateValue(60);
-                Image img1 = new Image(new File(ClassPath.classPath+"user-boarding.png").toURI().toString());
+                Image img1 = new Image(new File("./user-boarding.png").toURI().toString());
                 board.setImage(img1);
                 board.setVisible(true);
 
@@ -230,7 +230,7 @@ public class PrintProgress {
                         str1[1] = userData.getDepAddr();
                         str1[2] = userData.getDesAddr();
                         Utils.printTag(str1);
-                        Image img2 = new Image(new File(ClassPath.classPath+"user-tag.png").toURI().toString());
+                        Image img2 = new Image(new File("./user-tag.png").toURI().toString());
                         tag.setImage(img2);
                         tag.setVisible(true);
                     }
@@ -246,7 +246,7 @@ public class PrintProgress {
                         str2[2] = userData.getDesAddr();
                         str2[3] = userData.getFlightNum();
                         Utils.printTicket(str2);
-                        Image img3 = new Image(new File(ClassPath.classPath+"user-ticket.png").toURI().toString());
+                        Image img3 = new Image(new File("./user-ticket.png").toURI().toString());
                         ticket.setImage(img3);
                         ticket.setVisible(true);
                     }

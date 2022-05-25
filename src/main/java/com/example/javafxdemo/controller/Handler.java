@@ -19,6 +19,9 @@ import static com.example.javafxdemo.utils.Page.*;
  * @version 1.0
  */
 public class Handler {
+    /**
+     * it stores all fxml loaders
+     */
     private static HashMap<Page, FXMLLoader> loaders;
 
     /**

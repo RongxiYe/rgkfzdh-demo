@@ -11,11 +11,14 @@ import java.util.regex.Pattern;
  * From https://cmlanche.github.io/
  */
 public class IntegerStringFilter implements UnaryOperator<TextFormatter.Change> {
+    /**
+     * pattern of integer and string
+     */
     private final static Pattern DIGIT_PATTERN = Pattern.compile("\\w*");
 
     /**
      * This method is called when the text changes in the text field.
-     * @param change
+     * @param change change of the char
      * @return return null if the char isn't apply pattern.
      */
     @Override

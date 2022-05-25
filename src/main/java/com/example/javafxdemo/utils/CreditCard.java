@@ -8,7 +8,7 @@ package com.example.javafxdemo.utils;
  */
 public class CreditCard {
     /**
-     * First name <space> last name of a user.
+     * First name and last name of a user.
      */
     private String name;
     /**

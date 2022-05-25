@@ -21,12 +21,24 @@ import java.util.Optional;
  */
 public class SmConfirmController implements Controller {
 
+    /**
+     * confirm selection
+     */
     @FXML
     private Button confirmSelect;
+    /**
+     * selection of seats of the user
+     */
     @FXML
     private Label seatselect;
+    /**
+     * selection of meals
+     */
     @FXML
     private Label mealselect;
+    /**
+     * main anchor of this page
+     */
     public AnchorPane smConfirmAnchor;
 
 

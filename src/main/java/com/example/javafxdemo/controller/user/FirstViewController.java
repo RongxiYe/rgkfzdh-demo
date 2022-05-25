@@ -13,13 +13,31 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 import java.util.Optional;
-
+/**
+ * Class CreditInfoController is used to control creait-info.fxml and
+ * it helps to check the credit
+ *
+ * @author dxzSabrina, RongxiYe
+ * @version 1.0
+ */
 public class FirstViewController implements Controller {
+    /**
+     * the main anchor pane in the stage
+     */
     @FXML
     public AnchorPane firstViewAnchor;
+    /**
+     * label of information
+     */
     public Label infoContent;
+    /**
+     * button of confirmation
+     */
     public Button fvConfirm;
 
+    /**
+     * initialize the page and print user information on the page
+     */
     public void init(){
         UserData userData = CurrentData.userData;
         //airline information 打印
@@ -41,6 +59,10 @@ public class FirstViewController implements Controller {
         infoContent.setText(string1);
 
     }
+
+    /**
+     * confirm to ensure the information is correct
+     */
     @FXML public void ConfirmButton(){
         //use loaders to enter the next page.
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION,"Are you sure the information is correct?"); //

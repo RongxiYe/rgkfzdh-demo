@@ -10,11 +10,14 @@ import java.util.regex.Pattern;
  * From https://cmlanche.github.io/
  */
 public class IntegerFilter implements UnaryOperator<TextFormatter.Change> {
+    /**
+     * pattern of only integer
+     */
     private final static Pattern DIGIT_PATTERN = Pattern.compile("\\d*");
 
     /**
      * This method is called when the text changes in the text field.
-     * @param change
+     * @param change change of the charater
      * @return return null if the char isn't apply pattern.
      */
     @Override

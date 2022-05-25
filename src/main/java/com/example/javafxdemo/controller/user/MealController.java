@@ -17,29 +17,53 @@ import javafx.scene.control.ButtonBar.ButtonData;
 
 import java.util.ArrayList;
 import java.util.Optional;
-
+/**
+ * Class MealController is used to control meal-select.fxml and
+ * it helps to select the meal
+ *
+ * @author ritacrthh,Mzybupt
+ * @version 1.0
+ */
 public class MealController implements Controller {
 
-    @FXML
-    private Button nextpage;
+    /**
+     * button to select staple food
+     */
     @FXML
     private Button choosestaple;
+    /**
+     * button to select halal food
+     */
     @FXML
     private Button choosehalal;
+    /**
+     * button to selcet set food
+     */
     @FXML
     private Button chooseset;
-    @FXML
-    private Label mealInfo;
 
+    /**
+     * root of the page
+     */
     public AnchorPane mealAnchor;
 
+    /**
+     * meal type of current choice
+     */
     private String mealType;
 
+    /**
+     * initialize the page and obtain current selection
+     */
     public void init(){
         System.out.println("Initialing meal info");
         mealType = CurrentData.userData.getMeal();
     }
 
+    /**
+     * button that can go to the next page when you click it
+     * alert the information about food selection
+     */
     @FXML public void onClickNextPageButton(){
         if(mealType == null) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -75,6 +99,9 @@ public class MealController implements Controller {
         }
     }
 
+    /**
+     * button to go to choose staple food
+     */
     @FXML public void onClickChooseStaple(){
         choosestaple.setStyle("-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%);-fx-text-fill: #ffff ");
         choosehalal.setStyle("-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: #fff4e6;-fx-text-fill: #f49e31; ");
@@ -84,6 +111,9 @@ public class MealController implements Controller {
     }
 
 
+    /**
+     * button to go to choose halal food
+     */
     @FXML public void onClickChooseHalal(){
         choosestaple.setStyle("-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: #fff4e6;-fx-text-fill: #f49e31; ");
         choosehalal.setStyle("-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: linear-gradient(#47b0a5 0,#4dbd92 48%,#53c67d 100%);-fx-text-fill: #ffff");
@@ -91,7 +121,9 @@ public class MealController implements Controller {
         CurrentData.userData.setMeal("halal");
         mealType = "halal";
     }
-
+    /**
+     * button to go to choose set meal
+     */
     @FXML public void onClickChooseSET(){
         choosestaple.setStyle("-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: #fff4e6;-fx-text-fill: #f49e31; ");
         choosehalal.setStyle("-fx-min-height: 30; -fx-min-width: 80; -fx-background-color: #fff4e6;-fx-text-fill: #f49e31; ");

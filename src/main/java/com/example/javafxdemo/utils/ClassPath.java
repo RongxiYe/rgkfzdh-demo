@@ -15,6 +15,7 @@ public class ClassPath {
     /**
      * Specify the file path
      */
-    public static String classPath = HelloApplication.class.getResource("").getPath();
+//    public static String classPath = HelloApplication.class.getResource("").getPath();
+    public static String classPath = "./";
 
 }
