@@ -21,19 +21,67 @@ import java.io.File;
 
 import static com.example.javafxdemo.utils.PrintProgress.runTask;
 
+/**
+ * PrintProgress is used to control how the flight information print page is loaded
+ * and how the information is presented.
+ *
+ * @author RongxiYe
+ * @version 1.0
+ */
 public class PrintProgress {
+    /**
+     * pb is used to show loading progress
+     */
     public static ProgressBar pb = new ProgressBar(0);
+    /**
+     * vBox is used to divide the page vertically into 3 sections
+     * so that content can be inserted in that area.
+     */
     public static VBox vBox = new VBox(20);
+    /**
+     * vBox2 is used to divide the bottom section which is divided by vBox into 2 sections vertically
+     */
     public static VBox vBox2 = new VBox(10);
+    /**
+     * hBox is used to divide the page horizontally into 2 sections
+     */
     public static HBox hBox = new HBox(10);
+    /**
+     * btn1 is a button that can be clicked on to confirm when the user has taken all the materials
+     */
     public static Button btn1 = new Button("OK, I have taken all my materials.");
+    /**
+     * stage is a stage on this page
+     */
     public static Stage stage = new Stage();
+    /**
+     * label is a label on this page
+     */
     public static Label label = new Label();
+    /**
+     * scene is used to specify the length and width of the vBox
+     */
     public static Scene scene = new Scene(vBox,1200,800);
+    /**
+     * board is a picture and some information will be print on it
+     */
     public static ImageView board = new ImageView();
+    /**
+     * tag is a picture and some information will be print on it
+     */
     public static ImageView tag = new ImageView();
+    /**
+     * ticket a picture and some information will be print on it
+     */
     public static ImageView ticket = new ImageView();
+    /**
+     * alert is a pop-up window which will pop up when the user has completed the print operation
+     */
     public static Alert alert;
+
+    /**
+     * Initialisation of the sections
+     */
     static {
         stage.initModality(Modality.APPLICATION_MODAL);
         label.setText("Do not leave before all materials have been printed!");
@@ -63,18 +111,32 @@ public class PrintProgress {
         stage.setScene(scene);
         stage.setTitle("Printing...");
     }
+
+    /**
+     * The page starts loading and displays
+     */
     public static void show() {
         stage.show();
     }
 
-
-
-
+    /**
+     * Start printing
+     * Start calling and running the runTask() method
+     *
+     * @return {@code true} if the runTask() method succeeds
+     */
     public static boolean printInfo(){
         runTask(new MyTask());
         return true;
     }
 
+    /**
+     * The runTask() method is used to combine the MyTask() method with the progress bar
+     * The progress bar will turn green when the load is successful
+     * When the load fails, the progress bar turns red
+     *
+     * @param task integer which is used to pass parameters
+     */
     public static void runTask(Task task) {
         pb.setVisible(true);
         pb.setDisable(false);
@@ -103,15 +165,30 @@ public class PrintProgress {
     }
 
     /**
-     *
+     * Task is running with an error
      */
     public static void taskOnError() {
 
     }
+
+    /**
+     * Task successfully completed
+     */
     public static void taskComplete() {
         pb.setDisable(true);
         btn1.setVisible(true);
     }
+
+    /**
+     * MyTask() is used to control the specific task details
+     * Extends the Task class.
+     * Override the call() method.
+     * Combine the specific degree of page loading with the progress bar.
+     * Reach the point where the progress bar can show the loading percentage.
+     *
+     * @return {@code return 1} If the page loads successfully, the value of 1 is returned
+     *         {@code  return -1} If the page loaded with an error, loaded unsuccessfully, the value of -1 is returned
+     */
     private static class MyTask extends Task {
         @Override
         protected Object call() throws Exception {

@@ -20,7 +20,21 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.awt.image.BufferedImage;
 
+/**
+ * Defines the format of the database。
+ * Defines the login screen and the output of the print-out screen.
+ *
+ * @author RongxiYe
+ * @version 1.0
+ */
 public class Utils {
+    /**
+     * Write the data into the Data.json file
+     * and arrange them neatly in a fixed format for easy viewing
+     *
+     * @param args This data represents the Xth array of data in the Data.json file
+     * @return Returns a string converted to a JAVA entity class
+     */
     public static UserData login(String... args){
         int argc = args.length;
         File file = new File(ClassPath.classPath+"Data.json"); //Json
@@ -58,6 +72,12 @@ public class Utils {
         return null;
     }
 
+    /**
+     * When logging in by entering bookingNum, determine if the bookingNum entered at login is correct
+     *
+     * @param ud The value of a particular set of data in the database
+     * @param msg Prompt in alert when login error occurs
+     */
     public static void loginCheck(UserData ud, String msg){
         Alert alert;
         if (ud==null){
@@ -81,6 +101,11 @@ public class Utils {
         }
     }
 
+    /**
+     * Generate a file with flight information
+     *
+     * @return Return the seat code of the selected seat
+     */
     public static ArrayList<String> initialSeatPage(){
         ArrayList<String> occupiedSeat = new ArrayList<String>();
         File file = new File(ClassPath.classPath + CurrentData.userData.getFlightNum() + "_" + CurrentData.userData.getFlyingDate() + ".json"); //Json
@@ -101,16 +126,29 @@ public class Utils {
     }
 
     /**
-     * @param backgroundPath
-     * @param message
-     * @param outPutPath
-     * @throws IOException
+     * Creating a page background
+     *
+     * @param backgroundPath Path to the background image
+     * @param message Text message on page
+     * @param outPutPath Output path
+     * @throws IOException Image failed to load
      */
     public static void overlapImage(String backgroundPath, String message, String outPutPath,int x,int y, int fontSize) throws IOException {
         overlapImage(backgroundPath, message, outPutPath, x, y, fontSize,Color.black);
     }
 
-
+    /**
+     * Creating a page background
+     *
+     * @param backgroundPath Path to the background image
+     * @param message Text message on page
+     * @param outPutPath Output path
+     * @param x Width
+     * @param y Length
+     * @param fontSize Font size
+     * @param c colour
+     * @throws IOException Image failed to load
+     */
     public static void overlapImage(String backgroundPath, String message, String outPutPath,int x,int y, int fontSize,Color c) throws IOException{
         BufferedImage backgroundImage = ImageIO.read(new File(backgroundPath));
         Graphics2D graphics = backgroundImage.createGraphics();
@@ -124,8 +162,12 @@ public class Utils {
         ImageIO.write(backgroundImage, "png", new File(outPutPath));
     }
 
-
-
+    /**
+     * Print the user's detailed flight data on the boarding.png
+     *
+     * @param str An array in the database
+     * @throws IOException Error loading images or data
+     */
     public static void printBoarding(String[] str) throws IOException {
         String backgroundPath = ClassPath.classPath+ "boarding.png";
         String outPutPath = ClassPath.classPath+ "user-boarding.png";
@@ -157,6 +199,12 @@ public class Utils {
         Utils.overlapImage(outPutPath, str[8], outPutPath,93,259,20);
     }
 
+    /**
+     * Print the user's detailed flight data on the tag.png
+     *
+     * @param str An array in the database
+     * @throws IOException Error loading images or data
+     */
     public static void printTag(String[] str) throws IOException{
         String backgroundPath = ClassPath.classPath+ "tag.png";
         String outPutPath = ClassPath.classPath+ "user-tag.png";
@@ -167,6 +215,13 @@ public class Utils {
         Utils.overlapImage(outPutPath, str[2], outPutPath,136,210,25);
 
     }
+
+    /**
+     * Print the user's detailed flight data on the ticket.png
+     *
+     * @param str An array in the database
+     * @throws IOException Error loading images or data
+     */
     public static void printTicket(String[] str) throws IOException{
         String backgroundPath = ClassPath.classPath+ "ticket.png";
         String outPutPath = ClassPath.classPath+ "user-ticket.png";
@@ -181,3 +236,4 @@ public class Utils {
     }
 
 }
+
