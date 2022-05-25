@@ -2,16 +2,23 @@ package com.example.javafxdemo;
 
 import com.example.javafxdemo.controller.Controller;
 import com.example.javafxdemo.controller.Handler;
-import com.example.javafxdemo.data.CurrentData;
 import com.example.javafxdemo.utils.Page;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-
+/**
+ * Start the whole process
+ *
+ * @author RongxiYe
+ * @version 1.0
+ */
 public class HelloApplication extends Application {
+
+    /**
+     * Loading the first page
+     */
     @Override
     public void start(Stage stage) {
         Handler.stage = stage;
@@ -25,6 +32,11 @@ public class HelloApplication extends Application {
         stage.show();
     }
 
+    /**
+     * Start-up procedure
+     *
+     * @param args String
+     */
     public static void main(String[] args) {
         launch();
     }
