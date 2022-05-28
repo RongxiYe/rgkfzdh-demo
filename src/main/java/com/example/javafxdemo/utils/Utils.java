@@ -149,6 +149,9 @@ public class Utils {
      * @param fontSize font size
      * @throws IOException Image failed to load
      */
+    public static void overlapImage(URL backgroundPath, String message, String outPutPath,int x,int y, int fontSize) throws IOException {
+        overlapImage(backgroundPath, message, outPutPath, x, y, fontSize,Color.black);
+    }
     public static void overlapImage(String backgroundPath, String message, String outPutPath,int x,int y, int fontSize) throws IOException {
         overlapImage(backgroundPath, message, outPutPath, x, y, fontSize,Color.black);
     }
@@ -169,6 +172,17 @@ public class Utils {
         BufferedImage backgroundImage = ImageIO.read(backgroundPath);
         Graphics2D graphics = backgroundImage.createGraphics();
 
+        graphics.setColor(c);
+        graphics.setFont(new Font("Calibri", Font.BOLD, fontSize));
+        graphics.drawString(message, x, y);
+        graphics.dispose();
+
+
+        ImageIO.write(backgroundImage, "png", new File(outPutPath));
+    }
+    public static void overlapImage(String backgroundPath, String message, String outPutPath, int x, int y, int fontSize, Color c) throws IOException{
+        BufferedImage backgroundImage = ImageIO.read(new File(backgroundPath));
+        Graphics2D graphics = backgroundImage.createGraphics();
         graphics.setColor(c);
         graphics.setFont(new Font("Calibri", Font.BOLD, fontSize));
         graphics.drawString(message, x, y);
