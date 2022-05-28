@@ -124,21 +124,6 @@ public class Utils {
     }
 
     /**
-     * Creating a page background using URL
-     *
-     * @param backgroundPath Path to the background image
-     * @param message Text message on page
-     * @param outPutPath Output path
-     * @param x x width
-     * @param y y height
-     * @param fontSize font size
-     * @throws IOException Image failed to load
-     */
-    public static void overlapImage(URL backgroundPath, String message, String outPutPath,int x,int y, int fontSize) throws IOException {
-        overlapImage(backgroundPath, message, outPutPath, x, y, fontSize,Color.black);
-    }
-
-    /**
      * Creating a page background using String
      *
      * @param backgroundPath Path to the background image
@@ -152,6 +137,17 @@ public class Utils {
     public static void overlapImage(URL backgroundPath, String message, String outPutPath,int x,int y, int fontSize) throws IOException {
         overlapImage(backgroundPath, message, outPutPath, x, y, fontSize,Color.black);
     }
+    /**
+     * Creating a page background using URL
+     *
+     * @param backgroundPath Path to the background image
+     * @param message Text message on page
+     * @param outPutPath Output path
+     * @param x x width
+     * @param y y height
+     * @param fontSize font size
+     * @throws IOException Image failed to load
+     */
     public static void overlapImage(String backgroundPath, String message, String outPutPath,int x,int y, int fontSize) throws IOException {
         overlapImage(backgroundPath, message, outPutPath, x, y, fontSize,Color.black);
     }
@@ -180,17 +176,7 @@ public class Utils {
 
         ImageIO.write(backgroundImage, "png", new File(outPutPath));
     }
-    public static void overlapImage(String backgroundPath, String message, String outPutPath, int x, int y, int fontSize, Color c) throws IOException{
-        BufferedImage backgroundImage = ImageIO.read(new File(backgroundPath));
-        Graphics2D graphics = backgroundImage.createGraphics();
-        graphics.setColor(c);
-        graphics.setFont(new Font("Calibri", Font.BOLD, fontSize));
-        graphics.drawString(message, x, y);
-        graphics.dispose();
 
-
-        ImageIO.write(backgroundImage, "png", new File(outPutPath));
-    }
 
     /**
      * a overload method for overlap image

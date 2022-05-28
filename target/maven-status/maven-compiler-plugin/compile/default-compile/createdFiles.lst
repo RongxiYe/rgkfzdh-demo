@@ -13,8 +13,6 @@ com\example\javafxdemo\utils\Page$13.class
 com\example\javafxdemo\utils\IntegerFilter.class
 com\example\javafxdemo\utils\Page$2.class
 com\example\javafxdemo\utils\Page$9.class
-com\example\javafxdemo\test\SeatTest.class
-com\example\javafxdemo\test\MealTest.class
 com\example\javafxdemo\controller\MainController.class
 com\example\javafxdemo\HelloApplication.class
 com\example\javafxdemo\utils\PrintProgress$1.class
