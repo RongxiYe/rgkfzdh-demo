@@ -36,9 +36,19 @@ import java.util.Optional;
  * @version 1.0
  */
 public class SeatController implements Controller {
+
+        /**
+         * seat number
+         */
         @FXML
         private String tempSeatNum;
+        /**
+         * last selected rectangle
+         */
         private Rectangle lastRect;
+        /**
+         * if the user click on rectangle
+         */
         private boolean ifClicked = false;
 
         /**
@@ -99,6 +109,7 @@ public class SeatController implements Controller {
 
         /**
          * onClickSeat() is used to ensure that only one seat can be selected at a time.
+         * @param event event of the mouse
          */
         public void onClickSeat(MouseEvent event){
                 Rectangle rect = (Rectangle) event.getSource();

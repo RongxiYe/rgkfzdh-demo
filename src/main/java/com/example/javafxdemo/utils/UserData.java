@@ -9,19 +9,61 @@ package com.example.javafxdemo.utils;
  *  @version 1.0
  */
 public class UserData {
+    /**
+     * booking number
+     */
     private String bookingNum;
+    /**
+     * surname of user
+     */
     private String surname;
+    /**
+     * first name of user
+     */
     private String firstname;
+    /**
+     * id number of user
+     */
     private String id;
+    /**
+     * flight number of user
+     */
     private String flightNum;
+    /**
+     * seat of user
+     */
     private String seatNum;
+    /**
+     * meal plan of user
+     */
     private String meal;
+    /**
+     * the date of the flight of user
+     */
     private String flyingDate;
+    /**
+     * departure address of user's flight
+     */
     private String depAddr;
+    /**
+     * destination address of user's flight
+     */
     private String desAddr;
+    /**
+     * total time of user's flight
+     */
     private String totalTime;
+    /**
+     * delay status of user's flight
+     */
     private String delayStatus;
+    /**
+     * check in luggage of user's flight
+     */
     private String luggage;
+    /**
+     * carry on baggage of user's flight
+     */
     private String carryOn;
 
     /**

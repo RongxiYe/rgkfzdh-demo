@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.awt.image.BufferedImage;
 
 /**
- * Defines the format of the database。
+ * Defines the format of the database
  * Defines the login screen and the output of the print-out screen.
  *
  * @author RongxiYe
@@ -124,11 +124,29 @@ public class Utils {
     }
 
     /**
-     * Creating a page background
+     * Creating a page background using URL
      *
      * @param backgroundPath Path to the background image
      * @param message Text message on page
      * @param outPutPath Output path
+     * @param x x width
+     * @param y y height
+     * @param fontSize font size
+     * @throws IOException Image failed to load
+     */
+    public static void overlapImage(URL backgroundPath, String message, String outPutPath,int x,int y, int fontSize) throws IOException {
+        overlapImage(backgroundPath, message, outPutPath, x, y, fontSize,Color.black);
+    }
+
+    /**
+     * Creating a page background using String
+     *
+     * @param backgroundPath Path to the background image
+     * @param message Text message on page
+     * @param outPutPath Output path
+     * @param x x width
+     * @param y y height
+     * @param fontSize font size
      * @throws IOException Image failed to load
      */
     public static void overlapImage(URL backgroundPath, String message, String outPutPath,int x,int y, int fontSize) throws IOException {
@@ -147,8 +165,8 @@ public class Utils {
      * @param x Width
      * @param y Length
      * @param fontSize Font size
-     * @param c colour
-     * @throws IOException Image failed to load
+     * @param c color
+     * @throws IOException when image failed to load
      */
     public static void overlapImage(URL backgroundPath, String message, String outPutPath, int x, int y, int fontSize, Color c) throws IOException{
         BufferedImage backgroundImage = ImageIO.read(backgroundPath);
@@ -162,6 +180,29 @@ public class Utils {
 
         ImageIO.write(backgroundImage, "png", new File(outPutPath));
     }
+    public static void overlapImage(String backgroundPath, String message, String outPutPath, int x, int y, int fontSize, Color c) throws IOException{
+        BufferedImage backgroundImage = ImageIO.read(new File(backgroundPath));
+        Graphics2D graphics = backgroundImage.createGraphics();
+        graphics.setColor(c);
+        graphics.setFont(new Font("Calibri", Font.BOLD, fontSize));
+        graphics.drawString(message, x, y);
+        graphics.dispose();
+
+
+        ImageIO.write(backgroundImage, "png", new File(outPutPath));
+    }
+
+    /**
+     * a overload method for overlap image
+     * @param backgroundPath path of background
+     * @param message message to print
+     * @param outPutPath path of output image
+     * @param x x width
+     * @param y y height
+     * @param fontSize size of font
+     * @param c color
+     * @throws IOException when there are any exceptions
+     */
     public static void overlapImage(String backgroundPath, String message, String outPutPath, int x, int y, int fontSize, Color c) throws IOException{
         BufferedImage backgroundImage = ImageIO.read(new File(backgroundPath));
         Graphics2D graphics = backgroundImage.createGraphics();

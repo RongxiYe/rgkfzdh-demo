@@ -12,13 +12,24 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * This test is used to test first-overview page
+ */
 public class FirstOverviewTest extends Application{
-
-public static void main(String[] args){
+        /**
+         * entry of the test
+         * @param args command line arguments
+         */
+        public static void main(String[] args){
         launch();
         }
 
-@Override
+        /**
+         * test code
+         * @param stage main stage of the application. It is passed by launch();
+         * @throws IOException when there are any exceptions
+         */
+        @Override
 public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("main.fxml"));
         //FXMLLoader smLoader = new FXMLLoader(HelloApplication.class.getResource("sm-confirm.fxml"));

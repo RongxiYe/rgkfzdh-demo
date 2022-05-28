@@ -1,3 +1,6 @@
+/**
+ * all module information
+ */
 module com.example.javafxdemo {
     requires javafx.controls;
     requires javafx.fxml;

@@ -188,8 +188,6 @@ public class PrintProgress {
      * Combine the specific degree of page loading with the progress bar.
      * Reach the point where the progress bar can show the loading percentage.
      *
-     * @return {@code return 1} If the page loads successfully, the value of 1 is returned
-     *         {@code  return -1} If the page loaded with an error, loaded unsuccessfully, the value of -1 is returned
      */
     private static class MyTask extends Task {
         @Override

@@ -23,10 +23,11 @@ import java.util.Optional;
  * @version 1.0
  */
 public class PrintPageController implements Controller {
-    @FXML
+
     /**
      * the Airline Information label on main anchor
      */
+    @FXML
     public Label airLineInfo;
 
     /**

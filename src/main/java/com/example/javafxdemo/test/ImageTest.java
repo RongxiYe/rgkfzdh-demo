@@ -9,7 +9,15 @@ import com.example.javafxdemo.utils.Utils;
 import java.awt.*;
 import java.io.IOException;
 
+/**
+ * use to test image insert in printing page
+ */
 public class ImageTest {
+    /**
+     * main entry of the test
+     * @param args command line args
+     * @throws IOException when there are any exceptions
+     */
     public static void main(String[] args) throws IOException {
 //        String backgroundPath = ClassPath.classPath+ "ticket.png";
 //        String message = "John";
